@@ -1,0 +1,17 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    background-color: var(--bg-dark-1);
+
+    &__item{
+        font-size: 2rem;
+        font-family: 'Rosario', sans-serif;
+
+        &:not(:last-of-type){
+            margin-right: 2rem;
+        }
+    }
+}

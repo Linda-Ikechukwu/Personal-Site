@@ -1,0 +1,62 @@
+.header{
+    height: 80vh;
+    background-color: var(--bg-dark-1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &__left{
+        width: 60rem;
+    }
+
+    &__title{
+        font-family: 'Ribeye Marrow', cursive;
+        font-size: 6.4rem;
+        line-height: 87px;
+    }
+
+    &__subtitle{
+        font-size: 3.2rem;
+        line-height: 50px;
+
+    }
+
+    &__description{
+        font-size: 1.8rem;
+    }
+
+    &__image {
+        background: radial-gradient( var( --contrast-color) 1px, var(--bg-dark-1) 1px);
+        background-size: 15px 15px;
+        border-radius: 50%;
+        width: 34rem;
+        height: 34rem;
+        position: relative;
+        
+        & img{
+            border-radius: 50%;
+            width: 30rem;
+            height: 30rem;
+            
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            transform:translate(45px, 15px);
+
+        }
+
+        &__overlay{
+            background:var(--bg-dark-1) ;
+            z-index: 2;
+            position: absolute;
+            width: 30rem;
+            height: 30rem;
+            left: 45px;
+            top: 15px;
+            opacity: .6;
+            border-radius: 50%;
+        }
+    }
+    
+    
+      
+}

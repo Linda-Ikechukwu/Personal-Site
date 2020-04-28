@@ -1,0 +1,13 @@
+.button{
+    background-color: var( --contrast-color);
+    color: var(--text-color-light);
+    border:none;
+    min-width: 10rem;
+    height: 6rem;
+    padding: 1rem 2rem;
+    font-size: 1.9rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 4px rgba(17, 16, 16, 0.8);
+}

@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --contrast-color: #E53170;
+    --bg-dark-1: #232946;
+    --bg-dark-2: #2d2948;
+    --component-color: #B8C1EC;
+    --text-color-light: #FFFFFE;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*10px*/
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  color: var(--text-color-light);
+}
+
+a{
+  text-decoration: none;
+  color: var(--text-color-light); 
+}
+
+/*Utility Classes*/
+.u-margin-top-s{
+  margin-top: 2rem;
+}
+
+.nav, .header{
+  padding: 0 10rem;
+}

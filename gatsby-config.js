@@ -6,5 +6,23 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: `Linda Ikechukwu's Site`,
+    description: `Linda Ikechukwu is a Software Developer with a focus on Frontend and Cloud Technologies from Lagos, Nigeria`,
+    author: `Linda Ikechukwu`,
+  },
+  
+  plugins: [
+    `gatsby-plugin-sass`,
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["Rosario,  Ribeye Marrow"],
+          urls: ["/fonts/fonts.css"],
+        },
+      },
+    },
+  
+  ],
 }
