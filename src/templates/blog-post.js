@@ -1,10 +1,11 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import MetaData from "../components/metadata"
 import AdComponent from "../components/ad/ad.component"
+import ShareButtons from "../components/share-buttons/share.component"
 
 import "../components/posts/posts.style.scss"
 
@@ -36,6 +37,24 @@ export const query = graphql`
 `
 
 const BlogPost = props => {
+    const title ="Great Article by Linda Ikechukwu on " + props.data.markdownRemark.frontmatter.title;
+    const url = props.location.href;
+
+    const prev = props.pageContext.prev ?
+        {
+            url: `/blog/${props.pageContext.prev.fields.slug}`,
+            title: props.pageContext.prev.frontmatter.title
+        }
+        : null;
+
+    const next = props.pageContext.next
+        ? {
+            url: `/blog/${props.pageContext.next.fields.slug}`,
+            title: props.pageContext.next.frontmatter.title
+        }
+        : null
+
+    
 
     return (
         <Layout>
@@ -48,7 +67,7 @@ const BlogPost = props => {
             />
             <div className="container flex-container">
                 <div className="post-body">
-                    
+
                     <div className="post-body__info">
                         <h1 className="post-body__title">{props.data.markdownRemark.frontmatter.title}</h1>
                         <span>Published on {props.data.markdownRemark.frontmatter.date}{" "}<span>
@@ -58,9 +77,9 @@ const BlogPost = props => {
                         {
                             props.data.markdownRemark.frontmatter.featured && (
                                 <Img style={{
-                                       height: `40rem`,
-                                       width: `100%`
-                                    }}
+                                    height: `40rem`,
+                                    width: `100%`
+                                }}
                                     fluid={
                                         props.data.markdownRemark.frontmatter.featured.childImageSharp.fluid
                                     }
@@ -69,12 +88,29 @@ const BlogPost = props => {
                             )
                         }
                     </div>
-                   <div className="post-body__content"
+                    <div className="post-body__content"
                         dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
                     >
                     </div>
+                    <div className="post-body__share-buttons">
+                        Share this Post: <ShareButtons title={title} url={url}/>
+                    </div>
+                    <div className="post-body__links">
+                        {prev && (
+                            <div>
+                                <span>⇦ Previous Post</span>
+                                <h3><Link to={prev.url}>{prev.title}</Link></h3>
+                            </div>
+                        )}
+                        {next && (
+                            <div>
+                                <span>Next Post ⇨</span>
+                                <h3><Link to={next.url}>{next.title}</Link></h3>
+                            </div>
+                        )}
+                    </div>
                 </div>
-                <AdComponent/>
+                <AdComponent />
             </div>
         </Layout>
     )

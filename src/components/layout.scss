@@ -67,9 +67,15 @@ a{
   h1{
     font-size: 7rem;
     font-family: var(--secondary-font-family);
+    margin: 2rem 0;
   }
 
   p{
     font-style: italic;
+  }
+
+  &__emoji{
+    display: block;
+    font-size: 20rem;
   }
 }
