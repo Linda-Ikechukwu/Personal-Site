@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import Button from "../button/button.component";
 
 import "./header.styles.scss"
@@ -19,7 +19,7 @@ const Header = () => {
                deliver or manage stuff on the cloud. I write stuff too - when I feel like it.
            </div>
 
-           <Button textContent="See Sample Projects" />
+           <Button>See Sample Projects</Button>
        </div>
        <div className="header__right">
            <div className="header__image">

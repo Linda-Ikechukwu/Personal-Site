@@ -7,13 +7,17 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Linda Ikechukwu's Site`,
-    description: `Linda Ikechukwu is a Software Developer with a focus on Frontend and Cloud Technologies from Lagos, Nigeria`,
+    title: `Linda Ikechukwu`,
+    description: `Linda Ikechukwu is a Community Manager, a Software Developer focused on Frontend and Cloud Technologies from Lagos, Nigeria`,
     author: `Linda Ikechukwu`,
+    keywords: `Nigerian Female Software Developer, PH School Of AI, Frontend Developer, Javascript Developer in Nigeria `,
+    siteUrl: `https://your-site.com/`
   },
   
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
@@ -23,6 +27,28 @@ module.exports = {
         },
       },
     },
-  
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src",
+        path: `${__dirname}/src/`,
+      },
+    },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 750,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
+    },
   ],
 }

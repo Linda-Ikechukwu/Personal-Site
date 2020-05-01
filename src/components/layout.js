@@ -1,13 +1,15 @@
 import React from "react"
 import Navigation from "./navigation/navigation.component";
+import Footer from "./footer/footer.component";
 
 import "./layout.scss"
 
-const Layout = props => {
+const Layout = (props) => {
   return (
     <div className="body">
       <Navigation />
       {props.children}
+      <Footer />
     </div>
   )
 }

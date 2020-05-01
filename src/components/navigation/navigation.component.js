@@ -15,9 +15,9 @@ const Navigation = () => {
                <span className="nav__item"><Link to="/blog">Blog</Link></span>
            </div>
            <div className="nav__left">
-               <span className="nav__item"><Link to="https://github.com/Linda-Ikechukwu"><GitHubIcon style={{ fontSize: 20 }} /></Link></span>
-               <span className="nav__item"><Link to="/https://twitter.com/_MsLinda"><TwitterIcon style={{ fontSize: 20 }}/></Link></span>
-               <span className="nav__item"><Link to="/https://www.linkedin.com/in/linda-ikechukwu/"><LinkedInIcon style={{ fontSize: 20 }}/></Link></span>
+               <span className="nav__item"><a href="https://github.com/Linda-Ikechukwu"><GitHubIcon style={{ fontSize: 20 }} /></a></span>
+               <span className="nav__item"><a href="/https://twitter.com/_MsLinda"><TwitterIcon style={{ fontSize: 20 }}/></a></span>
+               <span className="nav__item"><a href="/https://www.linkedin.com/in/linda-ikechukwu/"><LinkedInIcon style={{ fontSize: 20 }}/></a></span>
            </div>
       </div>
   )

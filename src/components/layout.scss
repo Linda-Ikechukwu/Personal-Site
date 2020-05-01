@@ -8,6 +8,9 @@
     --bg-dark-2: #2d2948;
     --component-color: #B8C1EC;
     --text-color-light: #FFFFFE;
+    --secondary-font-family: 'Ribeye Marrow', cursive;
+    --primary-font-family: 'Rosario', sans-serif;
+
 }
 
 html{
@@ -19,6 +22,9 @@ body{
   margin: 0;
   padding: 0;
   color: var(--text-color-light);
+  font-family: var(--primary-font-family);
+  font-size: 1.8rem;
+
 }
 
 a{
@@ -31,6 +37,39 @@ a{
   margin-top: 2rem;
 }
 
-.nav, .header{
+
+
+/*general Classes*/
+
+.nav, .header, .footer{
   padding: 0 10rem;
+}
+
+.container{
+  background-color: var(--bg-dark-2);
+  margin: 0 0;
+  padding: 5rem 10rem;
+  border-bottom: .5px solid var( --component-color);
+  border-top: .5px solid var( --component-color);
+  min-height: 80vh;
+  
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.not-found{
+  text-align: center;
+
+  h1{
+    font-size: 7rem;
+    font-family: var(--secondary-font-family);
+  }
+
+  p{
+    font-style: italic;
+  }
 }

@@ -1,0 +1,29 @@
+.taglist{
+   border: 1px solid var( --component-color);
+   border-radius: 1rem; 
+   width: 20vw;
+   padding: 1rem;
+   box-shadow: 1px 3px 4px rgba(17, 16, 16, 0.6);
+   margin-top: 3rem;
+
+   h3{
+       margin: .5rem 0;
+   }
+
+   hr{
+       border:.2px solid var( --component-color); 
+       border-top-width: .2px;
+       border-bottom-width: .2px;
+       margin: 0 -10px;
+   }
+
+   ul{
+       list-style-type:none ;
+       padding-left: 0;
+       margin: 1rem 0;
+
+       li{
+           
+       }
+   }
+}
