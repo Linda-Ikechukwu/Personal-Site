@@ -1,0 +1,11 @@
+.contact{
+    background-color: var(--bg-dark-2);
+    padding: 5rem 10rem;
+
+    & h4{
+        margin-bottom: 0;
+    }
+    & p{
+        margin-top: 0;
+    }
+}

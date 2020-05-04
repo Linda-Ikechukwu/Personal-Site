@@ -10,6 +10,7 @@
     --text-color-light: #FFFFFE;
     --secondary-font-family: 'Ribeye Marrow', cursive;
     --primary-font-family: 'Rosario', sans-serif;
+    --link-color: #eebbc3;
 
 }
 
@@ -36,12 +37,15 @@ a{
 .u-margin-top-s{
   margin-top: 2rem;
 }
+.u-center{
+  text-align: center;
+}
 
 
 
 /*general Classes*/
 
-.nav, .header, .footer{
+.nav, .header,  .footer{
   padding: 0 10rem;
 }
 
@@ -78,4 +82,13 @@ a{
     display: block;
     font-size: 20rem;
   }
+}
+
+.title{
+  font-family: 'Ribeye Marrow', cursive;
+  font-size: 3.4rem;
+  line-height: 67px;
+  text-transform: uppercase;
+  text-align: center;
+  
 }

@@ -1,0 +1,42 @@
+.info{
+    background-color: var(--bg-dark-2);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+    padding: 5rem 10rem;
+
+    &__community, &__speaking{
+        width: 38vw;
+    }
+
+    &__list{
+        padding-left: 0;
+
+        &__item{
+            &::marker{
+                font-size: 2.8rem;
+                transform: translateY(-5px);
+            }
+
+            & h4{
+              margin-bottom: 5px;
+
+              & a:hover{
+                  color:var(--link-color)
+              }
+            }
+            & p{
+                margin: 0;
+                margin-top: 4px;
+            }
+
+            & span{
+                border-top: .5px solid;
+                width: 33rem;
+                display: block;
+            }
+        }
+    }
+}

@@ -37,9 +37,12 @@ export const query = graphql`
 `
 
 const BlogPost = props => {
+    
+    //For the social share buttons
     const title ="Great Article by Linda Ikechukwu on " + props.data.markdownRemark.frontmatter.title;
     const url = props.location.href;
-
+    
+    //For the previous and next blog post link
     const prev = props.pageContext.prev ?
         {
             url: `/blog/${props.pageContext.prev.fields.slug}`,
@@ -93,7 +96,7 @@ const BlogPost = props => {
                     >
                     </div>
                     <div className="post-body__share-buttons">
-                        Share this Post: <ShareButtons title={title} url={url}/>
+                        <span>Share this Post:</span> <ShareButtons title={title} url={url}/>
                     </div>
                     <div className="post-body__links">
                         {prev && (

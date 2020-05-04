@@ -13,5 +13,16 @@
         &:not(:last-of-type){
             margin-right: 2rem;
         }
+
+        
+    }
+
+    & a{
+        &:hover{
+            color: var(--link-color);
+            
+        }
+
+        
     }
 }

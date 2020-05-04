@@ -1,0 +1,30 @@
+.projects{
+    background-color: var(--bg-dark-1);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 5rem 10rem;
+
+    &__title, &__list{
+        width: 38vw;
+    }
+
+    &__title{
+        & h4{
+            margin-bottom: 0;
+        }
+        & p{
+            margin-top: 0;
+        }
+    }
+
+    &__list{
+        background-color: var(--component-color);
+        border-radius: 5px;
+        height: 70vh;
+    }
+
+}

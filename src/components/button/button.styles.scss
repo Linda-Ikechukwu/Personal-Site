@@ -17,6 +17,15 @@
         margin-top: 1.5rem;
         padding: 1rem .5rem;
         height: 4rem;
+        font-weight: bold;
+    }
+
+    &--center{
+        margin: 1rem auto;
+    }
+
+    &:hover{
+        cursor: pointer;
     }
 }
 

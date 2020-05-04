@@ -57,10 +57,26 @@
 
         h3{
             margin: .5rem 0;
+
+            & a{
+                color: #eebbc3;
+            }
+            
         }
 
         span{
             font-size: 1.5rem;
+        }
+    }
+
+    &__share-buttons {
+        margin: 1rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        
+        & span{
+           margin-right: 2rem;
         }
     }
 }
