@@ -22,10 +22,16 @@
 
     &--center{
         margin: 1rem auto;
+
+        @media only screen and (max-width: 500px) {
+            margin: 3rem auto 0;
+        }
     }
 
     &:hover{
         cursor: pointer;
+        background: transparent;
+        border: 2px solid var( --contrast-color);
     }
 }
 

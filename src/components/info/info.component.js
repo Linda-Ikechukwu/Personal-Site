@@ -26,7 +26,7 @@ const Info = () => {
             <div className="info__speaking">
                 <h2 className="title">Speaking</h2>
                 <p>I love to share my knowledge and experience,
-                If you'll like me to speak at your event, please <a href="#contact">send me a message</a>
+                If you'll like me to speak at your event, please <a className="inline-link" href="#contact">send me a message</a>
                 </p>
                 <ul className="info__list">
                     <li className="info__list__item">

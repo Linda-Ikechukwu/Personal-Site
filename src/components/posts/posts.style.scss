@@ -15,9 +15,13 @@
         &__info{
           font-style: italic;
        }
-
+    
+       @media only screen and (max-width: 770px) {
+         width: 100%;
+       }
         
     }
+    
 
 
 }
@@ -51,7 +55,7 @@
     &__links{
         display: flex;
         flex-direction: row;
-        margin-top: 3rem;
+        margin: 3rem 0;
         justify-content: space-between;
         flex-wrap: wrap;
 
@@ -59,7 +63,11 @@
             margin: .5rem 0;
 
             & a{
-                color: #eebbc3;
+                color:var(--link-color);
+
+                &:hover{
+                    color: var(--text-color-light);
+                }
             }
             
         }
@@ -70,7 +78,7 @@
     }
 
     &__share-buttons {
-        margin: 1rem 0;
+        margin: 3rem 0;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -78,5 +86,9 @@
         & span{
            margin-right: 2rem;
         }
+    }
+
+    @media only screen and (max-width: 770px) {
+        width: 100%;
     }
 }

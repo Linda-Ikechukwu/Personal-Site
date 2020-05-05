@@ -1,3 +1,10 @@
 .react-share__ShareButton{
     margin-right: 1rem;
+
+    & a svg{
+        
+        @media only screen and (max-width: 500px) {
+            width: 5rem;
+        }
+    }
 }

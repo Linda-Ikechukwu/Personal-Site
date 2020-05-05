@@ -6,7 +6,7 @@ import "./contact-form.style.scss"
 
 const ContactForm = () => {
     return (
-        <form>
+        <form  action="https://formspree.io/xrgygkey" method="POST">
             <div className="form">
                 <div className="form__left">
                     <input type="text" placeholder="Your Name" required></input>
@@ -17,7 +17,7 @@ const ContactForm = () => {
                 </div>
             </div>
             <div className="form">
-                <Button small center>Send</Button>
+                <Button type="submit" small center>Send</Button>
             </div>
             
         </form>

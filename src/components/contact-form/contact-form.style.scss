@@ -1,6 +1,6 @@
 form{
     width: 78vw;
-    margin: 0 auto;
+    margin: 4rem auto;
     
 
 }
@@ -10,7 +10,9 @@ form{
    flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
+   width: 78vw;
 
+   
     &__left, &__right{
         width: 38vw;
     }
@@ -45,12 +47,27 @@ form{
         outline: none  !important;
         resize: none;
         height: 9rem;
+        margin: -5px 0;
         
     }
     /*To remove the weird red outline for required textarea in firefox*/
     & textarea:not(output):-moz-ui-invalid {
         box-shadow: none;
     }
+
+    @media only screen and (max-width: 500px) {
+        flex-direction: column;
+  
+        &__left, &__right{
+          width: 100%;
+        }
+  
+        & textarea{
+            margin-top: 2px;
+        }
+  
+    }
+  
 
 
 }

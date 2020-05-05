@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
+import { DiscussionEmbed } from "disqus-react"
 
 import Layout from "../components/layout"
 import MetaData from "../components/metadata"
@@ -38,6 +39,8 @@ export const query = graphql`
 
 const BlogPost = props => {
     
+    const disqusTitle = props.data.markdownRemark.frontmatter.title;
+    
     //For the social share buttons
     const title ="Great Article by Linda Ikechukwu on " + props.data.markdownRemark.frontmatter.title;
     const url = props.location.href;
@@ -56,10 +59,15 @@ const BlogPost = props => {
             title: props.pageContext.next.frontmatter.title
         }
         : null
-
     
-
+    const disqusConfig = {
+        shortname: process.env.GATSBY_DISQUS_NAME,
+        config: { identifier: disqusTitle },
+        }
+    
+        
     return (
+        
         <Layout>
             <MetaData
                 title={props.data.markdownRemark.frontmatter.title}
@@ -111,6 +119,9 @@ const BlogPost = props => {
                                 <h3><Link to={next.url}>{next.title}</Link></h3>
                             </div>
                         )}
+                    </div>
+                    <div>
+                        <DiscussionEmbed {...disqusConfig} />
                     </div>
                 </div>
                 <AdComponent />

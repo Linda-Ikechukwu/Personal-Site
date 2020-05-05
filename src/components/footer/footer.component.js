@@ -5,10 +5,10 @@ const Footer = () => {
     return(
         <div className="footer">
             <p> 
-                &copy; {new Date().getFullYear()}. 
                 <span role="img" aria-label="Love"> 💖 </span> &  
                 <span role="img" aria-label="Light">✨</span>, From Linda Ikechukwu, Always.
             </p>
+            <p><span>&copy; {new Date().getFullYear()}. </span></p>
         </div>
     )
 }

@@ -34,7 +34,7 @@ const TagsList = () => {
                     <li key={tag.fieldValue} className="tag">
                         <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
                             {tag.fieldValue} ({tag.totalCount})
-                </Link>
+                        </Link>
                     </li>
                 ))}
             </ul>

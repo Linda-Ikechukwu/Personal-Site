@@ -5,19 +5,28 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
-    padding: 5rem 10rem;
+    min-height: 100vh;
 
-    &__title, &__list{
-        width: 38vw;
-    }
 
     &__title{
-        & h4{
+        & h2{
             margin-bottom: 0;
+            
+            
         }
         & p{
             margin-top: 0;
+        }
+
+        @media only screen and (max-width: 500px) {
+            & h2{
+                line-height: 4rem;
+                margin-bottom: 1rem;
+                margin-top: 4.5rem;
+            }
+            & p{
+                margin-bottom: 5rem;
+            }
         }
     }
 

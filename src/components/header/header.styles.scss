@@ -1,23 +1,28 @@
 .header{
-    height: 80vh;
+    min-height: 88vh;
     background-color: var(--bg-dark-1);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: 100vw;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 
-    &__left{
-        width: 60rem;
+    &__left, &__right{
+        width: 40vw;
     }
 
-    &__title{
+    
+
+    &__title h1{
         font-family: 'Ribeye Marrow', cursive;
         font-size: 6.4rem;
         line-height: 87px;
     }
 
-    &__subtitle{
-        font-size: 3.2rem;
+    &__subtitle h2{
+        font-size: 3rem;
         line-height: 50px;
 
     }
@@ -27,21 +32,33 @@
         margin-top: 1.5rem;
     }
 
+    & h1, & h2, & h3{
+        margin:0;
+        font-weight: normal;
+    }
+
     &__image {
         background: radial-gradient( var( --contrast-color) 1px, var(--bg-dark-1) 1px);
         background-size: 15px 15px;
         border-radius: 50%;
-        width: 34rem;
-        height: 34rem;
+        width: 100%;
+        height: 40rem;
         position: relative;
+
+        @media only screen and (min-width: var(--desktop)){
+            background: radial-gradient( var( --contrast-color) 2px, var(--bg-dark-1) 2px);
+            background-size: 18px 18px;
+        }
         
         & img{
             border-radius: 50%;
             width: 30rem;
             height: 30rem;
-            
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            transform:translate(45px, 15px);
+            position: absolute;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
 
         }
 
@@ -51,13 +68,50 @@
             position: absolute;
             width: 30rem;
             height: 30rem;
-            left: 45px;
-            top: 15px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             opacity: .6;
             border-radius: 50%;
         }
     }
+
+    @media only screen and (max-width: 1000px) {
+        &__title h1{
+            font-size: 5rem;
+        }
     
+        &__subtitle h2{
+            font-size: 2.5rem;
+            line-height: 20px;
+        }
+
     
+    }
+    
+    @media only screen and (max-width: 770px) {
+        flex-direction: column-reverse;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+
+        &__left, &__right{
+            width: 100%;
+        }
+
+        &__title h1{
+            font-size: 5rem;
+            line-height: 40px;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+        }
+    
+        &__subtitle h2{
+            font-size: 2.5rem;
+            line-height: 20px;
+    
+        }
+
+    
+    }
       
 }

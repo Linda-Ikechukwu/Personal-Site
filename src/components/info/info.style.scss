@@ -5,14 +5,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     height: 100%;
-    padding: 5rem 10rem;
-
-    &__community, &__speaking{
-        width: 38vw;
-    }
-
+    
     &__list{
-        padding-left: 0;
+        padding-left: 2.5rem;
 
         &__item{
             &::marker{
@@ -35,8 +30,23 @@
             & span{
                 border-top: .5px solid;
                 width: 33rem;
-                display: block;
+                display: block; 
+
+                @media only screen and (max-width: 900px) {
+                    width: 100%;
+                }
             }
         }
+    }
+
+    @media only screen and (max-width: 500px) {
+        & h2{
+            margin-bottom: 0;
+        }
+        
+        & >div > p{
+            margin-top: 0;
+        }
+
     }
 }

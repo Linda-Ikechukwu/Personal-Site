@@ -8,9 +8,9 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `Linda Ikechukwu`,
-    description: `Linda Ikechukwu is a Community Manager, a Software Developer focused on Frontend and Cloud Technologies from Lagos, Nigeria`,
+    description: `Linda Ikechukwu is a driven Community Manager, a Software Developer focused on Frontend and Cloud Technologies from Lagos, Nigeria`,
     author: `Linda Ikechukwu`,
-    keywords: `Nigerian Female Software Developer, PH School Of AI, Frontend Developer, Javascript Developer in Nigeria `,
+    keywords: `Linda Ikechukwu, Nigerian Female Software Developer, PH School Of AI, Frontend Developer, Javascript Developer in Nigeria `,
     siteUrl: `https://your-site.com/`
   },
   
@@ -50,5 +50,17 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "All About Linda",
+        short_name: "allaboutlinda.com",
+        start_url: "/",
+        background_color: "#232946",
+        theme_color: "#232946",
+        display: "standalone",
+        icon: "static/icon.jpg" // This path is relative to the root of the site.
+      }
+    }
   ],
 }

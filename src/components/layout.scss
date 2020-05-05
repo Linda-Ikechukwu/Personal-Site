@@ -1,94 +1,163 @@
-*{
-    box-sizing: border-box;
+//Base styles for the whole site. Fnd general classes, Utility classes and vaiables here
+
+* {
+  box-sizing: border-box;
 }
 
 :root {
-    --contrast-color: #E53170;
-    --bg-dark-1: #232946;
-    --bg-dark-2: #2d2948;
-    --component-color: #B8C1EC;
-    --text-color-light: #FFFFFE;
-    --secondary-font-family: 'Ribeye Marrow', cursive;
-    --primary-font-family: 'Rosario', sans-serif;
-    --link-color: #eebbc3;
+  --contrast-color: #e53170;
+  --bg-dark-1: #232946;
+  --bg-dark-2: #2d2948;
+  --component-color: #b8c1ec;
+  --text-color-light: #fffffe;
+  --secondary-font-family: "Ribeye Marrow", cursive;
+  --primary-font-family: "Rosario", sans-serif;
+  --link-color: #eebbc3;
 
+  //RESPONSIVE BREAKPOINTS. How to calculate : Xpx / 16
+  --desktop: 112.5em; //1800px;
+  --mobile-small: 20em; //320px
+  --mobile: 37.5em; //500px
+  --tablet-small: 45.625em; //730px
+  --tablet: 56.25em; //900px
+  --laptop-small: 75em; //1200px;(default range)
+  --laptop-big: 81.25em; //1300px
 }
 
-html{
-    box-sizing: border-box;
-    font-size: 62.5%; /*10px*/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /*10px. Root font size is 16px i.e 100%*/
+
+  //changing root font size of screen sizes. NB: Base styling is laptop screensize centric.
+  @media only screen and (min-width: 1500px) {
+    font-size: 100%; //16px
+  }
+  @media only screen and (max-width: 500px) {
+    font-size: 50%; //1rem = 8px
+  }
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   color: var(--text-color-light);
   font-family: var(--primary-font-family);
   font-size: 1.8rem;
-
 }
 
-a{
+a {
   text-decoration: none;
-  color: var(--text-color-light); 
+  color: var(--text-color-light);
+}
+
+h2{
+  margin-top: 3rem;
 }
 
 /*Utility Classes*/
-.u-margin-top-s{
+.u-margin-top-s {
   margin-top: 2rem;
 }
-.u-center{
+.u-center {
   text-align: center;
 }
-
-
 
 /*general Classes*/
 
-.nav, .header,  .footer{
-  padding: 0 10rem;
+.nav,
+.header,
+.footer {
+  padding: 2rem 10rem;
+
+  @media only screen and (max-width: 1000px) {
+    padding: 2rem 5rem;
+  }
+
+  @media only screen and (max-width: 500px) {
+    padding: 1rem 2rem;
+  }
 }
 
-.container{
+.info, .contact, .projects{
+  padding: 5rem 10rem;
+
+  & > div{
+    width: 38vw;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    padding: 5rem 5rem;
+  }
+
+  @media only screen and (max-width: 770px) {
+    padding: 2rem 5rem 8.5rem 5rem;
+
+    & > div{
+      width: 100vw;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    padding: 2rem 3rem 8.5rem 3rem;
+
+  }
+}
+
+.container {
   background-color: var(--bg-dark-2);
   margin: 0 0;
   padding: 5rem 10rem;
-  border-bottom: .5px solid var( --component-color);
-  border-top: .5px solid var( --component-color);
+  border-bottom: 0.5px solid var(--component-color);
+  border-top: 0.5px solid var(--component-color);
   min-height: 80vh;
-  
+
+  @media only screen and (max-width: 900px) {
+    padding: 5rem 5rem;
+  }
+
+  @media only screen and (max-width: 500px) {
+    padding: 5rem 2rem;
+  }
 }
 
-.flex-container{
+.flex-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media only screen and (max-width: 770px) {
+    flex-direction: column;
+  }
 }
 
-.not-found{
+.not-found {
   text-align: center;
 
-  h1{
+  h1 {
     font-size: 7rem;
     font-family: var(--secondary-font-family);
     margin: 2rem 0;
   }
 
-  p{
+  p {
     font-style: italic;
   }
 
-  &__emoji{
+  &__emoji {
     display: block;
     font-size: 20rem;
   }
 }
 
-.title{
-  font-family: 'Ribeye Marrow', cursive;
+.title {
+  font-family: "Ribeye Marrow", cursive;
   font-size: 3.4rem;
   line-height: 67px;
   text-transform: uppercase;
   text-align: center;
-  
+}
+
+.inline-link{
+  color: var(--link-color);
+  font-style: italic;
 }
