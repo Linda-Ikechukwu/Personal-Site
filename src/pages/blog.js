@@ -19,7 +19,9 @@ const Blog = (props) => {
       />
       <div className="container flex-container">
         <Posts />
-        <TagList/>
+        <div className="sidebar">
+          <TagList/>
+        </div>
       </div>
     </Layout>
   )

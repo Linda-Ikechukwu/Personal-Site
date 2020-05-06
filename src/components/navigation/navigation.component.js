@@ -8,18 +8,30 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import './navigation.styles.scss'
 
 const Navigation = () => {
-  return (
-      <div className="nav"> 
-           <div className="nav__right">
-               <span className="nav__item"><Link to="/">Home</Link></span>
-               <span className="nav__item"><Link to="/blog">Blog</Link></span>
+
+    function toggleMode() {
+        var element = document.getElementById("body");
+        element.classList.toggle("light-mode");
+    }
+
+    return (
+        <div className="nav">
+            <div className="nav__right">
+                <span className="nav__item"><Link to="/">Home</Link></span>
+                <span className="nav__item"><Link to="/blog">Blog</Link></span>
+            </div>
+            <div className="nav__left">
+                <span className="nav__item">
+                    <label class="switch">
+                        <input type="checkbox" onClick={toggleMode}></input>
+                        <span class="slider"></span>
+                    </label>
+               </span>
+                <span className="nav__item"><a href="https://github.com/Linda-Ikechukwu"><GitHubIcon style={{ fontSize: 22 }} /></a></span>
+                <span className="nav__item"><a href="/https://twitter.com/_MsLinda"><TwitterIcon style={{ fontSize: 22 }} /></a></span>
+                <span className="nav__item"><a href="/https://www.linkedin.com/in/linda-ikechukwu/"><LinkedInIcon style={{ fontSize: 22 }} /></a></span>
            </div>
-           <div className="nav__left">
-               <span className="nav__item"><a href="https://github.com/Linda-Ikechukwu"><GitHubIcon style={{ fontSize: 22 }} /></a></span>
-               <span className="nav__item"><a href="/https://twitter.com/_MsLinda"><TwitterIcon style={{ fontSize: 22 }}/></a></span>
-               <span className="nav__item"><a href="/https://www.linkedin.com/in/linda-ikechukwu/"><LinkedInIcon style={{ fontSize: 22 }}/></a></span>
-           </div>
-      </div>
+        </div>
   )
 }
 

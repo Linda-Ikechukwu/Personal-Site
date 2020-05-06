@@ -6,7 +6,7 @@ import "./layout.scss"
 
 const Layout = (props) => {
   return (
-    <div className="body">
+    <div id="body">
       <Navigation />
       {props.children}
       <Footer />

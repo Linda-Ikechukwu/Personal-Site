@@ -124,7 +124,10 @@ const BlogPost = props => {
                         <DiscussionEmbed {...disqusConfig} />
                     </div>
                 </div>
-                <AdComponent />
+                <div className="sidebar">
+                   <AdComponent />
+                </div>
+               
             </div>
         </Layout>
     )

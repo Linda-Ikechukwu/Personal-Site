@@ -14,19 +14,12 @@
   --primary-font-family: "Rosario", sans-serif;
   --link-color: #eebbc3;
 
-  //RESPONSIVE BREAKPOINTS. How to calculate : Xpx / 16
-  --desktop: 112.5em; //1800px;
-  --mobile-small: 20em; //320px
-  --mobile: 37.5em; //500px
-  --tablet-small: 45.625em; //730px
-  --tablet: 56.25em; //900px
-  --laptop-small: 75em; //1200px;(default range)
-  --laptop-big: 81.25em; //1300px
 }
 
 html {
   box-sizing: border-box;
   font-size: 62.5%; /*10px. Root font size is 16px i.e 100%*/
+  scroll-behavior: smooth;
 
   //changing root font size of screen sizes. NB: Base styling is laptop screensize centric.
   @media only screen and (min-width: 1500px) {
@@ -160,4 +153,78 @@ h2{
 .inline-link{
   color: var(--link-color);
   font-style: italic;
+}
+
+.sidebar{
+  position: relative;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+  }
+}
+
+.dark-mode{
+
+  color: var(--text-color-light);
+
+  .nav, .header, .projects{
+    background-color: var(--bg-dark-1);
+  }
+
+  .footer, .info, .contact {
+    background-color: var(--bg-dark-2);
+  }
+}
+
+.light-mode{
+  color: var(--bg-dark-1);
+
+  a{
+    color: var(--bg-dark-1);
+  }
+
+  .button a{
+    color: var( --text-color-light);
+
+    
+  }
+
+  button:hover{
+    a{
+      color: var(--bg-dark-1);
+    }
+  }
+
+  .nav, .header, .projects{
+    background-color: var( --text-color-light);
+  }
+
+  .footer, .info, .contact {
+    background-color:  rgba(229, 49, 112,0.5);
+  }
+
+  .header__image {
+    background: radial-gradient(var(--contrast-color) 1px, var(--text-color-light) 1px);
+  }
+
+  .input, .textarea{
+    border: 2px solid var(--bg-dark-1);
+    color: var(--bg-dark-1);
+  }
+
+  .input:focus, .textarea:focus{
+    border: 2px solid var(--bg-dark-2);
+  }
+
+  .container{
+    color: var(--bg-dark-1);
+    background-color: var( --text-color-light);
+  }
+
+  .container + .footer{
+    background-color: var( --text-color-light);
+  }
 }

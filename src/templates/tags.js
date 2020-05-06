@@ -102,7 +102,7 @@ const Tags = ({ pageContext, data }, props) => {
                     })}
                 </ul>
                 </div>
-                <div>
+                <div className="sidebar">
                     <TagList/>
                     <AdComponent/>
                 </div>
