@@ -1,15 +1,59 @@
 .adComponent{
    border: 1px solid var( --component-color);
    border-radius: 1rem; 
-   width: 20vw;
-   height: 30rem;
+   width: 100%;
+   min-height: 20rem;
    padding: 1rem;
-   box-shadow: 1px 3px 4px rgba(17, 16, 16, 0.6);
+   box-shadow: 0 .5rem 1rem  rgba(17, 16, 16, 0.6);
    margin-top: 3rem;
-   position: fixed;
 
-   @media only screen and (max-width: 770px) {
+   & img{
+      height: 10rem;
       width: 100%;
-      position: relative;
+
+   }
+
+   & p{
+      text-transform: capitalize;
+      font-size: 1.5rem;
+
+      & > span{
+         color: var(--link-color);
+         text-transform: uppercase;
+      }
+   }
+
+   & button{
+      margin-top: 1.5rem;
+      min-height: 8.5rem;
+      margin-bottom: 1.5rem;
+
+      &:hover{
+         background: var(--bg-dark-2);
+      }
+   }
+
+   @media only screen and (max-width: 900px) {
+      width: 100%;
+      margin-top: 6rem;
+      margin-bottom: 6rem;
+
+      & img{
+         height: 10rem;
+         width: 40%;
+         margin: 0 30%;
+   
+      }
+      & p{
+         font-size: 1.8rem;
+
+         
+      }
+      & button{
+         position: relative;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+
    }
 }

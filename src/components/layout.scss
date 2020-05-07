@@ -104,7 +104,7 @@ h2{
   border-top: 0.5px solid var(--component-color);
   min-height: 80vh;
 
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 1000px) {
     padding: 5rem 5rem;
   }
 
@@ -118,7 +118,7 @@ h2{
   flex-direction: row;
   justify-content: space-between;
 
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 900px) {
     flex-direction: column;
   }
 }
@@ -157,25 +157,14 @@ h2{
 
 .sidebar{
   position: relative;
-  width: 20vw;
+  width: 25vw;
   display: flex;
   flex-direction: column;
+  margin-top: 10rem;
 
   @media only screen and (max-width: 900px) {
     width: 100%;
-  }
-}
-
-.dark-mode{
-
-  color: var(--text-color-light);
-
-  .nav, .header, .projects{
-    background-color: var(--bg-dark-1);
-  }
-
-  .footer, .info, .contact {
-    background-color: var(--bg-dark-2);
+    margin-top: 5rem;
   }
 }
 
@@ -208,6 +197,12 @@ h2{
 
   .header__image {
     background: radial-gradient(var(--contrast-color) 1px, var(--text-color-light) 1px);
+    background-size: 15px 15px;
+
+    @media only screen and (min-width: var(--desktop)){
+      background: radial-gradient( var( --contrast-color) 2px, var(--text-color-light) 2px);
+      background-size: 18px 18px;
+    }
   }
 
   .input, .textarea{
@@ -227,4 +222,19 @@ h2{
   .container + .footer{
     background-color: var( --text-color-light);
   }
+
+  .adComponent{
+    & button{
+       &:hover{
+         background: var(--text-color-light);
+       }
+    }
+
+    & p{
+      & > span{
+        color: var(--contrast-color);
+      }
+    }
+  }
 }
+

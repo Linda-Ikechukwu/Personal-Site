@@ -125,7 +125,14 @@ const BlogPost = props => {
                     </div>
                 </div>
                 <div className="sidebar">
-                   <AdComponent />
+                   <AdComponent 
+                      image = "/ztm.png"
+                      alt = "Zero to Mastery Academy Logo"
+                      description="Avoid Uncertainties and the Tutorial loophole. Learn to Code the right way, become a fullstack developer and land a h
+                                   igh paying job in less than a year for less than $300. Use my coupon code <span>FRIENDS10</span> for 10% off membership fee"
+                      link="https://academy.zerotomastery.io/p/academy?affcode=441520_tjxt0mkj"
+                      cto="Join the ZTM Academy Now!"
+                   ></AdComponent>
                 </div>
                
             </div>
