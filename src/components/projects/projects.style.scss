@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
+    position: relative;
 
 
     &__title{
@@ -30,10 +31,6 @@
         }
     }
 
-    &__list{
-        background-color: var(--component-color);
-        border-radius: 5px;
-        height: 70vh;
-    }
+    
 
 }

@@ -5,14 +5,14 @@
 }
 
 :root {
-  --contrast-color: #e53170;
+  --contrast-color: rgb(229, 49, 112);
   --bg-dark-1: #232946;
   --bg-dark-2: #2d2948;
   --component-color: #b8c1ec;
   --text-color-light: #fffffe;
   --secondary-font-family: "Ribeye Marrow", cursive;
   --primary-font-family: "Rosario", sans-serif;
-  --link-color: #eebbc3;
+  --link-color: rgb(238, 187, 195);
 
 }
 
@@ -157,7 +157,7 @@ h2{
 
 .sidebar{
   position: relative;
-  width: 25vw;
+  width: 22vw;
   display: flex;
   flex-direction: column;
   margin-top: 10rem;
@@ -167,6 +167,27 @@ h2{
     margin-top: 5rem;
   }
 }
+
+.tags{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+ .tag{
+     background-color: var(--component-color);
+     box-shadow: 0 1.5px 4px  rgba(17, 16, 16, 0.6);
+     padding: .8rem;
+     margin: 1rem 5px;
+     border-radius: 6px;
+     cursor: pointer;
+
+      & a{
+         color: var(--bg-dark-1);
+      }
+}
+
+/*Alternate styles for light mode*/
 
 .light-mode{
   color: var(--bg-dark-1);
@@ -187,7 +208,7 @@ h2{
     }
   }
 
-  .nav, .header, .projects{
+  .nav, .shape, .projects{
     background-color: var( --text-color-light);
   }
 
@@ -199,10 +220,6 @@ h2{
     background: radial-gradient(var(--contrast-color) 1px, var(--text-color-light) 1px);
     background-size: 15px 15px;
 
-    @media only screen and (min-width: var(--desktop)){
-      background: radial-gradient( var( --contrast-color) 2px, var(--text-color-light) 2px);
-      background-size: 18px 18px;
-    }
   }
 
   .input, .textarea{

@@ -2,7 +2,7 @@
 
 .header{
     min-height: 88vh;
-    background-color: var(--bg-dark-1);
+    background-color: transparent;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -12,7 +12,12 @@
     padding-bottom: 5rem;
     position: absolute;
     top: 0;
-    z-index: -100;
+    z-index: 100;
+
+    @media only screen and (max-width: 280px) {
+        height: 90rem;
+        top: 17rem;
+    }
 
     &__left, &__right{
         width: 40vw;
@@ -35,6 +40,10 @@
     &__description{
         font-size: 1.8rem;
         margin-top: 1.5rem;
+
+        @media only screen and (max-width: 280px) {
+            text-align: center;
+        }
     }
 
     & h1, & h2, & h3{
@@ -49,11 +58,6 @@
         width: 100%;
         height: 40rem;
         position: relative;
-
-        @media only screen and (min-width: var(--desktop)){
-            background: radial-gradient( var( --contrast-color) 2px, var(--bg-dark-1) 2px);
-            background-size: 18px 18px;
-        }
         
         & img{
             border-radius: 50%;
@@ -103,17 +107,27 @@
             width: 100%;
         }
 
+        &__left{
+            padding-bottom: 10rem;
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
         &__title h1{
             font-size: 5rem;
             line-height: 40px;
             margin-top: 4rem;
             margin-bottom: 2rem;
+            text-align: center;
         }
     
         &__subtitle h2{
             font-size: 2.5rem;
             line-height: 20px;
-    
+            text-align: center;
         }
 
     
@@ -125,6 +139,11 @@
     position: relative;
     height: 88vh;
     overflow: hidden;
+    background-color: var(--bg-dark-1);
+
+    @media only screen and (max-width: 770px) {
+        height: 95rem;
+    }
 }
 
 .random-shape:after {
