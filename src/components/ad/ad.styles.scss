@@ -4,7 +4,7 @@
    width: 100%;
    min-height: 20rem;
    padding: 1rem;
-   box-shadow: 0 .5rem 1rem  rgba(17, 16, 16, 0.6);
+   box-shadow: 0 1px 2px  rgba(17, 16, 16, 0.6);
    margin-top: 3rem;
 
    & img{
@@ -14,7 +14,6 @@
    }
 
    & p{
-      text-transform: capitalize;
       font-size: 1.5rem;
 
       & > span{

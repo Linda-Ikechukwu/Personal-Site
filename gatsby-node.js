@@ -1,7 +1,7 @@
 const path = require("path");
 const _ = require("lodash");
 
-//Generate slug for bog posts path.
+//Generate slug for blog posts path.
 exports.onCreateNode = ({ node, actions }) => {
     const { createNodeField } = actions; let slug;
     if (node.internal.type === "MarkdownRemark") {

@@ -24,7 +24,7 @@ const ProjectItem = ({active, title, projectLink, description, image, techsUsed,
                    
                }
            </div>
-           <div className="github"><Button small><a href={githubLink}>See Github</a></Button></div>
+           <div className="github"><Button small><a target="blank" href={githubLink}>See Github</a></Button></div>
 
         </div>
     )

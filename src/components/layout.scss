@@ -104,6 +104,10 @@ h2{
   border-top: 0.5px solid var(--component-color);
   min-height: 80vh;
 
+  @media only screen and (max-width: 1300px) {
+    padding: 5rem 8rem;
+  }
+
   @media only screen and (max-width: 1000px) {
     padding: 5rem 5rem;
   }
@@ -150,7 +154,7 @@ h2{
   text-align: center;
 }
 
-.inline-link{
+.inline-link {
   color: var(--link-color);
   font-style: italic;
 }
@@ -192,14 +196,30 @@ h2{
 .light-mode{
   color: var(--bg-dark-1);
 
-  a{
-    color: var(--bg-dark-1);
-  }
-
   .button a{
     color: var( --text-color-light);
+  }
 
-    
+  .post__title {
+    a {
+      color: var(--bg-dark-1);
+    }
+  }
+
+  .nav__item a{
+    color: var(--bg-dark-1);
+
+    &:hover{
+       color: var(--link-color);
+    }
+  }
+
+  .post-body__links  a{
+    color: black;
+
+    &:hover{
+      color: black;
+    }
   }
 
   button:hover{
@@ -213,22 +233,14 @@ h2{
   }
 
   .footer, .info, .contact {
-    background-color:  rgba(229, 49, 112,0.5);
+    color: var( --text-color-light);
+    background-color: var(--bg-dark-2); 
   }
 
   .header__image {
-    background: radial-gradient(var(--contrast-color) 1px, var(--text-color-light) 1px);
+    background: radial-gradient(var(--bg-dark-1) 1px, var(--text-color-light) 1px);
     background-size: 15px 15px;
 
-  }
-
-  .input, .textarea{
-    border: 2px solid var(--bg-dark-1);
-    color: var(--bg-dark-1);
-  }
-
-  .input:focus, .textarea:focus{
-    border: 2px solid var(--bg-dark-2);
   }
 
   .container{
@@ -238,6 +250,7 @@ h2{
 
   .container + .footer{
     background-color: var( --text-color-light);
+    color: var(--bg-dark-1);
   }
 
   .adComponent{

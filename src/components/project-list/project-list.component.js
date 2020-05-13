@@ -38,7 +38,13 @@ class ProjectList extends React.Component{
                   githubLink="https://github.com/Linda-Ikechukwu/Official-Website"
                 />
                 <ProjectItem
-                   title='Project 2'
+                   title='Trivia Quiz App (PWA)'
+                   projectLink=" https://linda-ikechukwu.github.io/Simple-Quiz-App/src/index.html"
+                   description="<p>The trivia quiz app is a PWA that can be installed from the browser like a native app. It has four categories with 20 random questions for each round and a countdown timer.</p> 
+                   <p>The web appmakes use of localstorage to store user highscores, ifo and state</p>"
+                   image="/trivaapp.png"
+                   techsUsed={['HTML', 'CSS','JavaScript','Service Workers' ]}
+                   githubLink=" https://github.com/Linda-Ikechukwu/Simple-Quiz-App"
                 />
                 <ProjectItem
                    title='Project 3'
@@ -51,4 +57,4 @@ class ProjectList extends React.Component{
     
 }
 
-export default ProjectList
+export default ProjectList;

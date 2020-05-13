@@ -29,6 +29,11 @@
 .post-body{
     width: 60vw;
 
+    &__content, &__share-buttons, &__links, &__comment{
+        border-bottom: 0.2px solid var(--component-color);
+        padding-bottom: 2rem;
+    }
+
     &__info{
          text-align: center;
          margin-bottom: 3rem;
