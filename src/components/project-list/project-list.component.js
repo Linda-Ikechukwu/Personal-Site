@@ -40,15 +40,30 @@ class ProjectList extends React.Component{
                 <ProjectItem
                    title='Trivia Quiz App (PWA)'
                    projectLink=" https://linda-ikechukwu.github.io/Simple-Quiz-App/src/index.html"
-                   description="<p>The trivia quiz app is a PWA that can be installed from the browser like a native app. It has four categories with 20 random questions for each round and a countdown timer.</p> 
-                   <p>The web appmakes use of localstorage to store user highscores, ifo and state</p>"
+                   description="<p>The trivia quiz app is a fully offline app that can be installed from the browser like a native app. It features four categories each with 20 random questions for each round and a timer of 20 seconds for each round.</p> 
+                   <p>The app makes use of localstorage to store user highscores, info and state.</p>"
                    image="/trivaapp.png"
-                   techsUsed={['HTML', 'CSS','JavaScript','Service Workers' ]}
+                   techsUsed={['HTML', 'CSS','JavaScript','Service Workers', 'Local Storage' ]}
                    githubLink=" https://github.com/Linda-Ikechukwu/Simple-Quiz-App"
                 />
                 <ProjectItem
-                   title='Project 3'
+                   title='Money Paddy (PWA)'
+                   projectLink=" https://linda-ikechukwu.github.io/MoneyPaddy/dist/index.html"
+                   description="<p>Money Paddy is an income and expense logging app. The app incoporates indexed DB and Local Storage to persist data so the user can have a fully offline experience after installation. </p> 
+                   <p>It makes use of the Push and Notification Web APIs alongside firebase functions to implement Push Notifications and background syncing.</p>"
+                   image="/moneypaddy.png"
+                   techsUsed={['HTML', 'CSS','JavaScript','Webpack','Babel','Service Workers', 'Local Storage', 'PostCSS', 'Firebase', 'Indexed DB', 'Push API', 'Notifications API' ]}
+                   githubLink=" https://github.com/Linda-Ikechukwu/MoneyPaddy"
                 />
+                 <ProjectItem
+                   title='Newsify'
+                   projectLink=" https://linda-ikechukwu.github.io/MoneyPaddy/dist/index.html"
+                   description="<p>This project is a news website powered by the NEWS API. It is built on Express and uses EJS for templating. The app curates news from thousand of sources, which can then be filtered in terms of category or keyword.</p> "
+                   image="/newsify.png"
+                   techsUsed={['HTML', 'CSS','Node JS','Express','EJS']}
+                   githubLink=" https://github.com/Linda-Ikechukwu/Newsify"
+                />
+                
                 <button className="next-button">&#10095;</button>
             </div>
         )

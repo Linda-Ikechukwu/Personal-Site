@@ -27,7 +27,7 @@ const TagsList = () => {
     )
     return (
         <div className="taglist">
-            <h2>Categories : </h2>
+            <h2>Topics : </h2>
             <ul className="tags">
                 {data.allMarkdownRemark.group.map(tag => (
                     <li key={tag.fieldValue} className="tag">

@@ -100,20 +100,25 @@ h2{
   background-color: var(--bg-dark-2);
   margin: 0 0;
   padding: 5rem 10rem;
+  padding-top: 0;
   border-bottom: 0.5px solid var(--component-color);
   border-top: 0.5px solid var(--component-color);
   min-height: 80vh;
 
+
   @media only screen and (max-width: 1300px) {
     padding: 5rem 8rem;
+    padding-top: 0;
   }
 
   @media only screen and (max-width: 1000px) {
     padding: 5rem 5rem;
+    padding-top: 0;
   }
 
   @media only screen and (max-width: 500px) {
     padding: 5rem 2rem;
+    padding-top: 0;
   }
 }
 
@@ -194,6 +199,7 @@ h2{
 /*Alternate styles for light mode*/
 
 .light-mode{
+
   color: var(--bg-dark-1);
 
   .button a{
@@ -206,7 +212,7 @@ h2{
     }
   }
 
-  .nav__item a{
+  .nav__item a, .info__list h4 a{
     color: var(--bg-dark-1);
 
     &:hover{
@@ -233,8 +239,7 @@ h2{
   }
 
   .footer, .info, .contact {
-    color: var( --text-color-light);
-    background-color: var(--bg-dark-2); 
+    background-color: #f7f7f7; 
   }
 
   .header__image {
@@ -265,6 +270,10 @@ h2{
         color: var(--contrast-color);
       }
     }
+  }
+
+  .form input, .form textarea{
+    border: 2px solid var(--bg-dark-1);
   }
 }
 
