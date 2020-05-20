@@ -17,6 +17,7 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
+        tags
         keywords
         date(formatString: "DD MMMM, YYYY")
         featured {
@@ -41,11 +42,11 @@ export const query = graphql`
 
 const BlogPost = props => {
 
-    const disqusTitle = props.data.markdownRemark.frontmatter.title;
-
     //For the social share buttons
-    const title = "Great Article by Linda Ikechukwu on " + props.data.markdownRemark.frontmatter.title;
+    const title = "Read this Article by Linda Ikechukwu on " + props.data.markdownRemark.frontmatter.title;
     const url = props.location.href;
+    const twitterHandle = "_MsLinda";
+    const tags = props.data.markdownRemark.frontmatter.tags;
 
     //For the previous and next blog post link
     const prev = props.pageContext.prev ?
@@ -61,6 +62,10 @@ const BlogPost = props => {
             title: props.pageContext.next.frontmatter.title
         }
         : null
+    
+    //For disquss comments
+    const disqusTitle = props.data.markdownRemark.frontmatter.title;
+    console.log(disqusTitle)
 
     const disqusConfig = {
         shortname: process.env.GATSBY_DISQUS_NAME,
@@ -78,8 +83,9 @@ const BlogPost = props => {
                 keywords={props.data.markdownRemark.frontmatter.keywords}
                 pathname={props.location.pathname}
             />
+            <BlogTagline/>
             <div className="container">
-                <BlogTagline/>
+                
                 <div className="flex-container">
                     <div className="post-body">
 
@@ -108,7 +114,8 @@ const BlogPost = props => {
                         >
                         </div>
                         <div className="post-body__share-buttons">
-                            <span>Share this Post:</span> <ShareButtons title={title} url={url} />
+                            <span>If you found this article helpful, Share it:</span> 
+                            <ShareButtons title={title} url={url} twitterHandle={twitterHandle} tags={tags}/>
                         </div>
                         <div className="post-body__links">
                             {prev && (
@@ -133,7 +140,7 @@ const BlogPost = props => {
                             image="/ztm.png"
                             alt="Zero to Mastery Academy Logo"
                             description="Avoid Uncertainties and the Tutorial loophole. Learn to Code the right way, become a fullstack developer and land a high 
-  paying job in less than a year for less than $300. Use my coupon code <span>FRIENDS10</span> for 10% off membership fee."
+                               paying job in less than a year for less than $300. Use my coupon code <span>FRIENDS10</span> for 10% off membership fee."
                             link="https://academy.zerotomastery.io/p/academy?affcode=441520_tjxt0mkj"
                             cto="Join the ZTM Academy Now!"
                         ></AdComponent>

@@ -1,7 +1,7 @@
 .project{
     background-color: var(--component-color);
     border-radius: 5px;
-    height: 100%f;
+    height: 100%;
     width: 100%;
     padding: 2rem;
     padding-bottom: 4rem;
@@ -9,7 +9,7 @@
     position: relative;
     right: -1000px;
     -webkit-animation: slide 0.5s forwards;
-    -webkit-animation-delay: 2s;
+    -webkit-animation-delay: .1s;
     animation: slide 0.2s forwards;
     animation-delay: .1s;
     color: var(--bg-dark-1);

@@ -4,9 +4,14 @@ import Button from "../button/button.component";
 
 import "./project-item.style.scss"
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
+
 const ProjectItem = ({active, title, projectLink, description, image, techsUsed, githubLink}) => {
     return (
-        <div className={`project ${active ? 'active' : ' '}`}>
+        <div className={`project ${active ? 'active' : ' '}`} data-aos="zoom-in-left">
            <h5 className="project__title "><a target="blank" href={projectLink}>{title}</a></h5>
            <div className="project__description" dangerouslySetInnerHTML={{ __html: description }}></div>
            <a target="blank" href={projectLink}><img alt="" src={image}></img></a>

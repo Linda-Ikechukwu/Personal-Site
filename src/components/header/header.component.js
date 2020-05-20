@@ -21,7 +21,7 @@ const Header = () => {
       }
       <div className="header">
 
-        <div className="header__left">
+        <div className="header__left animate__animated animate__bounce">
           <div className="header__title">
             <h1>Hi, I’m Linda</h1>
           </div>
@@ -38,6 +38,7 @@ const Header = () => {
 
           <Button><a href="#projects">See Sample Projects</a></Button>
         </div>
+
         <div className="header__right">
           <div className="header__image">
             <img src="https://res.cloudinary.com/lindadxk/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1588042230/me.jpg"

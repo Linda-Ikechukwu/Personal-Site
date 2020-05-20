@@ -59,7 +59,7 @@ const Tags = ({ pageContext, data }, props) => {
     return (
         <Layout>
             <MetaData
-                title="Linda's Blog"
+                title="Codes With Linda"
                 description={`Explore Articles on ${tag} written by Linda Ikechukwu`}
             />
             <div className="container flex-container">

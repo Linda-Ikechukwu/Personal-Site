@@ -8,7 +8,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `Linda Ikechukwu`,
-    description: `Linda Ikechukwu is a driven Community Manager, a Software Developer focused on Frontend and Cloud Technologies from Lagos, Nigeria`,
+    description: `Welcome to Linda Ikechukwu's site. Linda is a driven Community Manager, a Software Developer focused on Frontend and Cloud Technologies from Lagos, Nigeria`,
     author: `Linda Ikechukwu`,
     keywords: `Linda Ikechukwu, Nigerian Female Software Developer, PH School Of AI, Frontend Developer, Javascript Developer in Nigeria `,
     siteUrl: `https://your-site.com/`

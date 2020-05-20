@@ -36,7 +36,7 @@ function MetaData({ description, lang, meta, image: metaImage, title, pathname, 
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+      titleTemplate={`%s`}
       link={
         canonical
           ? [
