@@ -10,7 +10,7 @@ import 'aos/dist/aos.css';
 const Info = () => {
     return (
         <div className="info" >
-            <div className="info__community" data-aos="zoom-in-right">
+            <div className="info__community" >
                 <h2 className="title">Community</h2>
                 <p>
                     I believe technology can change lives.
@@ -28,7 +28,7 @@ const Info = () => {
                     </li>
                 </ul>
             </div>
-            <div className="info__speaking" data-aos="zoom-in-left">
+            <div className="info__speaking" >
                 <h2 className="title">Speaking</h2>
                 <p>I enjoy sharing knowledge and experiences as I learn.
                 If you'll like me to speak at your event, please <a className="inline-link" href="#contact">send me a message</a>

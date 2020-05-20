@@ -11,7 +11,7 @@ import 'aos/dist/aos.css';
 
 const ContactForm = () => {
     return (
-        <form  action="https://formspree.io/xrgygkey" method="POST"  data-aos="zoom-out">
+        <form  action="https://formspree.io/xrgygkey" method="POST"  >
             <div className="form">
                 <div className="form__left">
                     <input className="input" type="text" name="Name" placeholder="Your Name" required></input>

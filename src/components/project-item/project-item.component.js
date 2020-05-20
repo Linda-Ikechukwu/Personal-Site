@@ -11,7 +11,7 @@ import 'aos/dist/aos.css';
 
 const ProjectItem = ({active, title, projectLink, description, image, techsUsed, githubLink}) => {
     return (
-        <div className={`project ${active ? 'active' : ' '}`} data-aos="zoom-in-left">
+        <div className={`project ${active ? 'active' : ' '}`} >
            <h5 className="project__title "><a target="blank" href={projectLink}>{title}</a></h5>
            <div className="project__description" dangerouslySetInnerHTML={{ __html: description }}></div>
            <a target="blank" href={projectLink}><img alt="" src={image}></img></a>
