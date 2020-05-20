@@ -21,7 +21,7 @@ const Header = () => {
       }
       <div className="header">
 
-        <div className="header__left animate__animated animate__bounce">
+        <div className="header__left">
           <div className="header__title">
             <h1>Hi, I’m Linda</h1>
           </div>

@@ -7,7 +7,7 @@ import "./project-item.style.scss"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-AOS.init();
+//AOS.init();
 
 const ProjectItem = ({active, title, projectLink, description, image, techsUsed, githubLink}) => {
     return (
