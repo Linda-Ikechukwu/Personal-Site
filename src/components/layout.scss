@@ -13,7 +13,8 @@
   --secondary-font-family: "Ribeye Marrow", cursive;
   --primary-font-family: "Rosario", sans-serif;
   --link-color: rgb(238, 187, 195);
-  --bg-white:#f7f7f7;
+  --bg-white-1:#fdf9f9;
+  --bg-white-2:#f8edeb;
 
 }
 
@@ -79,7 +80,7 @@ h2{
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   
-  padding: 5rem 10rem;
+  padding: 5rem 10rem 8rem;
 
   & > div{
     width: 38vw;
@@ -137,6 +138,13 @@ h2{
   }
 }
 
+.reverse-flex{
+
+  @media only screen and (max-width: 900px) {
+    flex-direction: column-reverse;
+  }
+}
+
 .not-found {
   text-align: center;
 
@@ -178,7 +186,7 @@ h2{
 
   @media only screen and (max-width: 900px) {
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 0;
   }
 }
 
@@ -201,6 +209,7 @@ h2{
       }
 }
 
+
 /*Alternate styles for light mode*/
 
 .light-mode{
@@ -220,7 +229,7 @@ h2{
     }
   }
 
-  .nav__item a, .info__list h4 a{
+  .nav__item a, .info__list h4 a, .not-found p a{
     color: var(--bg-dark-1);
 
     &:hover{
@@ -243,26 +252,26 @@ h2{
   }
 
   .nav, .shape, .projects{
-    background-color: var(--bg-white);
+    background-color: var(--bg-white-1);
   }
 
-  .footer, .info, .contact {
-    background-color: var(--component-color); 
+  .nav.nav-dark,.footer, .info, .contact {
+    background-color: var(--bg-white-2); 
   }
 
   .header__image {
-    background: radial-gradient(var(--bg-dark-1) 1px, var(--bg-white) 1px);
+    background: radial-gradient(var(--contrast-color) 1px, var(--bg-white-1) 1px);
     background-size: 15px 15px;
 
   }
 
   .container{
     color: var(--bg-dark-1);
-    background-color: var( --bg-white);
+    background-color: var( --bg-white-1);
   }
 
   .container + .footer{
-    background-color: var( --bg-white);
+    background-color: var( --bg-white-1);
     color: var(--bg-dark-1);
   }
 
@@ -291,18 +300,17 @@ h2{
     border: 2px solid var(--contrast-color);
   }
 
-  
-
-
   .blog-tagline{
-    background-color: var(--bg-white);
+    background-color: var(--bg-white-1);
     color: var(--bg-dark-1);
     padding: 5px;
     border-top: 0.5px solid var(--component-color);
     /* & p{
         
     } */
-}
+  }
+
+  
 }
 
 //ANIMATION FOR SLIDE UPS

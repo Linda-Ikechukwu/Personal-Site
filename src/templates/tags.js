@@ -116,6 +116,8 @@ const Tags = ({ pageContext, data }, props) => {
         </Layout>
     )
 }
+
+
 Tags.propTypes = {
     pageContext: PropTypes.shape({
         tag: PropTypes.string.isRequired,

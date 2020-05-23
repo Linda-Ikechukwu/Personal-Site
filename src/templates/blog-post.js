@@ -65,7 +65,6 @@ const BlogPost = props => {
     
     //For disquss comments
     const disqusTitle = props.data.markdownRemark.frontmatter.title;
-    console.log(disqusTitle)
 
     const disqusConfig = {
         shortname: process.env.GATSBY_DISQUS_NAME,
@@ -75,7 +74,7 @@ const BlogPost = props => {
 
     return (
 
-        <Layout>
+        <Layout dark>
             <MetaData
                 title={props.data.markdownRemark.frontmatter.title}
                 description={props.data.markdownRemark.frontmatter.description || props.data.markdownRemark.excerpt}

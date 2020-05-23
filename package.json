@@ -14,6 +14,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@deckdeckgo/highlight-code": "^1.1.0",
     "@material-ui/core": "^4.9.12",
     "@material-ui/icons": "^4.9.1",
     "animate.css": "^4.1.0",
@@ -30,9 +31,10 @@
     "gatsby-plugin-sharp": "^2.6.0",
     "gatsby-plugin-sitemap": "^2.4.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-remark-highlight-code": "^1.4.0",
     "gatsby-remark-images": "^3.3.0",
     "gatsby-source-filesystem": "^2.3.0",
-    "gatsby-transformer-remark": "^2.8.0",
+    "gatsby-transformer-remark": "^2.8.13",
     "gatsby-transformer-sharp": "^2.5.0",
     "node-sass": "^4.14.1",
     "react": "^16.12.0",

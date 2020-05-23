@@ -4,6 +4,9 @@ import ProjectItem from "../project-item/project-item.component"
 
 import "./project-list.styles.scss"
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 class ProjectList extends React.Component{
 
     componentDidMount(){
@@ -21,13 +24,22 @@ class ProjectList extends React.Component{
                index++
            }
         })
+
+        this.aos = AOS;
+        this.aos.init();
+    
+        
+    }
+
+    componentDidUpdate() {
+        this.aos.refresh();
     }
 
     render(){
         
     
         return (
-            <div className="projects-list">
+            <div className="projects-list" data-aos="zoom-in-right">
                 <ProjectItem active 
                   title='Port Harcourt School of AI'
                   projectLink="https://phcschoolofai.org/"

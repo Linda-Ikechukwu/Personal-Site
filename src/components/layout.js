@@ -4,11 +4,11 @@ import Footer from "./footer/footer.component";
 
 import "./layout.scss"
 
-const Layout = (props) => {
+const Layout = ({children, dark}) => {
   return (
     <div id="body">
-      <Navigation />
-      {props.children}
+      {dark ? <Navigation dark/> : <Navigation />}
+      {children}
       <Footer />
     </div>
   )

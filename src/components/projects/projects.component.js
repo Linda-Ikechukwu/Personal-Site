@@ -9,16 +9,28 @@ import 'aos/dist/aos.css';
 
 //AOS.init();
 
-const Projects = () => {
-    return (
-        <div className="projects" id="projects">
-            <div className="projects__title" >
-                <h2 className="title">Sample Projects</h2>
-                <p className="u-center">All Projects built from scratch with coffee and chips </p>
+class Projects extends React.Component {
+
+    componentDidMount() {
+        this.aos = AOS;
+        this.aos.init();
+    }
+
+    componentDidUpdate() {
+        this.aos.refresh();
+    }
+    
+    render(){
+        return (
+            <div className="projects" id="projects">
+                <div className="projects__title" data-aos="zoom-in-right">
+                    <h2 className="title">Sample Projects</h2>
+                    <p className="u-center">All Projects built from scratch with coffee and chips </p>
+                </div>
+                <ProjectList></ProjectList>
             </div>
-            <ProjectList></ProjectList>
-        </div>
-    )
+        )
+    }
 }
 
 export default Projects

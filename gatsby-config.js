@@ -8,7 +8,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `Linda Ikechukwu`,
-    description: `Welcome to Linda Ikechukwu's site. Linda is a driven Community Manager, a Software Developer focused on Frontend and Cloud Technologies from Lagos, Nigeria`,
+    description: `Welcome to Linda Ikechukwu's site. Linda is a Software Developer focused on Frontend and Cloud Technologies from Lagos, Nigeria`,
     author: `Linda Ikechukwu`,
     keywords: `Linda Ikechukwu, Nigerian Female Software Developer, PH School Of AI, Frontend Developer, Javascript Developer in Nigeria `,
     siteUrl: `https://your-site.com/`
@@ -48,6 +48,12 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              theme: 'night-owl'
+            }
+          },
         ],
       },
     },
@@ -63,5 +69,6 @@ module.exports = {
         icon: "static/icon.jpg" // This path is relative to the root of the site.
       }
     }
+
   ],
 }

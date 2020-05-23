@@ -8,9 +8,9 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 import './navigation.styles.scss'
 
-const Navigation = () => {
+const Navigation = ({dark}) => {
     return (
-        <div className="nav">
+        <div className={`nav ${dark ? 'nav-dark' : ' '} `}>
             <div className="nav__right">
                 <span className="nav__item"><Link to="/">Home</Link></span>
                 <span className="nav__item"><Link to="/blog">Blog</Link></span>
