@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { DiscussionEmbed } from "disqus-react"
+import { Disqus } from 'gatsby-plugin-disqus'
 
 import Layout from "../components/layout"
 import MetaData from "../components/metadata"
@@ -66,11 +67,10 @@ const BlogPost = props => {
     //For disquss comments
     const disqusTitle = props.data.markdownRemark.frontmatter.title;
 
-    const disqusConfig = {
-        shortname: process.env.GATSBY_DISQUS_NAME,
-        config: { identifier: disqusTitle },
+    let disqusConfig = {
+        identifier: props.data.markdownRemark.frontmatter.title,
+        title: props.data.markdownRemark.frontmatter.title,
     }
-
 
     return (
 
@@ -131,7 +131,7 @@ const BlogPost = props => {
                             )}
                         </div>
                         <div className="post-body__comment">
-                            <DiscussionEmbed {...disqusConfig} />
+                            <Disqus config={disqusConfig} />
                         </div>
                     </div>
                     <div className="sidebar">

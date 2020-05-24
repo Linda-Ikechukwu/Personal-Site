@@ -84,6 +84,12 @@ module.exports = {
         trackingId: "UA-167406817-1",
       },
     },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname:`allaboutlinda`
+      }
+    },
 
   ],
 }
