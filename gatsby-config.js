@@ -19,7 +19,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-dark-mode`,
-    `gatsby-plugin-feed`,
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
@@ -38,6 +37,7 @@ module.exports = {
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    `gatsby-plugin-feed`,
     {
       resolve: "gatsby-transformer-remark",
       options: {
