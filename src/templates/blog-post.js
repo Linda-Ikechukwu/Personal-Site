@@ -19,6 +19,7 @@ export const query = graphql`
         title
         tags
         keywords
+        description
         date(formatString: "DD MMMM, YYYY")
         featured {
             childImageSharp {
@@ -41,7 +42,6 @@ export const query = graphql`
 `
 
 const BlogPost = props => {
-
     //For the social share buttons
     const title = "Read this Article by Linda Ikechukwu on " + props.data.markdownRemark.frontmatter.title;
     const url = props.location.href;

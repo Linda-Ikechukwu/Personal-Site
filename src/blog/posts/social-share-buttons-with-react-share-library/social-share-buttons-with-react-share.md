@@ -106,6 +106,7 @@ First, you need to query the title and tags of each blog post’s frontmatter in
 
 ```
 
+
 Next, get the resulting data from query into the `BlogPost` component:
 
 ```javascript
@@ -118,6 +119,7 @@ Next, get the resulting data from query into the `BlogPost` component:
     }
 
 ```
+
 *N.B: The `location.href` property of the prop points to the absolute url of the current page. You can `console.log(props)` and take a look at the properties.* 
 
 Then, import the `ShareButtons` component and pass the declared constants above as props to it.
@@ -160,6 +162,7 @@ Putting everything together, you should have this:
 
 ```
 
+
 Yaay!! You did it. Now You should have social share buttons enabled on your blog page. You can click on them to see what happens.
 
 ## BONUS
@@ -181,7 +184,8 @@ Inspecting the buttons in dev tools, you’ll find that each is a button with a 
     }
 ```
 
-*N.B: You should have the <a href="https://www.gatsbyjs.org/docs/sass/" class="inline-link">gatsby-sass plugin</a>installed and added to the plugins array of your gatsby.config.js file.*
+
+*N.B: You should have the <a href="https://www.gatsbyjs.org/docs/sass/" class="inline-link">gatsby-sass plugin</a> installed and added to the plugins array of your gatsby.config.js file.*
 
 Go on and build something great!
 

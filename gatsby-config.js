@@ -11,7 +11,7 @@ module.exports = {
     description: `Welcome to Linda Ikechukwu's site. Linda is a Software Developer focused on Frontend and Cloud Technologies from Lagos, Nigeria`,
     author: `Linda Ikechukwu`,
     keywords: `Linda Ikechukwu, Nigerian Female Software Developer, PH School Of AI, Frontend Developer, Javascript Developer in Nigeria `,
-    siteUrl: `https://your-site.com/`
+    siteUrl: `https://www.codewithlinda.com/`
   },
   
   plugins: [
@@ -19,6 +19,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-dark-mode`,
+    `gatsby-plugin-feed`,
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
@@ -61,14 +62,28 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: "All About Linda",
-        short_name: "allaboutlinda.com",
+        short_name: "codewithlinda.com",
         start_url: "/",
         background_color: "#232946",
         theme_color: "#232946",
         display: "standalone",
         icon: "static/icon.jpg" // This path is relative to the root of the site.
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.example.com`,
+        stripQueryString: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-167406817-1",
+      },
+    },
 
   ],
 }

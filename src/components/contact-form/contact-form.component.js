@@ -25,11 +25,15 @@ class ContactForm extends React.Component{
             <form  action="https://formspree.io/xrgygkey" method="POST" data-aos="zoom-in" >
                 <div className="form">
                     <div className="form__left">
-                        <input className="input" type="text" name="Name" placeholder="Your Name" required></input>
-                        <input className="input" type="email" name="Email" placeholder="Your Email" required></input>
+                        <label for="name">Name</label>
+                        <input className="input" type="text" name="Name" placeholder="Your Name" id="name" required></input>
+                        
+                        <label for="email">Email</label>
+                        <input className="input" type="email" name="Email" placeholder="Your Email" id="email" required ></input>
                     </div>
                     <div className="form__right">
-                        <textarea className="textarea" placeholder="Your Message" name="Message" required wrap="hard"></textarea>
+                        <label for="message">Message</label>
+                        <textarea className="textarea" placeholder="Your Message" name="Message" id="message" required wrap="hard"></textarea>
                     </div>
                 </div>
                 <div className="form">

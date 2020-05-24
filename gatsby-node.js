@@ -1,9 +1,12 @@
 const path = require("path");
 const _ = require("lodash");
+const { createFilePath } = require(`gatsby-source-filesystem`);
+
 
 //Generate slug for blog posts path.
 exports.onCreateNode = ({ node, actions }) => {
-    const { createNodeField } = actions; let slug;
+    const { createNodeField } = actions; 
+    let slug;
     if (node.internal.type === "MarkdownRemark") {
         slug = path.basename(node.fileAbsolutePath, ".md");
         createNodeField({
@@ -13,6 +16,19 @@ exports.onCreateNode = ({ node, actions }) => {
         })
         console.log(slug);
     }
+}
+
+//RSS Feed
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
 }
 
 //Create pages and coresponding url for each markdown file.

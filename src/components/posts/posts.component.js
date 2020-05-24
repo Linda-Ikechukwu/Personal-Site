@@ -1,5 +1,5 @@
 import React from "react";
-import { useStaticQuery, StaticQuery, graphql, Link } from "gatsby";
+import { StaticQuery, graphql, Link } from "gatsby";
 import Img from "gatsby-image"
 import Button from "../button/button.component";
 
