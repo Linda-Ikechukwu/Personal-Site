@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
-import { DiscussionEmbed } from "disqus-react"
 import { Disqus } from 'gatsby-plugin-disqus'
 
 import Layout from "../components/layout"
@@ -65,7 +64,6 @@ const BlogPost = props => {
         : null
     
     //For disquss comments
-    const disqusTitle = props.data.markdownRemark.frontmatter.title;
 
     let disqusConfig = {
         identifier: props.data.markdownRemark.frontmatter.title,

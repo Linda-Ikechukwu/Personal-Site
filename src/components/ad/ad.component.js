@@ -9,7 +9,7 @@ const AdComponent = ({ image, alt, description, link, cto }) => {
         <div className="adComponent">
             <img src={image} alt={alt}></img>
             <p dangerouslySetInnerHTML={{ __html: description }}></p>
-            <Button><a href={link}>{cto}</a></Button>
+            <a href={link}><Button>{cto}</Button></a>
         </div>
     )
 }

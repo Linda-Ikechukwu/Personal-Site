@@ -84,7 +84,7 @@ class Posts extends React.Component {
                             </span>
                         </div>
                         <p className="post__excerpt">{edge.node.excerpt}</p>
-                        <Button small><Link to={`/blog/${edge.node.fields.slug}/`}>Read More </Link></Button>
+                        <Link to={`/blog/${edge.node.fields.slug}/`}><Button small>Read More</Button> </Link>
                     </li>
                 )
             })}

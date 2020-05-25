@@ -36,7 +36,7 @@ const Header = () => {
           </p>
           </div>
 
-          <Button><a href="#projects">See Sample Projects</a></Button>
+          <a href="#projects"><Button>See Sample Projects</Button></a>
         </div>
 
         <div className="header__right">

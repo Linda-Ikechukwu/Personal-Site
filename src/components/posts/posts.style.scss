@@ -1,14 +1,17 @@
 .posts{
     list-style-type: none;
     padding-left: 0;
-    margin: 3rem 0;
+    margin: 0;
+    
+    @media only screen and (max-width: 500px) {
+       padding-top: 5rem;
+    }
     
     .post{
         border: 1px solid var( --component-color);
         border-radius: 1rem; 
         width: 55vw;
-        height: 100%;
-        margin-top: 5rem;
+        margin-bottom: 5rem;
         padding: 1rem;
         box-shadow: 0 2px 4px  rgba(17, 16, 16, 0.6);
      

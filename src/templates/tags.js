@@ -62,55 +62,55 @@ const Tags = ({ pageContext, data }, props) => {
                 title="Codes With Linda"
                 description={`Explore Articles on ${tag} written by Linda Ikechukwu`}
             />
-            <div className="container flex-container">
-                <div>
+            <div className="container">
                 <h1>{tagHeader}</h1>
-                <ul className="posts">
-                    {data.allMarkdownRemark.edges.map(edge => {
-                        return (
-                            <li key={edge.node.id} className="post">
-                                <div className="post__thumbnail">
-                                    {
-                                        edge.node.frontmatter.featured && (
-                                            <Img
-                                               style={{
-                                                height: `15rem`,
-                                                width: `100%`
-                                               }}
-                                                fluid={edge.node.frontmatter.featured.childImageSharp.fluid}
-                                                alt={edge.node.frontmatter.title}
-                                            />
-                                        )
-                                    }
-                                </div>
-                                <h2 className="post__title">
-                                    <Link to={`/blog/${edge.node.fields.slug}/`}>
-                                        {edge.node.frontmatter.title}
-                                    </Link>
+                <div className="flex-container">
+                    <ul className="posts">
+                        {data.allMarkdownRemark.edges.map(edge => {
+                            return (
+                                <li key={edge.node.id} className="post">
+                                    <div className="post__thumbnail">
+                                        {
+                                            edge.node.frontmatter.featured && (
+                                                <Img
+                                                    style={{
+                                                        height: `15rem`,
+                                                        width: `100%`
+                                                    }}
+                                                    fluid={edge.node.frontmatter.featured.childImageSharp.fluid}
+                                                    alt={edge.node.frontmatter.title}
+                                                />
+                                            )
+                                        }
+                                    </div>
+                                    <h2 className="post__title">
+                                        <Link to={`/blog/${edge.node.fields.slug}/`}>
+                                            {edge.node.frontmatter.title}
+                                        </Link>
 
-                                </h2>
-                                <div className="post__info">
-                                    <span>
-                                        Posted on {edge.node.frontmatter.date} <span> / </span>{" "}
-                                        {edge.node.timeToRead} min read
+                                    </h2>
+                                    <div className="post__info">
+                                        <span>
+                                            Posted on {edge.node.frontmatter.date} <span> / </span>{" "}
+                                            {edge.node.timeToRead} min read
                                 </span>
-                                </div>
-                                <p className="post__excerpt">{edge.node.excerpt}</p>
-                                <Button small><Link to={`/blog/${edge.node.fields.slug}/`}>Read More </Link></Button>
-                            </li>
-                        )
-                    })}
-                </ul>
-                </div>
-                <div className="sidebar">
-                    <TagList/>
-                    <AdComponent 
-                      image = "/ztm.png"
-                      alt = "Zero to Mastery Academy Logo"
-                      description="Avoid Uncertainties and the Tutorial loophole. Learn to Code the right way, become a fullstack developer and land a high paying job in less than a year for less than $300. Use my coupon code <span>FRIENDS10</span> for 10% off membership fee"
-                      link="https://academy.zerotomastery.io/p/academy?affcode=441520_tjxt0mkj"
-                      cto="Join the ZTM Academy Now!"
-                   ></AdComponent>
+                                    </div>
+                                    <p className="post__excerpt">{edge.node.excerpt}</p>
+                                    <Button small><Link to={`/blog/${edge.node.fields.slug}/`}>Read More </Link></Button>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                    <div className="sidebar">
+                        <TagList />
+                        <AdComponent
+                            image="/ztm.png"
+                            alt="Zero to Mastery Academy Logo"
+                            description="Avoid Uncertainties and the Tutorial loophole. Learn to Code the right way, become a fullstack developer and land a high paying job in less than a year for less than $300. Use my coupon code <span>FRIENDS10</span> for 10% off membership fee"
+                            link="https://academy.zerotomastery.io/p/academy?affcode=441520_tjxt0mkj"
+                            cto="Join the ZTM Academy Now!"
+                        ></AdComponent>
+                    </div>
                 </div>
             </div>
         </Layout>
