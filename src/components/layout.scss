@@ -13,9 +13,8 @@
   --secondary-font-family: "Ribeye Marrow", cursive;
   --primary-font-family: "Rosario", sans-serif;
   --link-color: rgb(238, 187, 195);
-  --bg-white-1:#fdf9f9;
-  --bg-white-2:#f8edeb;
-
+  --bg-white-1: #fdf9f9;
+  --bg-white-2: #f8edeb;
 }
 
 html {
@@ -28,9 +27,9 @@ html {
     font-size: 100%; //16px
   }
 
-  @media only screen and (max-width: 500px) {
+  /* @media only screen and (max-width: 500px) {
     font-size: 56.25%; //1rem = 9px
-  }
+  } */
 }
 
 body {
@@ -46,12 +45,37 @@ a {
   color: var(--text-color-light);
 }
 
-h2{
+h2 {
   margin-top: 3rem;
 }
 
-label{
-  display:none
+label {
+  display: none;
+}
+
+input,
+textarea {
+  background-color: transparent;
+  border: 2px solid var(--component-color);
+  border-radius: 5px;
+  color: var(--text-color-light);
+  font-family: monospace;
+}
+
+input:focus, textarea:focus{
+  border: 2px solid var(--link-color);
+  box-shadow: 0px 1px 3px rgba(17, 16, 16, 0.8);
+  outline: none;
+}
+
+input{
+  height: 5rem;
+  margin-bottom: 1.5rem;
+}
+
+textarea{
+  outline: none  !important;
+  resize: none;
 }
 
 /*Utility Classes*/
@@ -67,7 +91,6 @@ label{
 .nav,
 .header,
 .footer {
-
   padding: 2rem 10rem;
 
   @media only screen and (max-width: 1000px) {
@@ -79,15 +102,17 @@ label{
   }
 }
 
-.info, .contact, .projects{
+.info,
+.contact,
+.projects {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  
+
   padding: 5rem 10rem 8rem;
 
-  & > div{
+  & > div {
     width: 38vw;
   }
 
@@ -98,16 +123,17 @@ label{
   @media only screen and (max-width: 770px) {
     padding: 2rem 5rem 8.5rem 5rem;
 
-    & > div{
+    & > div {
       width: 100vw;
     }
   }
 
   @media only screen and (max-width: 500px) {
     padding: 2rem 3rem 8.5rem 3rem;
-
   }
 }
+
+
 
 .container {
   background-color: var(--bg-dark-2);
@@ -117,19 +143,16 @@ label{
   border-top: 0.5px solid var(--component-color);
   min-height: 80vh;
 
-
   @media only screen and (max-width: 1300px) {
     padding: 5rem 8rem;
   }
 
   @media only screen and (max-width: 1000px) {
     padding: 5rem 5rem;
-    
   }
 
   @media only screen and (max-width: 500px) {
     padding: 5rem 2rem;
-    
   }
 }
 
@@ -143,8 +166,7 @@ label{
   }
 }
 
-.reverse-flex{
-
+.reverse-flex {
   @media only screen and (max-width: 900px) {
     flex-direction: column-reverse;
   }
@@ -182,7 +204,7 @@ label{
   font-style: italic;
 }
 
-.sidebar{
+.sidebar {
   position: relative;
   width: 22vw;
   display: flex;
@@ -194,37 +216,35 @@ label{
   }
 }
 
-.tags{
+.tags {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
- .tag{
-     background-color: var(--component-color);
-     box-shadow: 0 1.5px 4px  rgba(17, 16, 16, 0.6);
-     padding: .8rem;
-     margin: 1rem 5px;
-     border-radius: 6px;
-     cursor: pointer;
+.tag {
+  background-color: var(--component-color);
+  box-shadow: 0 1.5px 4px rgba(17, 16, 16, 0.6);
+  padding: 0.8rem;
+  margin: 1rem 5px;
+  border-radius: 6px;
+  cursor: pointer;
 
-      & a{
-         color: var(--bg-dark-1);
-      }
+  & a {
+    color: var(--bg-dark-1);
+  }
 }
-
 
 /*Alternate styles for light mode*/
 
-.light-mode{
-
+.light-mode {
   color: var(--bg-dark-1);
 
-  .button a{
-    color: var( --text-color-light);
+  .button a {
+    color: var(--text-color-light);
   }
-  
-  .inline-link{
+
+  .inline-link {
     color: var(--contrast-color);
   }
   .post__title {
@@ -233,78 +253,83 @@ label{
     }
   }
 
-  .nav__item a, .info__list h4 a, .not-found p a{
+  .nav__item a,
+  .info__list h4 a,
+  .not-found p a {
     color: var(--bg-dark-1);
 
-    &:hover{
-       color: var(--link-color);
+    &:hover {
+      color: var(--link-color);
     }
   }
 
-  .post-body__links  a{
+  .post-body__links a {
     color: black;
 
-    &:hover{
+    &:hover {
       color: black;
     }
   }
 
+
   button:hover{
-    a{
       color: var(--bg-dark-1);
-    }
   }
 
-  .nav, .shape, .projects{
+  .nav,
+  .shape,
+  .projects {
     background-color: var(--bg-white-1);
   }
 
-  .nav.nav-dark,.footer, .info, .contact {
-    background-color: var(--bg-white-2); 
+  .nav.nav-dark,
+  .footer,
+  .info,
+  .contact {
+    background-color: var(--bg-white-2);
   }
 
   .header__image {
     background: radial-gradient(var(--contrast-color) 1px, var(--bg-white-1) 1px);
     background-size: 15px 15px;
-
   }
 
-  .container{
+  .container {
     color: var(--bg-dark-1);
-    background-color: var( --bg-white-1);
+    background-color: var(--bg-white-1);
   }
 
-  .container + .footer{
-    background-color: var( --bg-white-1);
+  .container + .footer {
+    background-color: var(--bg-white-1);
     color: var(--bg-dark-1);
   }
 
-  .adComponent{
-    & button{
-       &:hover{
-         background: var(--bg-white);
-       }
+  .adComponent {
+    & button {
+      &:hover {
+        background: var(--bg-white);
+      }
     }
 
-    & p{
-      & > span{
+    & p {
+      & > span {
         color: var(--contrast-color);
       }
     }
   }
 
-  .form input, .form textarea{
+  input,
+  textarea {
     border: 2px solid var(--bg-dark-1);
     color: var(--bg-dark-1);
-
-    
   }
 
-  .form input:focus, .form textarea:focus{
+  input:focus,
+  textarea:focus {
     border: 2px solid var(--contrast-color);
   }
 
-  .blog-tagline{
+  .blog-tagline {
     background-color: var(--bg-white-1);
     color: var(--bg-dark-1);
     padding: 5px;
@@ -314,45 +339,9 @@ label{
     } */
   }
 
-  
-}
-
-//ANIMATION FOR SLIDE UPS
-@-webkit-keyframes backInUp {
-  0% {
-    -webkit-transform: translateY(1200px) scale(0.7);
-    transform: translateY(1200px) scale(0.7);
-    opacity: 0.7;
-  }
-
-  80% {
-    -webkit-transform: translateY(0px) scale(0.7);
-    transform: translateY(0px) scale(0.7);
-    opacity: 0.7;
-  }
-
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
+  .sub{
+    background-color: #ebeef2;
+    border: 5px solid var(--bg-dark-1);
   }
 }
-@keyframes backInUp {
-  0% {
-    -webkit-transform: translateY(1200px) scale(0.7);
-    transform: translateY(1200px) scale(0.7);
-    opacity: 0.7;
-  }
 
-  80% {
-    -webkit-transform: translateY(0px) scale(0.7);
-    transform: translateY(0px) scale(0.7);
-    opacity: 0.7;
-  }
-
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-  }
-}

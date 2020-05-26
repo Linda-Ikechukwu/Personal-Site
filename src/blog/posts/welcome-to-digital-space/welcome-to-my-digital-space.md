@@ -2,16 +2,16 @@
 title: "Welcome To My Digital Space"
 date: "2020-05-24"
 featured: "./digitalspace.png"
-description: "Some Introductions!!! Read about my developer story, how I started coding, the future ahead and my life in general"
+description: "Some Introductions! Hi, I'm Linda Ikechukwu, read about my developer story, how I started coding, the future ahead and my life in general"
 tags: ["Personal"]
-keywords: "Linda ikechukwu, Developer Career, Blogging Journey, Female Nigerian Programmer"
+keywords: "Linda Ikechukwu, Developer Story, Blogging Journey, Female Nigerian Programmer, Developer blog"
 ---
 
-Hi, If you’re reading this, that means that you’ve somehow found your way into my personal portfolio and blog site. Welcome! Let me go ahead to introduce myself then show you around.
+Hi. If you’re reading this, that means that you’ve somehow found your way into my developer portfolio and blog site. Welcome! Let me go ahead to introduce myself then show you around.
 
-My name is Linda Ikechukwu and I'm super curious about software and how they’re built. Consequently, this has turned me into a lifelong learner. While in school, I taught myself to code using online resources because I wanted to be a part of building stuff that made everyday people's life easier. Currently, I work at Huawei where i'm doing just that. My focus fields are frontend and cloud development.
+My name is Linda Ikechukwu and I'm super curious about software and how they’re built. Consequently, this has turned me into a lifelong learner. While in school, I taught myself to code using online resources because I wanted to be a part of building stuff that made everyday people's life easier. Currently, I work at Huawei where I'm doing just that. My focus fields are frontend and cloud development.
 
-On the side, I manage a community known as The PortHarcourt School of AI, a non profit organisation focused on democratizing Data Science and Machine Learning Education to underrepresented individuals in Nigeria through collaborative learning and study groups.Take a look. Incase you’re wondering what a community manager does, maybe I’ll write about it someday but for now, take a guess.
+On the side, I manage a community known as <a class="inline-link" href="https://phcschoolofai.org/">The PortHarcourt School of AI</a>, a non profit organisation focused on democratizing Data Science and Machine Learning Education to underrepresented individuals in Nigeria through collaborative learning and study groups. Take a <a class="inline-link" href="https://phcschoolofai.org/">look.</a> Incase you’re wondering what a community manager does, maybe I’ll write about it someday but for now, just guess.
 
 I’ve started codewithlinda to share as I learn on my dev journey, get better at writing and hope that my articles are able to help someone get out of a stuckzone. On codewithlinda, I’ll be publishing mostly beginner focused posts on frontend development, cloud development and developer lifestyle in general.If those interests you, consider subscribing to my mailing list to get notified of new articles as soon as they are published. In the meantime, browse around and let me know one thing that you like or dislike about this site.
 

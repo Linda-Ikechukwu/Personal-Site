@@ -1,0 +1,34 @@
+.sub{
+
+    background-color: #57546d;
+    border: 5px solid var(--component-color);
+    border-radius: 2rem;
+    margin: 8rem 0;
+    padding: 1rem 3rem;
+
+    h2,p{
+        text-align: center;
+    }
+
+    & p.sub__tag{
+        font-style: italic;
+        font-size: 1.3rem;
+    }
+
+    & .sub__form{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+
+
+        input{
+            width: 70%;
+        }
+
+        & button{
+            height: 5rem;
+            margin-top: 0;
+        }
+    }
+}

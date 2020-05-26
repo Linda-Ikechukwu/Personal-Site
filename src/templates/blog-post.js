@@ -8,6 +8,8 @@ import MetaData from "../components/metadata"
 import AdComponent from "../components/ad/ad.component"
 import ShareButtons from "../components/share-buttons/share.component"
 import BlogTagline from "../components/blog-tagline/blog-tagline.component"
+import SubscriptionForm from "../components/subscription-form/subscription-form.component"
+
 
 import "../components/posts/posts.style.scss"
 
@@ -111,8 +113,11 @@ const BlogPost = props => {
                         >
                         </div>
                         <div className="post-body__share-buttons">
-                            <span>If you found this article helpful, Share it:</span> 
+                            <span>If you found this article helpful,please share it:</span> 
                             <ShareButtons title={title} url={url} twitterHandle={twitterHandle} tags={tags}/>
+                        </div>
+                        <div>
+                            <SubscriptionForm></SubscriptionForm>
                         </div>
                         <div className="post-body__links">
                             {prev && (

@@ -22,7 +22,7 @@ class ContactForm extends React.Component{
     
     render(){
         return (
-            <form  action="https://formspree.io/xrgygkey" method="POST" data-aos="zoom-in" >
+            <form className="contact-form" action="https://formspree.io/xrgygkey" method="POST" data-aos="zoom-in" >
                 <div className="form">
                     <div className="form__left">
                         <label for="name">Name</label>
