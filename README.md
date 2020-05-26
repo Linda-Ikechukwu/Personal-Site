@@ -5,7 +5,7 @@
   Codes With Linda: My Portfolio Site + Blog
 </h1>
 
-This website was built with the hello world starter from Gatsby. If you'll like to use this website template, don't forget to give me a shout out.
+This website was built with the hello world starter from Gatsby. If you'll like to use this project as a template for your own website, don't forget to give me a shout out.
 
 ## 🚀 Quick start
 
@@ -13,7 +13,7 @@ This website was built with the hello world starter from Gatsby. If you'll like 
     Fork and clone Repo
 
     ```shell
-    git clone my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
+    git clone https://github.com/Linda-Ikechukwu/Personal-Site.git
     ```
 
 1.  **Start developing.**
@@ -21,7 +21,7 @@ This website was built with the hello world starter from Gatsby. If you'll like 
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd my-hello-world-starter/
+    cd your-folder-name/
     gatsby develop
     ```
 
@@ -31,7 +31,7 @@ This website was built with the hello world starter from Gatsby. If you'll like 
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    Open the project directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
 ## 🧐 What's inside?
 
