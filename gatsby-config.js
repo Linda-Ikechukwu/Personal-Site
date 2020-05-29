@@ -8,9 +8,9 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `Linda Ikechukwu`,
-    description: `Welcome to Linda Ikechukwu's site. Linda is a Software Developer focused on Frontend and Cloud Technologies from Lagos, Nigeria`,
+    description: `My name is Linda Ikechukwu and I am a Software Developer focused on Frontend and Cloud Technologies from Lagos, Nigeria. Welcome to my portfolio + blog site.`,
     author: `Linda Ikechukwu`,
-    keywords: `Linda Ikechukwu, Nigerian Female Software Developer, PH School Of AI, Frontend Developer, Javascript Developer in Nigeria `,
+    keywords: `Linda Ikechukwu, CodeWithLinda Nigerian Female Software Developer, PH School Of AI, Frontend Developer, Javascript Developer in Nigeria `,
     siteUrl: `https://www.codewithlinda.com/`
   },
   
@@ -73,7 +73,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://www.example.com`,
+        siteUrl: `https://www.codewithlinda.com/`,
         stripQueryString: true,
       },
     },

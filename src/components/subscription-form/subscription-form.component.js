@@ -31,15 +31,15 @@ const SubscriptionForm = () => {
 
             const json = await response.json();
 
-            if (json.status === 'success') {
+           if (json.status === 'success') {
                 setStatus('SUCCESS');
                 return;
-            }
+            } 
 
-            setStatus('ERROR');
            
         } catch (err) {
             setStatus('ERROR');
+            console.log(err);
         }
     };
 

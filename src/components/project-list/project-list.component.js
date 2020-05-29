@@ -75,6 +75,15 @@ class ProjectList extends React.Component{
                    techsUsed={['HTML', 'CSS','Node JS','Express','EJS']}
                    githubLink=" https://github.com/Linda-Ikechukwu/Newsify"
                 />
+                <ProjectItem
+                   title='Labrinth Stores'
+                   projectLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
+                   description="<p>Labrinth Stores is a hypothetical full blown ecommerce store for an african american women clothing label, with all the features you would expect: Authentication
+                   product directory, payment processing e.t.c</p> <p>The aim of this project was to challenge me to learn React to an Intermediate level</p>"
+                   image="/labrinthe.png"
+                   techsUsed={['Sass', 'JSX','React','Redux','React-Redux', 'Firebase Firestore', 'Firebase Authentication', 'Localstorage',]}
+                   githubLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
+                />
                 
                 <button className="next-button">&#10095;</button>
             </div>

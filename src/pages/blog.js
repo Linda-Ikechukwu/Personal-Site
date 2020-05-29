@@ -17,10 +17,10 @@ const Blog = (props) => {
     <Layout dark>
       <MetaData
         title="CodeWithLinda"
-        description="Beginner Friendly Articles on Frontend Developement, Cloud, Dev Life and more written by Linda Ikechukwu"
+        description="CodeWithLinda is Linda Ikechukwu's Blog where she writes Beginner Friendly Articles on Frontend Developement, Cloud, Dev Life and more."
         //image={props.data.markdownRemark.frontmatter.featured.childImageSharp.resize}
         pathname={props.location.pathname}
-        keywords="Frontend Blog, Javascript Articles, Technical Wrriter in Nigeria, Devops Articles Nigeria, CSS Tricks, Linda Ikechukwu, codeswithlinda"
+        keywords="Linda Ikechukwu, Frontend Blog, Javascript Articles, Technical Writer in Nigeria, Devops Articles Nigeria, CSS Tricks, Linda Ikechukwu, codeswithlinda"
       />
       <BlogTagline />
       <div className="container ">
