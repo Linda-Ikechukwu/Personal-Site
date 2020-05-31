@@ -31,6 +31,7 @@
     "gatsby-plugin-manifest": "^2.4.1",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.3.0",
+    "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-sass": "^2.3.0",
     "gatsby-plugin-sharp": "^2.6.0",
     "gatsby-plugin-sitemap": "^2.4.0",

@@ -90,6 +90,14 @@ module.exports = {
         shortname:`allaboutlinda`
       }
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.codewithlinda.com',
+        sitemap: 'https://www.codewithlinda.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    }
 
   ],
 }
