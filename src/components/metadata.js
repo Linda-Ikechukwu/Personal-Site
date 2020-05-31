@@ -28,7 +28,7 @@ function MetaData({ description, lang, meta, image: metaImage, title, pathname, 
   const canonical = pathname
     ? `${data.site.siteMetadata.siteUrl}${pathname}`
     : null
-  const metaKeyword = keywords || data.site.siteMetadata.description
+  const metaKeyword = keywords || data.site.siteMetadata.keywords
 
   return (
     <Helmet
