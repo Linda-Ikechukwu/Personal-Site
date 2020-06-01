@@ -13,7 +13,7 @@ Granted, there are a couple of tools available for doing this such as Mailchimp,
   - There are a lot of good reviews about it.
   - The UI is really simple to use and navigate.
   - It has a free tier, so you can experiment before commiting.
-  - The only <a target="blank" class="inline-link" href="https://monicalent.com/">Monica Lent </a>  recommended it.
+  - The one and only <a target="blank" class="inline-link" href="https://monicalent.com/">Monica Lent </a>  recommended it.
 
 This article assumes that you have some experience using <a target="blank" class="inline-link" href="https://www.gatsbyjs.org/">Gatsby</a>  or <a target="blank" class="inline-link" href="https://reactjs.org/">React</a> 
 
@@ -115,13 +115,13 @@ const SubscriptionForm = () => {
 
 export default SubscriptionForm;
 ```
-Style the form however you want, then import and use the subscription form component into your blog pages template file or wherever else you wish. 
+The for will be ugly, so style it however you want, then import and use the subscription form component in your blog pages template file or wherever else you wish. 
 
-<strong>To Test:</strong> Enter an email address into your form and click on the subscribe button. If you receive a sucess message and confirmation email to that email address then you’re good to go.
+<strong>To Test:</strong> Enter an email address into your form and click on the subscribe button. If you receive a success message and confirmation email to that email address then you’re good to go.
 
 *P.S: This should be done on a live site not on localhost.*
 
-You can also make changes to the contents of the confirmation email, tweak other settings for your form, and create an email template for your broadcasts. I’m hoping you’ll figure your way around. If you have any further questions, ask awaay in the comment section.
+You can also make changes to the contents of the confirmation email, tweak other settings for your form, and create an email template for your broadcasts. I’m hoping you’ll figure your way around. If you have any further questions, ask away in the comment section.
 
 Now go on and build something great!
 
