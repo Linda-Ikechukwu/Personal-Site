@@ -50,7 +50,7 @@ export const pageQuery = graphql`
   }
 `
 
-const Tags = ({ pageContext, data }, props) => {
+const Tags = ({ pageContext, data, location }) => {
     const { tag } = pageContext
     const { totalCount } = data.allMarkdownRemark
     const tagHeader = `${totalCount} Article${
@@ -61,7 +61,7 @@ const Tags = ({ pageContext, data }, props) => {
             <MetaData
                 title= {`Articles on ${tag} from CodeWithLinda`}
                 description={`Explore Articles on ${tag} written by Linda Ikechukwu`}
-                pathname={props.location.pathname}
+                pathname={location.pathname}
             />
             <div className="container">
                 <h1>{tagHeader}</h1>
