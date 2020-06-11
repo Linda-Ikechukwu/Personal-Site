@@ -1,10 +1,10 @@
 ---
 title: "Welcome To My Digital Space"
-date: "2020-05-24"
+date: "2020-05-23"
 featured: "./digitalspace.png"
 description: "Some Introductions! Hi, I'm Linda Ikechukwu, read about my developer story, how I started coding, the future ahead and my life in general"
 tags: ["Personal","Dev Life"]
-keywords: "Linda Ikechukwu, Developer Story, Blogging Journey, Female Nigerian Programmer, Developer blog"
+keywords: "Linda Ikechukwu,  Developer Story, Blogging Journey, Female Nigerian Programmer, Developer blog"
 ---
 
 Hi. If you’re reading this, that means that you’ve somehow found your way into my developer portfolio and blog site. Welcome! Let me go ahead to introduce myself then show you around.

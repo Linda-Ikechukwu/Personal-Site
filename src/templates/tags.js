@@ -59,8 +59,9 @@ const Tags = ({ pageContext, data }, props) => {
     return (
         <Layout>
             <MetaData
-                title="Codes With Linda"
+                title= {`Articles on ${tag} from CodeWithLinda`}
                 description={`Explore Articles on ${tag} written by Linda Ikechukwu`}
+                pathname={props.location.pathname}
             />
             <div className="container">
                 <h1>{tagHeader}</h1>

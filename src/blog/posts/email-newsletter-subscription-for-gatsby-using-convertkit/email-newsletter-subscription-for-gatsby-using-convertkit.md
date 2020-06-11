@@ -15,7 +15,7 @@ Granted, there are a couple of tools available for doing this such as Mailchimp,
   - It has a free tier, so you can experiment before commiting.
   - The one and only <a target="blank" class="inline-link" href="https://monicalent.com/">Monica Lent </a>  recommended it.
 
-This article assumes that you have some experience using <a target="blank" class="inline-link" href="https://www.gatsbyjs.org/">Gatsby</a>  or <a target="blank" class="inline-link" href="https://reactjs.org/">React</a> 
+This article assumes that you have some experience using <a target="blank" class="inline-link" href="https://www.gatsbyjs.org/">Gatsby</a>  or <a target="blank" class="inline-link" href="https://reactjs.org/">React.</a> 
 
 
 ## To get started with ConvertKit,
@@ -31,7 +31,7 @@ This article assumes that you have some experience using <a target="blank" class
   5. Click on 'Embed'
     <div class="inline-image"><img  src="./convetkit-embed.png" alt=""></div>
 
-  6. Click on ''Html' and take note of the form’s action url and the names of input tags present.(Scroll, look closely and you’ll find them). We’ll be using them later.
+  6. Click on 'Html' and take note of the form’s action url and the names of input tags present (scroll, look closely and you’ll find them). We’ll be using them later.
     <div class="inline-image"><img  src="./converkit-html.png" alt=""></div>
 
 
@@ -39,7 +39,8 @@ This article assumes that you have some experience using <a target="blank" class
 
 Due to the way Gatsby is written, you can’t directly embed the 'script tag' or the 'HTML' options into your code. The easiest way is to create a custom subscription form as a component.
 
-```javascript
+```jsx
+
 //In src/components/sub-form.component.js
 import React, { useState } from 'react';
 import Button from "../button/button.component";
@@ -47,8 +48,10 @@ import Button from "../button/button.component";
 const SubscriptionForm = () => {
     const [status, setStatus] = useState(null);
     const [email, setEmail] = useState('');
+
     //FORM_URL should be the same as the form action url pointed out above
     const FORM_URL = `https://app.convertkit.com/forms/1417892/subscriptions`;
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const data = new FormData(e.target);
@@ -83,7 +86,9 @@ const SubscriptionForm = () => {
     return (
         <div className="sub">
             <h2>Join My Newsletter</h2>
-            <p>If you've found any of my articles useful, subscribe to receive more quality articles straight to your inbox.</p>
+            <p>
+               If you've found any of my articles useful, subscribe to receive more quality articles straight to your inbox.
+            </p>
             
             {status === 'SUCCESS' && <p>Please go confirm your subscription!</p>}
             {status === 'ERROR' && <p>Oops, Something went wrong! try again.</p>}
@@ -96,26 +101,32 @@ const SubscriptionForm = () => {
                 <input
                     type="email"
                     aria-label="Your email"
-                    //The name attribute should be the same as your selected form's input name attribute
+                   //The name attribute should be the same as on you selected form.
                     name="email_address"
                     placeholder="Your email address"
                     onChange={handleInputChange}
                     value={email}
                     required
                 />
+
                 <Button type="submit">
                     Subscribe
                 </Button>
 
             </form>
+
             <p className="sub__tag">I won't send you spam and you can unsubscribe at any time</p>
+
         </div>
     );
 };
 
-export default SubscriptionForm;
+export default SubscriptionForm
+
 ```
-The for will be ugly, so style it however you want, then import and use the subscription form component in your blog pages template file or wherever else you wish. 
+
+
+You can style the subscription form component however you want, then import and use it in your blog pages template file or wherever else you wish. 
 
 <strong>To Test:</strong> Enter an email address into your form and click on the subscribe button. If you receive a success message and confirmation email to that email address then you’re good to go.
 

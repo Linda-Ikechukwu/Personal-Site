@@ -6,10 +6,6 @@ import MetaData from "../components/metadata"
 import TagList from "../components/taglist/taglist.component"
 import BlogTagline from "../components/blog-tagline/blog-tagline.component"
 
-//For code syntax highlighting
-import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
-deckDeckGoHighlightElement();
-
 
 const Blog = (props) => {
 
@@ -20,7 +16,7 @@ const Blog = (props) => {
         description="CodeWithLinda is Linda Ikechukwu's Blog where she writes Beginner Friendly Articles on Frontend Developement, Cloud, Dev Life and more."
         //image={props.data.markdownRemark.frontmatter.featured.childImageSharp.resize}
         pathname={props.location.pathname}
-        keywords="Linda Ikechukwu, Frontend Blog, Javascript Articles, Technical Writer in Nigeria, Devops Articles Nigeria, CSS Tricks, Linda Ikechukwu, codeswithlinda"
+        keywords="CodeWithLinda, Linda Ikechukwu, Frontend Blog, Javascript Articles, Technical Writer in Nigeria, Devops Articles Nigeria, CSS Tricks, Linda Ikechukwu, codeswithlinda"
       />
       <BlogTagline />
       <div className="container ">

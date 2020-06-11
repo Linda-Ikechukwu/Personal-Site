@@ -28,6 +28,7 @@ class Posts extends React.Component {
               node {
                 frontmatter {
                   title
+                  description
                   date(formatString: "DD MMMM, YYYY")
                   featured {
                       childImageSharp {
@@ -83,7 +84,7 @@ class Posts extends React.Component {
                                 ({edge.node.timeToRead} min read)
                             </span>
                         </div>
-                        <p className="post__excerpt">{edge.node.excerpt}</p>
+                        <p className="post__excerpt">{edge.node.frontmatter.description}</p>
                         <Link to={`/blog/${edge.node.fields.slug}/`}><Button small>Read More</Button> </Link>
                     </li>
                 )

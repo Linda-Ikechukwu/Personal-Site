@@ -8,9 +8,9 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `Linda Ikechukwu`,
-    description: `My name is Linda Ikechukwu and I am a Software Developer focused on Frontend and Cloud Technologies from Lagos, Nigeria. Welcome to my portfolio + blog site.`,
+    description: `Linda Ikechukwu is a Software Developer et Community builder focused on Frontend and Cloud Technologies from Lagos, Nigeria.`,
     author: `Linda Ikechukwu`,
-    keywords: `Linda Ikechukwu, CodeWithLinda Nigerian Female Software Developer, PH School Of AI, Frontend Developer, Javascript Developer in Nigeria `,
+    keywords: `Linda Ikechukwu, CodeWithLinda, Nigerian Female Software Developer, PH School Of AI Community Manager, Frontend Developer, Javascript Developer in Nigeria `,
     siteUrl: `https://www.codewithlinda.com/`
   },
   
@@ -50,11 +50,11 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-highlight-code`,
+            resolve: `gatsby-remark-vscode`,
             options: {
-              theme: 'night-owl'
+              theme: 'Abyss' 
             }
-          },
+          }
         ],
       },
     },
