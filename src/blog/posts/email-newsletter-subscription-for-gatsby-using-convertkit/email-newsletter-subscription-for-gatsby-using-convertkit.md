@@ -2,7 +2,7 @@
 title: "Set up Email Newsletter Subscription For Gatsby Blog Using ConvertKit"
 date: "2020-05-31"
 featured: "./emailsub.png"
-description: "Having an email newsletter subscription flow setup for your blog is great because it helps you retain/engage your readers and drive repeated traffic to your site amongst other reasons. In this article, you'll set it up using ConvertKit"
+description: "Having an email newsletter subscription flow setup for your blog is great because it helps you retain/engage your readers and drive repeated traffic to your site amongst other reasons. In this article, you'll set it up using ConvertKit."
 tags: ["React","Gatsby"]
 keywords: "Build a Gatsby Blog, Email Newsletter Subcription, Using ConvertKit, Build a developer blog, Email Subscription Gatsby"
 ---

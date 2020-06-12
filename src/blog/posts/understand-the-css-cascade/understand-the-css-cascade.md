@@ -2,12 +2,12 @@
 title: "The Cascade Explained - How CSS Styles Are Applied to Html Elements"
 date: "2020-06-11"
 featured: "./the-css-cascade.png"
-description: "The CSS Cascade is the algorithm used by browsers to resolve the conflict of which style rule to apply to an element when there are  2 or more style rules of the same property but different values targeting the element. This article will help you understand how it all works"
+description: "The CSS Cascade is the algorithm used by browsers to resolve the conflict of which style declaration to apply to an element when there are  2 or more style declarations of the same property but different values targeting the element. This article will help you understad how it all works."
 tags: ["CSS","HTML"]
 keywords: "The CSS Cascade, CSS !important, what is the cascade, cascade order for css, what is CSS specificity, what is C in CSS, CSS Inherintance. "
 ---
 
-Have you ever been in a situation where the CSS styles you wrote and thought should be applied to a particular element wasn’t what you saw in the browser? That’s the ‘Cascading’ in Cascading Style Sheets (CSS)  at work.
+Have you ever been in a situation where the CSS styles you wrote and thought should be applied to a particular element wasn’t what you saw in the browser? That’s the ‘Cascading’ in Cascading Style Sheets (CSS) at work.
 
 The CSS Cascade is the algorithm used by browsers to resolve the conflict of which style rule to apply to an element, when there are  2 or more style rules of the same property, but different values targeting the element. The style rules could be from the same style declaration and source or not.
 
@@ -199,7 +199,7 @@ To write more maintainable CSS and avoid unintentional style bugs:
 
 - Avoid using inline styles.
 - Avoid using ID’s and combination selectors.
-- Use single elements classes for styling.
+- Use classes only for styling  and id's for javascript interactions to avoid specificity errors.
 - Put general element styling up top then specific styling with class names.
 - Use !important only as a last resort.
 - Rely on order when using third party stylesheets. Always link your author stylesheets last.
