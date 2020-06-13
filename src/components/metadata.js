@@ -14,6 +14,7 @@ function MetaData({ description, lang, meta, image: metaImage, title, pathname, 
             author
             keywords
             siteUrl
+            paymentPointer
           }
         }
       }
@@ -29,6 +30,7 @@ function MetaData({ description, lang, meta, image: metaImage, title, pathname, 
     ? `${data.site.siteMetadata.siteUrl}${pathname}`
     : null
   const metaKeyword = keywords || data.site.siteMetadata.keywords
+  const paymentPointer = data.site.siteMetadata.paymentPointer
 
   return (
     <Helmet
@@ -54,6 +56,10 @@ function MetaData({ description, lang, meta, image: metaImage, title, pathname, 
         {
           name: "keywords",
           content: metaKeyword,
+        },
+        {
+          name: `monetization`,
+          content: paymentPointer,
         },
         {
           property: `og:title`,

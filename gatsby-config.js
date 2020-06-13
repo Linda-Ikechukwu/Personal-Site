@@ -11,7 +11,8 @@ module.exports = {
     description: `Linda Ikechukwu is a Software Developer et Community builder focused on Frontend and Cloud Technologies from Lagos, Nigeria.`,
     author: `Linda Ikechukwu`,
     keywords: `Linda Ikechukwu, CodeWithLinda, Nigerian Female Software Developer, PH School Of AI Community Manager, Frontend Developer, Javascript Developer in Nigeria `,
-    siteUrl: `https://www.codewithlinda.com/`
+    siteUrl: `https://www.codewithlinda.com/`,
+    paymentPointer: `$ilp.uphold.com/eMQKQ8RGXrb8`
   },
   
   plugins: [

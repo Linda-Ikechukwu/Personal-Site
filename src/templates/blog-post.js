@@ -81,6 +81,7 @@ const BlogPost = props => {
                 image={props.data.markdownRemark.frontmatter.featured.childImageSharp.resize}
                 keywords={props.data.markdownRemark.frontmatter.keywords}
                 pathname={props.location.pathname}
+                
             />
             <BlogTagline/>
             <div className="container">
