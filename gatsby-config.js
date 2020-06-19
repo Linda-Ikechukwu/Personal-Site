@@ -12,7 +12,7 @@ module.exports = {
     author: `Linda Ikechukwu`,
     keywords: `Linda Ikechukwu, CodeWithLinda, Nigerian Female Software Developer, PH School Of AI Community Manager, Frontend Developer, Javascript Developer in Nigeria `,
     siteUrl: `https://www.codewithlinda.com/`,
-    paymentPointer: `$ilp.uphold.com/eMQKQ8RGXrb8`
+    paymentPointer: `$ilp.uphold.com/UgFp7pe6LHFk`
   },
   
   plugins: [

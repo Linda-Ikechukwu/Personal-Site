@@ -1,5 +1,5 @@
 ---
-title: "Add  Social Share Buttons to Gatsby Blog Pages With React Share In 3 Steps"
+title: "How to Add  Social Share Buttons to Gatsby Blog Pages With React Share In 3 Steps"
 date: "2020-05-24"
 featured: "./socialshare.png"
 description: "When you write a blog post, you want more people to read it. In this post you'll learn how to add social share buttons to a blog built with gatsby in 3 steps."
