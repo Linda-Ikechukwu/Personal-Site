@@ -15,7 +15,7 @@ const Header = () => {
       {
         shapes.map(shape => {
           return (
-            <div className={`shape-container--${shape} shape-animation`}><div class="random-shape"></div></div>
+            <div className={`shape-container--${shape} shape-animation`}><div aria-hidden="true" class="random-shape"></div></div>
           )
         })
       }
