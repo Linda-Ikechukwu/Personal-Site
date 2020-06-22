@@ -15,7 +15,7 @@ This article will guide you on how to add social share buttons to a blog built w
 
 Enough said, let's dive in.
 
-## Step 1: Install `react share`
+## Step 1: Install React Share 
 
 React share is a library that provides social media share button components for react apps. To install, run `npm install react share --save`   or   `yarn add react-share`.
 
