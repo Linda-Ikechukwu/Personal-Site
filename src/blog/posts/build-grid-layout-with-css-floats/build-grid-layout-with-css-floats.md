@@ -15,7 +15,7 @@ Before those, float was the main property used for building layouts and is suppo
 
 This article assumes that you understand how the CSS Float property works. If you don’t, you may find <a target="blank" class="inline-link" href="https://css-tricks.com/all-about-floats/">this article </a> useful.
 
-We’ll be going through a fun exercise great for CSS beginners. You’ll use floats to build a grid column layout just like in bootstrap, that can be used across different projects, alongside some new CSS concepts you may not have used before like: 
+We’ll be going through a fun exercise great for CSS beginners. You’ll use floats to build a grid column layout just like in bootstrap, that can be used across different projects. You'll also make use of some CSS concepts you may not have used before like: 
    - CSS variables.
    - CSS [attribute^=”value”] selector.
    - CSS :not(:last-child) selector.
@@ -56,11 +56,11 @@ Let's call the spacing between columns: horizontal-grid-margin and the spacing b
 
 These variables have been defined because we will be using them across our code and if we ever need to change their values, we just need to change the variable’s value and it will be applied across our code.
 
-N. B: CSS variables are not yet supported on Internet explorer, so an alternative would be to simply replace the variables with the actual values or use a polyfill.
+*N.B: CSS variables are not yet supported on Internet explorer, so an alternative would be to simply replace the variables with the actual values or use a polyfill.*
 
 Next, let’s define the width of rows.
 
-*Widths will be defined in percentages, to make sure that our layout containers (i.e rows and columns) remain responsive regardless of device width, just like in the gif above.*
+*Widths will be defined in percentages, to make sure that our layout containers (i.e rows and columns) remain responsive regardless of device width.*
 
 We’ll give rows a width of 100% to ensure that they always take up the entire widths of their containers and a bottom margin of the value of our vertical grid gap: 50px.
 
@@ -76,6 +76,8 @@ Introducing the ` [class^=”value”] ` selector. This is a type of CSS selecto
 }
 ```
 
+The code above will target all elements whose classname start with ` col- ` and float them to the left.
+
 Also, we'll add some height and background color to our column divs to make them visible. Feel free to change these later on.
 
 ``` css
@@ -86,11 +88,9 @@ Also, we'll add some height and background color to our column divs to make them
 }
 ```
 
-The code above will target all elements whose classname start with col- and float them left.
+Next, we know that we need to define some right margin value for the columns to make them spaced as what we have above. Defining a right margin value under the ` [class^=”value”] ` selector will give both columns a right margin. 
 
-Next, we know that we need to define some right margin value for the columns to make them spaced as what we have above. Defining a right margin value under the ` [class^=”value”] ` will give both columns a right margin. 
-
-This is not what we want. We want to add spacing only between columns, not after. To do that, we have to give a right margin to all ` col- ` classes in a row excluding the last ones. 
+This is not what we want. We want to add spacing only between columns, not before or after. To do that, we have to give a right margin to all ` col- ` classes in a row excluding the last ones. 
 
 Introducing the ` :not(:last-child) ` selector. This selector  basically targets all child elements of the parent element it is attached to, except the last one.
 
@@ -108,7 +108,7 @@ Next we need to define widths for the columns.
 
 From the demo gif above, we can see that both columns are of equal width.
 
-Let’s do some logical thinking here. We can see that the combined width of both columns is the width of the row minus the margin i.e ` 100% - horizontal-grid-margin ` . From this, it means that the individual width of each column is the total width of both columns divided by 2 i.e `(100% - horizontal-grid-margin) / 2` . But how do we define that in CSS? 
+Let’s do some logical thinking here. We can see that the combined width of both columns is the width of the row minus the margin i.e ` 100% - horizontal-grid-margin ` .This means that the individual width of each column is the total width of both columns divided by 2 i.e `(100% - horizontal-grid-margin) / 2` .But, how do we write that in CSS? 
 
 Introducing the CSS `Calc()` function. The CSS calc function is used to perform simple calculations to determine CSS property values right in CSS.
 
@@ -155,9 +155,7 @@ The html will be
 </div>
 ```
 
-Notice that the width of the 2-of-3 column is two 1-of-3 columns plus the horizontal-grid-margin? We’ve already calculated the width of one 1-of-3 column, so that's:
-
-`2 * ((100% - 2 *  horizontal-grid-margin)/3) + horizontal-grid-margin` 
+Notice that the width of the 2-of-3 column is two 1-of-3 columns plus the horizontal-grid-margin? We’ve already calculated the width of one 1-of-3 column. That will be: `2 * ((100% - 2 *  horizontal-grid-margin)/3) + horizontal-grid-margin` 
 
 ``` css
 .col-2-of-3 {
@@ -196,4 +194,4 @@ We all know that the best way to learn to code, is to code.Try building out this
 
 *Hint: You'll need to use a 2-of-4 column*
 
-Now, go build something great and maybe connect with me on twitter.
+Now, go build something great and maybe connect with me on <a target="blank" class="inline-link" href="https://twitter.com/_MsLinda">twitter</a>.
