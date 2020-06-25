@@ -1,6 +1,4 @@
 
-<p align="center">
-</p>
 <h1 align="center">
   Codes With Linda: My Portfolio Site + Blog
 </h1>
@@ -16,7 +14,7 @@ This website was built with the hello world starter from Gatsby. If you'll like 
     git clone https://github.com/Linda-Ikechukwu/Personal-Site.git
     ```
 
-1.  **Start developing.**
+2.  **Start developing.**
 
     Navigate into your new site’s directory and start it up.
 
@@ -25,7 +23,7 @@ This website was built with the hello world starter from Gatsby. If you'll like 
     gatsby develop
     ```
 
-1.  **Open the source code and start editing!**
+3.  **Open the source code and start editing!**
 
     Your site is now running at `http://localhost:8000`!
 
