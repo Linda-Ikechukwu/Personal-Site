@@ -1,6 +1,7 @@
 /* rosario-regular - latin */
 @font-face {
     font-family: 'Rosario';
+    font-display: swap;
     font-style: normal;
     font-weight: 400;
     src: url('./rosario-v17-latin-regular.eot'); /* IE9 Compat Modes */
@@ -14,6 +15,7 @@
   /* rosario-600 - latin */
   @font-face {
     font-family: 'Rosario';
+    font-display: swap;
     font-style: normal;
     font-weight: 600;
     src: url('./rosario-v17-latin-600.eot'); /* IE9 Compat Modes */
@@ -27,6 +29,7 @@
   /* rosario-700 - latin */
   @font-face {
     font-family: 'Rosario';
+    font-display: swap;
     font-style: normal;
     font-weight: 700;
     src: url('./rosario-v17-latin-700.eot'); /* IE9 Compat Modes */
@@ -40,6 +43,7 @@
   /* rosario-italic - latin */
   @font-face {
     font-family: 'Rosario';
+    font-display: swap;
     font-style: italic;
     font-weight: 400;
     src: url('./rosario-v17-latin-italic.eot'); /* IE9 Compat Modes */
@@ -55,6 +59,7 @@
 /* ribeye-marrow-regular - latin */
 @font-face {
     font-family: 'Ribeye Marrow';
+    font-display: swap;
     font-style: normal;
     font-weight: 400;
     src: url('./ribeye-marrow-v9-latin-regular.eot'); /* IE9 Compat Modes */

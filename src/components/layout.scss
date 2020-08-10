@@ -12,7 +12,7 @@
   --text-color-light: #fffffe;
   --secondary-font-family: "Ribeye Marrow", cursive;
   --primary-font-family: "Rosario", sans-serif;
-  --link-color: rgb(238, 187, 195);
+  --link-color: rgb(243, 156, 169);
   --bg-white-1: #fdf9f9;
   --bg-white-2: #f8edeb;
 }
@@ -86,6 +86,16 @@ textarea{
 }
 .u-center {
   text-align: center;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /*general Classes*/
@@ -205,6 +215,10 @@ textarea{
 .inline-link {
   color: var(--link-color);
   font-style: italic;
+
+  &:hover, &:focus{
+     border-bottom: 1px solid var(--link-color);
+  }
 }
 
 .inline-image{
@@ -283,6 +297,10 @@ pre{
 
   .inline-link {
     color: var(--contrast-color);
+
+    &:hover, &:focus{
+      border-bottom: 1px solid var(--contrast-color);
+   }
   }
   .post__title {
     a {
@@ -309,7 +327,7 @@ pre{
   }
 
 
-  button:hover{
+  button:hover, button:focus{
       color: var(--bg-dark-1);
   }
 
@@ -355,8 +373,8 @@ pre{
     }
   }
 
-  input,
-  textarea {
+  .form input,
+  .form textarea {
     border: 2px solid var(--bg-dark-1);
     color: var(--bg-dark-1);
   }

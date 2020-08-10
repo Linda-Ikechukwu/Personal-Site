@@ -85,6 +85,16 @@ module.exports = {
         trackingId: "UA-167406817-1",
       },
     },
+   {
+    resolve: `gatsby-plugin-netlify`,
+    options: {
+      allPageHeaders: [
+        "Link: </static/fonts/rosario-v17-latin-regular.woff2>; rel=preload; as=font",
+        "Link: </static/fonts//fonts/ribeye-marrow-v9-latin-regular.woff2>; rel=preload; as=font",
+        "Link: </static/fonts.css>; rel=preload; as=font",
+      ],
+    }
+   },
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
@@ -94,8 +104,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.codewithlinda.com',
-        sitemap: 'https://www.codewithlinda.com/sitemap.xml',
+        host: 'https://www.codewithlinda.com/',
+        sitemap: 'https://www.codewithlinda.com/sitemap.xml/',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     }

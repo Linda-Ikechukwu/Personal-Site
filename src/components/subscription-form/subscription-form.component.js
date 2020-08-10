@@ -64,7 +64,7 @@ const SubscriptionForm = () => {
             >
                 <input
                     type="email"
-                    aria-label="Your email"
+                    aria-label="Enter Your email"
                     name="email_address"
                     placeholder="Your email address"
                     onChange={handleInputChange}

@@ -53,14 +53,14 @@ const BlogPost = props => {
     //For the previous and next blog post link
     const prev = props.pageContext.prev ?
         {
-            url: `/blog/${props.pageContext.prev.fields.slug}`,
+            url: `/blog/${props.pageContext.prev.fields.slug}/`,
             title: props.pageContext.prev.frontmatter.title
         }
         : null;
 
     const next = props.pageContext.next
         ? {
-            url: `/blog/${props.pageContext.next.fields.slug}`,
+            url: `/blog/${props.pageContext.next.fields.slug}/`,
             title: props.pageContext.next.frontmatter.title
         }
         : null
