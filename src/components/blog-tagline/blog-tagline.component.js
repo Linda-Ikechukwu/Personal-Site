@@ -5,7 +5,7 @@ import "./blog-tagline.style.scss";
 const BlogTagline = () => {
     return (
         <div className="blog-tagline">
-            <p>CodeWithLinda : Beginner Friendly Articles on Frontend Developement, Dev Life and more written by Linda Ikechukwu</p>
+            <p>Beginner Friendly Articles on Frontend Developement without the Technical Jargons and more written by Linda Ikechukwu</p>
         </div>
     )
 }

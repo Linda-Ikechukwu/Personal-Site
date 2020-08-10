@@ -23,6 +23,7 @@
     }
 
     & input, & textarea{
+        padding: 2px;
         width: 100%;
         background-color: transparent;
         border: 2px solid var(--component-color);

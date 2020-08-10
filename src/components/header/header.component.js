@@ -15,13 +15,15 @@ const Header = () => {
       {
         shapes.map(shape => {
           return (
-            <div className={`shape-container--${shape} shape-animation`}><div aria-hidden="true" class="random-shape"></div></div>
+            <div className={`shape-container--${shape} shape-animation`}>
+              <div aria-hidden="true" class="random-shape" alt=""></div>
+            </div>
           )
         })
       }
       <div className="header">
 
-        <div className="header__left">
+        <div className="header__left" id="main">
           <div className="header__title">
             <h1>Hi, I’m Linda</h1>
           </div>
@@ -30,9 +32,8 @@ const Header = () => {
           </div>
           <div className="header__description">
             <p>
-              Asides being a myraid of a couple of awesome things,
-              I build stuff that you see on the web and sometimes deploy,
-              deliver or manage stuff on the cloud. I write stuff too - when I feel like it.
+              Asides being a myriad of awesome things, I build stuff that you see on the web 
+              and sometimes deploy, deliver, or manage stuff on the cloud. I write stuff too - when I feel like it
           </p>
           </div>
 

@@ -2,7 +2,7 @@
 title: "Build a Simple Responsive Grid System with CSS Floats"
 date: "2020-06-25"
 featured: "./layout.png"
-description: "Before CSS Flexbox and Grids came into the picture, CSS Float was the go-to property for implementing web layouts. Notwithstanding, it is still very relevant. In this article, you'll solidify your knowlegde of CSS floats by building a Simple Responsive Grid Layout With Floats."
+description: "Understand how CSS floats work by building a simple grid syatem like bootstrap using floats."
 tags: ["CSS", "HTML"]
 keywords: "CSS Floats, CSS Float layout templates, CSS Layout Float"
 ---

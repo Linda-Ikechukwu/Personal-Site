@@ -54,8 +54,8 @@ class Posts extends React.Component {
       `}
         render={data => (
           <div className="blogs-container">
-        <ul className="posts">
-            {data.allMarkdownRemark.edges.map(edge => {
+            <ul className="posts">
+              {data.allMarkdownRemark.edges.map(edge => {
                 return (
                     <li key={edge.node.id} className="post" data-aos="zoom-in-right">
                         <div className="post__thumbnail">
