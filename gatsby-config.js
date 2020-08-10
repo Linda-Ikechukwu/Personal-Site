@@ -89,9 +89,9 @@ module.exports = {
     resolve: `gatsby-plugin-netlify`,
     options: {
       allPageHeaders: [
-        "Link: </static/fonts/rosario-v17-latin-regular.woff2>; rel=preload; as=font",
-        "Link: </static/fonts//fonts/ribeye-marrow-v9-latin-regular.woff2>; rel=preload; as=font",
-        "Link: </static/fonts.css>; rel=preload; as=font",
+        "Link: <static/fonts/rosario-v17-latin-regular.woff2>; rel=preload; as=font",
+        "Link: <static/fonts//fonts/ribeye-marrow-v9-latin-regular.woff2>; rel=preload; as=font",
+        "Link: <static/fonts.css>; rel=preload; as=font",
       ],
     }
    },
