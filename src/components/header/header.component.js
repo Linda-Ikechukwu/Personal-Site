@@ -5,17 +5,14 @@ import "./header.styles.scss"
 
 const Header = () => {
   //creating an  array containing the floating shapes
-  const shapes = [];
-  for (var i = 1; i <= 50; i++) {
-    shapes.push(i)
-  }
+  const shapes = [...Array(50)];
 
   return (
     <div className="shape">
       {
-        shapes.map(shape => {
+        shapes.map((_, shape) => {
           return (
-            <div className={`shape-container--${shape} shape-animation`}><div aria-hidden="true" class="random-shape"></div></div>
+            <div key={shape} className={`shape-container--${shape+1} shape-animation`}><div aria-hidden="true" class="random-shape"></div></div>
           )
         })
       }
