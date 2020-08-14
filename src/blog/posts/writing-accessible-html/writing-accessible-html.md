@@ -4,7 +4,7 @@ date: "2020-08-10"
 featured: "./accessible-html.png"
 description: "The accessibility stats of most websites can be greatly improved by making few changes to the HTML. Find out how!"
 tags: ["HTML"]
-keywords: "HTML Accessible Elements, Web Accessibility, Empty Image Alt "
+keywords: "HTML Accessible Elements, Web Accessibility, Empty Image Alt, Semantic Elements "
 ---
 
 Over the weekend, I decided to take out some time to look at my website’s accessibility, performance and SEO stats and fix some of the issues.
@@ -35,6 +35,7 @@ There’s nothing wrong with that until someone who uses screen readers has to a
 For every input, provide a label. Combine explicit and implicit labelling That is, wrap the input with the label tag and also associate them with the HTML `for` attribute.
 
 ```html
+
 <label for='name'>Enter Your Name:
     <input name="name" id="name"></input>
 </label>
@@ -43,7 +44,10 @@ For every input, provide a label. Combine explicit and implicit labelling That i
 
 But, if you do not want to include labels due to design-specs, add an aria-label to the input.
 
-`<input name="name" id="name" aria-label=’name’></input>`
+```html
+<input name="name" id="name" aria-label=’name’></input>
+
+```
 
 ## Never Forget the Alt.
 
@@ -54,6 +58,7 @@ Having images without an alt attribute is a no-no for web accessibility. Always 
 For every web page, the first thing you should provide is a skip link or button. This skip button is very useful for keyboard users and screen readers to be able to switch to the main content of the page without having to read through your header or navigation.
 
 ```html
+
  <a href='#main'>Skip To Main Content</a>
     <nav>....</nav>
     <main id="main"></main>
@@ -64,6 +69,7 @@ For every web page, the first thing you should provide is a skip link or button.
 The skip button is usually visually hidden but not hidden to screenreaders. A CSS class like below can be used to achieve visual hiding only.
 
 ```css
+
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -73,6 +79,7 @@ The skip button is usually visually hidden but not hidden to screenreaders. A CS
   white-space: nowrap;
   width: 1px;
 }
+
 ```
 
 ## Table Headers, not Table Data
@@ -105,9 +112,11 @@ Another thing is to remember to add captions. With table captions, screen reader
 This has been written countless times but I guess it hasn’t sunk in. If you do not like the browser’s annoying blue outline on focused elements, restyle it to match the website’s brand colors. Never just settle on outline: none otherwise you’ll be giving keyboard users a difficult time.
 
 ```css
+
 Button:focus{
  outline: 1px dotted pink;
 }
+
 ```
 
 You can also opt to use shadows for the focus state.
@@ -117,9 +126,11 @@ You can also opt to use shadows for the focus state.
 There are times when link tags are used to wrap another HTML element, so there can’t be text between the tags. For example, using an image as a link or using a social icon as a link. In these cases, add an aria-label to the link tag describing its purpose.
 
 ```html
+
 <a href='#main' aria-label="Checkout my pink's cat website">
    <img alt="Screenshotof my pink cat's website" src="mypinkcat.png"></img>
 </a>
+
 ```
 
 ## Conclusion

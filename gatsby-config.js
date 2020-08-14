@@ -8,7 +8,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `Linda Ikechukwu`,
-    description: `Linda Ikechukwu is a Software Developer et Community builder focused on Frontend and Cloud Technologies from Lagos, Nigeria.`,
+    description: `Linda Ikechukwu is a Frontend Developer, Community Manager  from Lagos, Nigeria.`,
     author: `Linda Ikechukwu`,
     keywords: `Linda Ikechukwu, CodeWithLinda, Nigerian Female Software Developer, PH School Of AI Community Manager, Frontend Developer, Javascript Developer in Nigeria `,
     siteUrl: `https://www.codewithlinda.com/`,
