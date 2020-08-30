@@ -1,7 +1,6 @@
 import React from "react";
 import { StaticQuery, graphql, Link } from "gatsby";
 import Img from "gatsby-image"
-import Button from "../button/button.component";
 
 import "./posts.style.scss";
 
@@ -10,6 +9,7 @@ import 'aos/dist/aos.css';
 
 class Posts extends React.Component {
   componentDidMount() {
+    console.log(this.props.data);
     this.aos = AOS;
     this.aos.init();
   }
@@ -19,45 +19,14 @@ class Posts extends React.Component {
   }
 
   render() {
+    
     return (
-      <StaticQuery
-        query={graphql`
-        query {
-          allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
-            edges {
-              node {
-                frontmatter {
-                  title
-                  description
-                  date(formatString: "DD MMMM, YYYY")
-                  featured {
-                      childImageSharp {
-                        fluid(maxWidth: 750) {
-                          ...GatsbyImageSharpFluid
-                        }
-                        fixed( quality: 100, cropFocus: CENTER){
-                          ...GatsbyImageSharpFixed
-                        }
-                      }
-                  }
-                }
-                timeToRead
-                excerpt
-                id
-                fields {
-                  slug
-                }
-              }
-            }
-          }
-        }
-      `}
-        render={data => (
           <div className="blogs-container">
             <ul className="posts">
-              {data.allMarkdownRemark.edges.map(edge => {
+              {this.props.data.allMarkdownRemark.edges.map(edge => {
                 return (
                     <li key={edge.node.id} className="post" data-aos="zoom-in-right">
+                      <Link to={`/blog/${edge.node.fields.slug}/`}>
                         <div className="post__thumbnail">
                             {
                                 edge.node.frontmatter.featured && (
@@ -85,16 +54,16 @@ class Posts extends React.Component {
                             </span>
                         </div>
                         <p className="post__excerpt">{edge.node.frontmatter.description}</p>
-                        <Link to={`/blog/${edge.node.fields.slug}/`}><Button small>Read More</Button> </Link>
+                      </Link>  
                     </li>
                 )
             })}
         </ul>
       </div>
-        )}
-      />
-    )
-  }
+    )}
+    
+    
+  
   
   
 }

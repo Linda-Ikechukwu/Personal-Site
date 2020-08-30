@@ -10,7 +10,7 @@ import './navigation.styles.scss'
 
 const Navigation = ({dark}) => {
     return (
-        <div className={`nav ${dark ? 'nav-dark' : ' '} `}>
+        <nav className={`nav ${dark ? 'nav-dark' : ' '} `}>
             <a href='#main' className="visually-hidden ">Skip to main content</a>
             <div className="nav__right">
                 <span className="nav__item"><Link to="/">Home</Link></span>
@@ -36,7 +36,7 @@ const Navigation = ({dark}) => {
                 <span className="nav__item"><a href="https://twitter.com/_MsLinda" aria-label="Go to My Twitter"><TwitterIcon style={{ fontSize: 22 }} /></a></span>
                 <span className="nav__item"><a href="https://www.linkedin.com/in/linda-ikechukwu/" aria-label="Go to My LinkedIn"><LinkedInIcon style={{ fontSize: 22 }} /></a></span>
             </div>
-        </div>
+        </nav>
     )
 }
 

@@ -2,8 +2,7 @@
 title: "The Cascade Explained - How CSS Styles Are Applied to Html Elements"
 date: "2020-06-11"
 featured: "./the-css-cascade.png"
-description: "Do you know what goes on behind browsers when there are two or more conflicting styles
-for the same element? Find Out!"
+description: "The CSS Cascade is the algorithm used by browsers to resolve the conflict of which style rule to apply to an element, when there are  2 or more style rules of the same property with different values targeting an element. Learn how it works."
 tags: ["CSS", "HTML"]
 keywords: "The CSS Cascade, CSS !important, what is the cascade, cascade order for css, what is CSS specificity, what is C in CSS, CSS Inherintance."
 ---

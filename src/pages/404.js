@@ -13,7 +13,7 @@ const NotFound = (props) => {
                 //image={props.data.markdownRemark.frontmatter.featured.childImageSharp.resize}
                 pathname={props.location.pathname}
             />
-            <div className="container">
+            <main className="container">
                 <div className="not-found">
                     <span className="not-found__emoji" role="img" aria-label="confused smiley emoji">🥴</span>
                     <h1>Oops!! Page Not Found</h1>
@@ -21,7 +21,7 @@ const NotFound = (props) => {
                         <Link to="/blog/">Why Not Check some latest articles?</Link>
                     </p>
                 </div>
-            </div>
+            </main>
         </Layout>
     )
 }
