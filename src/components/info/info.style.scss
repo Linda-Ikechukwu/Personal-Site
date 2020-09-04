@@ -1,15 +1,16 @@
-.info{
-    background-color: var(--bg-dark-2);
+.speaking{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    height: 100%;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     
     &__list{
         padding-left: 2.5rem;
 
         &__item{
+            margin-bottom: 2rem;
             &::marker{
                 font-size: 2.8rem;
                 transform: translateY(-5px);
@@ -28,8 +29,8 @@
             }
 
             & span{
-                border-top: .5px solid;
-                width: 33rem;
+                border-top: .5px solid var(--white-secondary);
+                width: 40rem;
                 display: block; 
 
                 @media only screen and (max-width: 900px) {
@@ -51,3 +52,7 @@
     }
 }
 
+.talks{
+    display: flex;
+    justify-content: space-between;
+}

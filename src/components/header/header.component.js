@@ -18,34 +18,36 @@ const Header = () => {
           )
         })
       }
-      <div className="header">
-
-        <div className="header__left" id="main">
-          <div className="header__title">
-            <h1>Hi, I’m Linda</h1>
-          </div>
-          <div className="header__subtitle">
-            <h2>Software Developer (Frontend + Cloud)</h2>
-          </div>
-          <div className="header__description">
-            <p>
-              Asides being a myriad of awesome things, I build stuff that you see on the web 
-              and sometimes deploy, deliver, or manage stuff on the cloud. I write stuff too - when I feel like it
-          </p>
-          </div>
-
-          <a href="#projects"><Button>See Sample Projects</Button></a>
-        </div>
+      <section className="header">
 
         <div className="header__right">
           <div className="header__image">
-            <img src="https://res.cloudinary.com/lindadxk/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1588042230/me.jpg"
+            <img className="hero-dark" src="/hero4.png"
               alt="headshot of Linda Ikechukwu">
             </img>
-            <div className="header__image__overlay"></div>
+            <img className="hero-light" src="/hero5.png"
+              alt="headshot of Linda Ikechukwu">
+            </img>
           </div>
         </div>
-      </div>
+
+        <div className="header__left">
+          <div className="header__title">
+            <p>Hi, I'm Linda</p>
+          </div>
+          <div className="header__subtitle">
+            <h1>Frontend Developer + <br/> Technical Writer</h1>
+          </div>
+          <div className="header__description">
+            <p>
+              I build web interfaces and <a className="inline-link" href="/blog">write</a> about it. 
+            </p>
+          </div>
+
+        </div>
+
+        
+      </section>
     </div>
   )
 }

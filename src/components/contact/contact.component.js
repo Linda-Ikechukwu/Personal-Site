@@ -10,11 +10,10 @@ import "./contact.style.scss"
 
 const Contact = () => {
     return (
-        <div className="contact" id="contact" >
-            <h2 className="title">Say Hi</h2>
-            <p className="u-center">Talk to me about Code, Technical Writing, Community Management, and Food.</p>
+        <section className="contact" id="contact" >
+            <p className="p-big">I love to chat about gigs, technical writing, food, tequila and karaoke dates</p>
             <ContactForm/>
-        </div>
+        </section>
     )
 }
 

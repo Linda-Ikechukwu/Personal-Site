@@ -11,10 +11,10 @@
   --dark-secondary: #181717;
   --white-primary: #ffffff;
   --white-secondary: #d6d3d3;
-  --link-color: rgb(243, 156, 169);
+  --link-color: #f39ca9;
   --component-color: #b8c1ec;
   --text-color-light: #f1f1ef;
-  --secondary-font: "Ribeye Marrow", cursive;
+  --secondary-font: "Rosario", sans-serif;
   --primary-font: "Rosario", sans-serif;
   
   --bg-white-1: #fdf9f9;
@@ -32,13 +32,15 @@ body {
   padding: 0;
   color: var(--white-secondary);
   font-family: var(--primary-font);
-  font-size: 1.8rem;
+  font-size: 2.0rem;
+  background-color: var(--dark-primary);
 }
 
 h1,h2,h3,h4,h5,h6{
   color: var(--white-primary);
   margin-top:1rem;
   margin-bottom: 1rem;
+  font-family: var(--secondary-font);
 }
 
 a {
@@ -50,30 +52,6 @@ label {
   display: none;
 }
 
-input{
-  height: 5rem;
-  margin-bottom: 1.5rem;
-}
-
-textarea{
-  outline: none  !important;
-  resize: none;
-}
-
-input,
-textarea {
-  background-color: transparent;
-  border: 2px solid var(--component-color);
-  border-radius: 5px;
-  color: var(--text-color-light);
-  font-family: monospace;
-}
-
-input:focus, textarea:focus{
-  border: 2px solid var(--link-color);
-  box-shadow: 0px 1px 3px rgba(17, 16, 16, 0.8);
-  outline: none;
-}
 
 /*Utility Classes*/
 .u-margin-top-s {
@@ -97,7 +75,6 @@ input:focus, textarea:focus{
 /*general Classes*/
 
 .nav,
-.header,
 .footer {
   padding: 2rem 10rem;
 
@@ -110,7 +87,8 @@ input:focus, textarea:focus{
   }
 }
 
-.info,
+.header,
+.speaking,
 .contact,
 .projects {
   -webkit-animation-duration: 1s;
@@ -118,11 +96,7 @@ input:focus, textarea:focus{
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 
-  padding: 5rem 10rem 8rem;
-
-  & > div {
-    width: 38vw;
-  }
+  padding: 5rem 15rem;
 
   @media only screen and (max-width: 1000px) {
     padding: 5rem 5rem;
@@ -140,8 +114,6 @@ input:focus, textarea:focus{
     padding: 2rem 3rem 8.5rem 3rem;
   }
 }
-
-
 
 .container {
   background-color: var(--dark-primary);
@@ -197,14 +169,6 @@ input:focus, textarea:focus{
   }
 }
 
-.title {
-  font-family: "Ribeye Marrow", cursive;
-  font-size: 3.4rem;
-  line-height: 67px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 .sidebar {
   width: 22vw;
   position: relative;
@@ -256,7 +220,12 @@ input:focus, textarea:focus{
   justify-content: space-between;
 }
 
+.p-big{
+  font-size: 3.0rem;
+  font-weight: normal;
+  font-style: italic;
 
+}
 
 /*General classes for blog pages*/
 .inline-link {
@@ -323,33 +292,26 @@ pre{
 /*Alternate styles for light mode*/
 
 .light-mode {
-  color: var(--dark-secondary);
+
+  color: var(--dark-primary);
+  background-color: var(--white-primary);
+
+  h1,h2,h3,h4,h5,h6{
+    color: var(--dark-secondary);
+  }
+
+  a {
+    color:inherit;
+  }
 
   .button a {
     color: var(--text-color-light);
   }
 
-  code:not(.grvsc-code){
-    background-color:#d0d0d5;
-    padding: 0 5px;
-  }
-
-  .inline-link {
-    color: var(--contrast-color);
-
-    &:hover, &:focus{
-      border-bottom: 1px solid var(--contrast-color);
-   }
-  }
-  .post__title {
-    a {
-      color: var(--dark-secondary);
-    }
-  }
-
   .nav__item a,
   .info__list h4 a,
-  .not-found p a {
+  .not-found p a,
+  .pagination-link {
     color: var(--dark-secondary);
 
     &:hover {
@@ -364,40 +326,47 @@ pre{
       color: black;
     }
   }
+  
+  code:not(.grvsc-code){
+    background-color:#d0d0d5;
+    padding: 0 5px;
+  }
 
+  .inline-link {
+    color: var(--contrast-color);
 
-  button:hover, button:focus{
+    &:hover, &:focus{
+      border-bottom: 1px solid var(--contrast-color);
+   }
+  }
+
+  .post-main{
+    background-color: #f9f4f487;
+  }
+
+  .post__title {
+    a {
       color: var(--dark-secondary);
+    }
   }
 
-  .nav,
-  .shape,
-  .projects {
-    background-color: var(--bg-white-1);
+  .posts .post{
+    background-color: #f9f4f487 ;
+    color: var(--dark-primary);
+    box-shadow: none;
   }
 
-  .nav.nav-dark,
-  .footer,
-  .info,
-  .contact {
-    background-color: var(--bg-white-2);
-  }
-
-  .header__image {
-    background: radial-gradient(var(--contrast-color) 1px, var(--bg-white-1) 1px);
-    background-size: 15px 15px;
+  button{
+    border: 1px solid var( --dark-secondary);
+    color: var(--dark-secondary);
   }
 
   .container {
     color: var(--dark-secondary);
-    background-color: var(--bg-white-1);
+    background-color: var(--white-primary);
   }
 
-  .container + .footer {
-    background-color: var(--bg-white-1);
-    color: var(--dark-secondary);
-  }
-
+  
   .adComponent {
     & button {
       &:hover {
@@ -414,7 +383,7 @@ pre{
 
   .form input,
   .form textarea {
-    border: 2px solid var(--dark-secondary);
+    border: 1px solid var(--dark-secondary);
     color: var(--dark-secondary);
   }
 
@@ -423,19 +392,17 @@ pre{
     border: 2px solid var(--contrast-color);
   }
 
-  .blog-tagline {
-    background-color: var(--bg-white-1);
-    color: var(--dark-secondary);
-    padding: 5px;
-    border-top: 0.5px solid var(--component-color);
-    /* & p{
-        
-    } */
-  }
-
   .sub{
     background-color: #ebeef2;
     border: 5px solid var(--dark-secondary);
+  }
+
+  .hero-dark{
+    display: none;
+  }
+
+  .hero-light{
+    display: block;
   }
 }
 

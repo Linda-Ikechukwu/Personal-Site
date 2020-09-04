@@ -8,13 +8,13 @@
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
-   justify-content: space-between;
+   justify-content: center;
    align-items: center;
    width: 78vw;
 
    
     &__left, &__right{
-        width: 38vw;
+        width: 32vw;
     }
 
     &__left{
@@ -23,33 +23,33 @@
     }
 
     & input, & textarea{
-        padding: 2px;
+        padding: 1rem;
         width: 100%;
         background-color: transparent;
-        border: 2px solid var(--component-color);
+        border: 1px solid var(--white-secondary);
         border-radius: 5px;
         color: var(--text-color-light);
         font-family: monospace;
+        font-size: 1.8rem;
 
     }
 
     & input:focus, & textarea:focus{
-        border: 2px solid var(--link-color);
-        box-shadow: 0px 1px 3px rgba(17, 16, 16, 0.8);
+        border: 1.5px solid var(--link-color);
         outline: none;
     }
 
     & input{
-        height: 5rem;
+        height: 8rem;
         margin-bottom: 1.5rem;
     }
     
     & textarea{
         outline: none  !important;
         resize: none;
-        height: 11.5rem;
+        height: 17.5rem;
         margin-top: -10px;
-        
+        margin-left: 3rem ;
     }
     /*To remove the weird red outline for required textarea in firefox*/
     & textarea:not(output):-moz-ui-invalid {

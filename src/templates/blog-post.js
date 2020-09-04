@@ -83,11 +83,11 @@ const BlogPost = props => {
                 pathname={props.location.pathname}
 
             />
-            <main className="container">
+            <div className="container">
 
                 <div className="flex-container">
                     <div className="post-body">
-                        <div className="post-main">
+                        <main className="post-main">
                             <div className="post-body__info">
                                 <h1 className="post-body__title">{props.data.markdownRemark.frontmatter.title}</h1>
                                 <span>Published on {props.data.markdownRemark.frontmatter.date}{" "}<span>
@@ -116,7 +116,7 @@ const BlogPost = props => {
                                 <span>If you found this article helpful,please share it:</span>
                                 <ShareButtons title={title} url={url} twitterHandle={twitterHandle} tags={tags} />
                             </div>
-                        </div>
+                        </main>
 
                         <div>
                             <SubscriptionForm></SubscriptionForm>
@@ -155,7 +155,7 @@ const BlogPost = props => {
                     </aside>
                 </div>
 
-            </main>
+            </div>
         </Layout>
     )
 }
