@@ -46,7 +46,7 @@ class speaking extends React.Component {
                         </ul>
                         <ul className="speaking__list">
                             <li className="speaking__list__item">
-                                <h4 aria-level="3"><a target="blank" href="https://drive.google.com/file/d/1V9kv_3VwSxq4Yml-ih0A7OsfG-ATB3Xi/view?usp=sharing">Contributing to Open Source; First Steps</a></h4>
+                                <h4 aria-level="3"><a target="blank" href="https://drive.google.com/file/d/1V9kv_3VwSxq4Yml-ih0A7OsfG-ATB3Xi/view?usp=sharing">Contributing to Open Source: First Steps</a></h4>
                                 <span></span>
                                 <p>November 2019. DevFest SE. Oko, Nigeria</p>
                             </li >

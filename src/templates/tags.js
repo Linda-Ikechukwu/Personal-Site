@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect} from "react"
 import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -7,9 +7,11 @@ import Button from "../components/button/button.component";
 import Layout from "../components/layout"
 import MetaData from "../components/metadata"
 import TagList from "../components/taglist/taglist.component"
-import AdComponent from "../components/ad/ad.component"
 
 import "../components/posts/posts.style.scss"
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const pageQuery = graphql`
   query($tag: String) {
@@ -26,6 +28,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            description
             date(formatString: "DD MMMM, YYYY")
             featured {
                 childImageSharp {
@@ -51,11 +54,21 @@ export const pageQuery = graphql`
 `
 
 const Tags = ({ pageContext, data, location }) => {
-    const { tag } = pageContext
-    const { totalCount } = data.allMarkdownRemark
+
+    const { tag } = pageContext;
+
+    const { totalCount } = data.allMarkdownRemark;
+
     const tagHeader = `${totalCount} Article${
         totalCount === 1 ? "" : "s"
         } on "${tag}"`
+
+    
+    useEffect(() => {
+        const aos = AOS;
+        aos.init();
+    })
+
     return (
         <Layout>
             <MetaData
@@ -64,53 +77,49 @@ const Tags = ({ pageContext, data, location }) => {
                 pathname={location.pathname}
             />
             <div className="container">
-                <h1>{tagHeader}</h1>
+                <h1 className="u-bottom">{tagHeader}</h1>
                 <div className="flex-container">
                     <ul className="posts">
                         {data.allMarkdownRemark.edges.map(edge => {
                             return (
-                                <li key={edge.node.id} className="post">
-                                    <div className="post__thumbnail">
-                                        {
-                                            edge.node.frontmatter.featured && (
-                                                <Img
-                                                    style={{
-                                                        height: `15rem`,
-                                                        width: `100%`
-                                                    }}
-                                                    fluid={edge.node.frontmatter.featured.childImageSharp.fluid}
-                                                    alt={edge.node.frontmatter.title}
-                                                />
-                                            )
-                                        }
-                                    </div>
-                                    <h2 className="post__title">
-                                        <Link to={`/blog/${edge.node.fields.slug}/`}>
-                                            {edge.node.frontmatter.title}
-                                        </Link>
+                                <li key={edge.node.id} className="post" data-aos="zoom-in-right">
+                                    <Link to={`/blog/${edge.node.fields.slug}/`}>
+                                        <div className="post__thumbnail">
+                                            {
+                                                edge.node.frontmatter.featured && (
+                                                    <Img
+                                                        style={{
+                                                            height: `15rem`,
+                                                            width: `100%`
+                                                        }}
+                                                        fixed={edge.node.frontmatter.featured.childImageSharp.fluid}
+                                                        alt={edge.node.frontmatter.title}
+                                                    />
+                                                )
+                                            }
+                                        </div>
+                                        <h2 className="post__title">
+                                            <Link to={`/blog/${edge.node.fields.slug}/`}>
+                                                {edge.node.frontmatter.title}
+                                            </Link>
 
-                                    </h2>
-                                    <div className="post__info">
-                                        <span>
-                                            Posted on {edge.node.frontmatter.date} <span> / </span>{" "}
-                                            {edge.node.timeToRead} min read
-                                </span>
-                                    </div>
-                                    <p className="post__excerpt">{edge.node.excerpt}</p>
-                                    <Button small><Link to={`/blog/${edge.node.fields.slug}/`}>Read More </Link></Button>
+                                        </h2>
+                                        <div className="post__info">
+                                            <span>
+                                                Published on {edge.node.frontmatter.date} <span>  </span>{" "}
+                                                ({edge.node.timeToRead} min read)
+                                           </span>
+                                        </div>
+                                        <p className="post__excerpt">{edge.node.frontmatter.description}</p>
+                                    </Link>
                                 </li>
                             )
+
+                            
                         })}
                     </ul>
                     <div className="sidebar">
                         <TagList />
-                        <AdComponent
-                            image="/ztm.png"
-                            alt="Zero to Mastery Academy Logo"
-                            description="Avoid Uncertainties and the Tutorial loophole. Learn to Code the right way, become a fullstack developer and land a high paying job in less than a year for less than $300. Use my coupon code <span>FRIENDS10</span> for 10% off membership fee"
-                            link="https://academy.zerotomastery.io/p/academy?affcode=441520_tjxt0mkj"
-                            cto="Join the ZTM Academy Now!"
-                        ></AdComponent>
                     </div>
                 </div>
             </div>

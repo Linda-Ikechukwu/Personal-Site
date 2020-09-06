@@ -49,7 +49,7 @@
                 height: 2rem;
                 width: 2rem;
                 left: -1px;
-                bottom: -0.3rem;
+                bottom: -0.4rem;
                 background-color:var(--link-color);
                 -webkit-transition: 0.4s;
                 transition: 0.4s;
@@ -61,7 +61,7 @@
             }
 
             input:checked + .slider:before {
-                background-color:var(--bg-dark-1);
+                background-color:var(--contrast-color);
             }
     
             input:focus + .slider {

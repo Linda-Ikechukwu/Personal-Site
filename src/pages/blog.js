@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby'
 
 import Layout from "../components/layout"
 import Posts from "../components/posts/posts.component"
+import PopularPosts from "../components/posts/popular-posts.component"
 import MetaData from "../components/metadata"
 import BlogTagline from "../components/blog-tagline/blog-tagline.component"
 import TagList from "../components/taglist/taglist.component"
@@ -22,6 +23,7 @@ export const query = graphql`
                 frontmatter {
                   title
                   description
+                  tags
                   date(formatString: "DD MMMM, YYYY")
                   featured {
                       childImageSharp {
@@ -75,7 +77,15 @@ const Blog = (props) => {
             </div>
           </aside>
           <div>
+            
+            {
+              currentPage === 1 &&  <PopularPosts/>
+            }
+            {
+              currentPage === 1 && <h1 className="u-bottom">Others:</h1>
+            }
             <Posts data={props.data} />
+
             <div className="pagination">
 
               {!isFirst && (

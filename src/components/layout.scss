@@ -32,7 +32,7 @@ body {
   padding: 0;
   color: var(--white-secondary);
   font-family: var(--primary-font);
-  font-size: 2.0rem;
+  font-size: 1.8rem;
   background-color: var(--dark-primary);
 }
 
@@ -56,6 +56,10 @@ label {
 /*Utility Classes*/
 .u-margin-top-s {
   margin-top: 2rem;
+}
+
+.u-bottom {
+  margin-bottom: 4rem;
 }
 
 .u-center {
@@ -218,6 +222,10 @@ label {
 .pagination{
   display: flex;
   justify-content: space-between;
+
+  &-link:hover{
+    color: var(--link-color);
+  }
 }
 
 .p-big{

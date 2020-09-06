@@ -1,11 +1,25 @@
 .project{
+    position: relative;
     background-color: var(--component-color);
     border-radius: 5px;
-    height: 28rem;
-    width: 32rem;
+    height: 24rem;
+    width: 28rem;
     padding: 2rem;
     padding-bottom: 4rem;
     margin-bottom: 3rem;
+    
+
+    &:hover .project__overlay{
+        opacity:1;
+        width: 100%;
+
+
+    }
+
+    img{
+        width: 100%;
+        height: 18rem;
+    }
 
     &--1{
         background:linear-gradient(180deg, #b7daed, #d7dad7) 
@@ -26,50 +40,58 @@
         background:linear-gradient(180deg, #a7e2be, #d7dad7) 
     }
 
-
-    &__title, h5{
-        font-size: 2.4rem;
-        margin: 0;
+    &__overlay{
+        transition: all .3s ease-in;
+        position: absolute;
+        width: 0;
+        height:100%;
+        top:0;
+        left:0;
+        background-color:#171414eb;
+        border-radius: 5px;
+        opacity: 0;
         
-        a{
-            color: var(--bg-dark-1);
-        }
-        
     }
 
-    p{
-        font-size: 1.8rem;
-        text-align: center;
-        margin: 5px 0;
-        font-weight: bold;
-    }
-
-    &__description > p{
-        font-size: 1.6rem;
-        margin: 5px 0;
-        text-align: left;
-        font-weight: normal;
-    }
-
-    img{
-        width: 100%;
-        height: 20rem;
-    }
-    
-    & .github{
+    &__details{
+        position: relative;
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+
+        h4{
+            text-align: center;
+        }
+
+        p{
+            text-align: center;  
+            font-size: 1.6rem;
+        }
+
+        div:not(:last-child){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            p:not(:last-child){
+                margin-right: 1rem;
+            }
+
+            p{
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
     }
 
-    & .tags, .github{
-       justify-content: center;
-
-        .tag{
-        background-color: var(--bg-dark-1);
-        color: var(--text-color-light);
-        font-size: 1.4rem;
-        margin: .5rem;
-       }
+    &__links{
+        display: flex;
+        justify-content: space-between;
+        width:25rem;
     }
+
 
     @media only screen and (max-width: 770px) {
         margin-top: 2rem;
@@ -103,10 +125,4 @@
 
 }
 
-.active{
-    display: block;
-}
 
-@keyframes slide {
-    100% { right: 0; }
-}

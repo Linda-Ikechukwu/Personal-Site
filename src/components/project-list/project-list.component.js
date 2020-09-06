@@ -28,10 +28,9 @@ class ProjectList extends React.Component{
                   num = {1}
                   title='Port Harcourt School of AI'
                   projectLink="https://phcschoolofai.org/"
-                  description="<p>The Port Harcourt School Of AI is an educational community focused on democratizing Data Science and Machine Learning education to underrepresented 
-                  groups.</p> <p>We needed a website to let the world in on what we do, so I designed the layout and developed it. </p>"
+                  description="Website for The Port Harcourt School Of AI."
                   image="/phcschoolofai.png"
-                  imageAlt="Screenshot of the project"
+                  imageAlt="Screenshot of Port Harcout School Of AI Website"
                   techsUsed={['HTML', 'SASS','PostCSS','JavaScript','Gulp' ]}
                   githubLink="https://github.com/Linda-Ikechukwu/Official-Website"
                 />
@@ -39,18 +38,17 @@ class ProjectList extends React.Component{
                    num = {2}
                    title='Money Paddy (PWA)'
                    projectLink=" https://linda-ikechukwu.github.io/MoneyPaddy/dist/index.html"
-                   description="<p>Money Paddy is an income and expense logging app. The app incoporates indexed DB and Local Storage to persist data so the user can have a fully offline experience after installation. </p> 
-                   <p>It makes use of the Push and Notification Web APIs alongside firebase functions to implement Push Notifications and background syncing.</p>"
+                   description="Income and Expense Logging PWA. Works totally offline using local storage and Indexed DB."
                    image="/moneypaddy.png"
                    imageAlt="Screenshot of the moneypaddy project"
-                   techsUsed={['HTML', 'CSS','JavaScript','Webpack','Babel','Service Workers', 'Local Storage', 'PostCSS', 'Firebase', 'Indexed DB', 'Push API', 'Notifications API' ]}
+                   techsUsed={['HTML', 'CSS','JavaScript','Webpack','Service Workers', 'PostCSS', 'Firebase','Push API', 'Notifications API' ]}
                    githubLink=" https://github.com/Linda-Ikechukwu/MoneyPaddy"
                 />
                  <ProjectItem
                    num = {3}
                    title='Newsify'
                    projectLink=" https://linda-ikechukwu.github.io/MoneyPaddy/dist/index.html"
-                   description="<p>This project is a news website powered by the NEWS API. It is built on Express and uses EJS for templating. The app curates news from thousand of sources, which can then be filtered in terms of category or keyword.</p> "
+                   description="A news curator app. Filter, search and read news from different sites. "
                    image="/newsify.png"
                    imageAlt="Screenshot of the newsify project"
                    techsUsed={['HTML', 'CSS','Node JS','Express','EJS']}
@@ -60,33 +58,30 @@ class ProjectList extends React.Component{
                    num = {4}
                    title='Labrinth Stores'
                    projectLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
-                   description="<p>Labrinth Stores is a hypothetical full blown ecommerce store for an african american women clothing label, with all the features you would expect: Authentication
-                   product directory, payment processing e.t.c</p> <p>The aim of this project was to challenge me to learn React to an Intermediate level</p>"
+                   description="Labrinth Stores is a hypothetical ecommerce store for an african american women clothing label."
                    image="/labrinthe.png"
                    imageAlt="Screenshot of the labrinth project"
-                   techsUsed={['Sass', 'JSX','React','Redux','React-Redux', 'Firebase Firestore', 'Firebase Authentication', 'Localstorage',]}
+                   techsUsed={['Sass','React','Redux', 'Firebase', 'Localstorage',]}
                    githubLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
                 />
                 <ProjectItem
                    num = {5}
-                   title='Labrinth Stores'
+                   title="MyPickup"
                    projectLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
-                   description="<p>Labrinth Stores is a hypothetical full blown ecommerce store for an african american women clothing label, with all the features you would expect: Authentication
-                   product directory, payment processing e.t.c</p> <p>The aim of this project was to challenge me to learn React to an Intermediate level</p>"
+                   description="Admin dashboard for a delivery as a service startup."
                    image="/labrinthe.png"
                    imageAlt="Screenshot of the labrinth project"
-                   techsUsed={['Sass', 'JSX','React','Redux','React-Redux', 'Firebase Firestore', 'Firebase Authentication', 'Localstorage',]}
+                   techsUsed={['Sass','React','Material UI',]}
                    githubLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
                 />
                 <ProjectItem
                    num = {6}
-                   title='Labrinth Stores'
+                   title='Severless Notist'
                    projectLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
-                   description="<p>Labrinth Stores is a hypothetical full blown ecommerce store for an african american women clothing label, with all the features you would expect: Authentication
-                   product directory, payment processing e.t.c</p> <p>The aim of this project was to challenge me to learn React to an Intermediate level</p>"
+                   description="A severless react app for taking notes."
                    image="/labrinthe.png"
-                   imageAlt="Screenshot of the labrinth project"
-                   techsUsed={['Sass', 'JSX','React','Redux','React-Redux', 'Firebase Firestore', 'Firebase Authentication', 'Localstorage',]}
+                   imageAlt="Screenshot of the Notist project"
+                   techsUsed={['Sass','React','Severless Framework','AWS DynamoDB', 'AWS Cognito', 'AWS Lambda',]}
                    githubLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
                 />
                  
