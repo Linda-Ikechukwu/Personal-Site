@@ -1,7 +1,5 @@
 import React from "react";
 
-import Button from "../button/button.component";
-
 import "./project-item.style.scss"
 
 //AOS.init();
@@ -18,9 +16,9 @@ const ProjectItem = ({ title, projectLink, description, image, imageAlt, techsUs
                         {
                             techsUsed &&
 
-                            techsUsed.map(techUsed => {
+                            techsUsed.map((techUsed, index) => {
                                 return (
-                                    <p>{techUsed}</p>
+                                    <p key={index}>{techUsed}</p>
                                 )
                             })
 

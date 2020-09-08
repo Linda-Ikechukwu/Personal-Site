@@ -69,7 +69,7 @@ const Blog = (props) => {
       />
       <main className="container ">
 
-        <div className="flex-container reverse-flex">
+        <div className="flex-container">
           <aside className="sidebar">
             <div className="sidebar-fixed sidebar-fixed-left">
               <BlogTagline />

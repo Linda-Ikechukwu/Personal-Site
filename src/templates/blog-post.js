@@ -83,7 +83,7 @@ const BlogPost = props => {
                 pathname={props.location.pathname}
 
             />
-            <div className="container">
+            <div className="container post-container">
 
                 <div className="flex-container">
                     <div className="post-body">

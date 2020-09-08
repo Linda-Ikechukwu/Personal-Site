@@ -10,7 +10,7 @@ import "./contact.style.scss"
 
 const Contact = () => {
     return (
-        <section className="contact" id="contact" >
+        <section className="contact section" id="contact"  data-anchor="Page 4" >
             <p className="p-big">I love to chat about gigs, technical writing, food, tequila and karaoke dates</p>
             <ContactForm/>
         </section>

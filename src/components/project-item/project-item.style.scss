@@ -12,8 +12,6 @@
     &:hover .project__overlay{
         opacity:1;
         width: 100%;
-
-
     }
 
     img{
@@ -22,16 +20,16 @@
     }
 
     &--1{
-        background:linear-gradient(180deg, #b7daed, #d7dad7) 
+        background:linear-gradient(180deg, #b7daed, #d7dad7);
     }
     &--2{
         background:linear-gradient(180deg, #f1d1d1, #d7dad7) 
     }
     &--3{
-        background:linear-gradient(180deg, #faedb8, #d7dad7) 
+        background:linear-gradient(180deg, #faedb8, #d7dad7);
     }
     &--4{
-        background:linear-gradient(180deg, #b8c1ec, #d7dad7) 
+        background:linear-gradient(180deg, #b8c1ec, #d7dad7) ;
     }
     &--5{
         background:linear-gradient(180deg, #575180, #d7dad7) 
@@ -93,35 +91,11 @@
     }
 
 
-    @media only screen and (max-width: 770px) {
-        margin-top: 2rem;
-
+    @media only screen and (max-width: 800px) {
         
     }
 
-    @media only screen and (max-width: 500px) {
-        margin-top: 2rem;
-        height: 100%;
-        
-        &__title, h5{
-            font-size: 2.8rem;
-
-           
-        }
-
-        p {
-            font-size: 2.2rem
-        }
-
-        &__description > p{
-            font-size: 1.8rem;
-        }
-
-        & .tags .tag, button{
-           font-size: 1.8rem;
-        }
-
-    }
+    
 
 }
 

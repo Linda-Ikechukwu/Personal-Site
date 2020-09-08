@@ -25,6 +25,14 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; /*10px. Root font size is 16px i.e 100%*/
   scroll-behavior: smooth;
+
+  @media only screen and (max-width: 400px) {
+    font-size: 50%; /*8px. Root font size is 16px i.e 100%*/
+  }
+
+  @media only screen and (min-width: 2000px) {
+    font-size: 100%; /*Root font size is 16px i.e 100%*/
+  }
 }
 
 body {
@@ -125,16 +133,24 @@ label {
   padding: 5rem 10rem;
   min-height: 80vh;
 
+  @media only screen and (min-width: 2500px) {
+    padding: 5rem 20rem;
+  }
+
   @media only screen and (max-width: 1300px) {
     padding: 5rem 8rem;
   }
 
-  @media only screen and (max-width: 1000px) {
-    padding: 5rem 5rem;
-  }
-
   @media only screen and (max-width: 500px) {
     padding: 5rem 2rem;
+  }
+}
+
+.tag-page{
+  @media only screen and (max-width: 800px) {
+    .sidebar{
+      display: none;
+    }
   }
 }
 
@@ -149,9 +165,7 @@ label {
 }
 
 .reverse-flex {
-  @media only screen and (max-width: 900px) {
     flex-direction: column-reverse;
-  }
 }
 
 .not-found {
@@ -184,39 +198,53 @@ label {
     margin-top: 0;
   }
 
-  &-fixed{
-    position: fixed;
-    top: 25%;
-    text-align:left;
+  @media only screen and (min-width: 905px) {
 
-    &-left{
-      right: 70%;
-      left: 10rem;
+    &-fixed{
+      position: fixed;
+      top: 25%;
+      text-align:left;
+  
+      &-left{
+        right: 70%;
+        left: 10rem;
+  
+        @media only screen and (max-width: 1300px) {
+          left: 8rem;
+        }
+      
+        @media only screen and (max-width: 1000px) {
+          left: 5rem;
+        }
+      }
+  
+      &-right{
+        left: 75%;
+        right: 10rem;
 
-      @media only screen and (max-width: 1300px) {
-        left: 8rem;
+        @media only screen and (min-width: 2500px) {
+          right: 20rem;
+        }
+  
+        @media only screen and (max-width: 1300px) {
+          right: 5rem;
+
+          .blog-tagline{
+            padding: 1rem;
+
+            h2{
+              font-size: 2.5rem;
+            }
+          }
+        }
+      
       }
-    
-      @media only screen and (max-width: 1000px) {
-        left: 5rem;
-      }
+  
+      
     }
-
-    &-right{
-      left: 75%;
-      right: 10rem;
-
-      @media only screen and (max-width: 1300px) {
-        right: 8rem;
-      }
-    
-      @media only screen and (max-width: 1000px) {
-        right: 5rem;
-      }
-    }
-
-    
   }
+
+  
 }
 
 .pagination{
@@ -232,6 +260,10 @@ label {
   font-size: 3.0rem;
   font-weight: normal;
   font-style: italic;
+
+  @media only screen and (max-width: 800px) {
+    font-size: 2.5rem;
+  }
 
 }
 

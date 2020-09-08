@@ -5,20 +5,20 @@ import "./header.styles.scss"
 
 const Header = () => {
   //creating an  array containing the floating shapes
-  const shapes = [...Array(50)];
+  const shapes = [...Array(30)];
 
   return (
     <div className="shape">
       {
         shapes.map((_, shape) => {
           return (
-            <div key={shape} className={`shape-container--${shape+1} shape-animation`}><div aria-hidden="true" class="random-shape"></div></div>
-
-            
+            <div key={shape} className={`shape-container--${shape+1} shape-animation`}>
+              <div aria-hidden="true" className="random-shape"></div>
+            </div>
           )
         })
       }
-      <section className="header">
+      <section className="header section" data-anchor="Page 1">
 
         <div className="header__right">
           <div className="header__image">

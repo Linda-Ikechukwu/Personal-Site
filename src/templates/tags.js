@@ -76,7 +76,7 @@ const Tags = ({ pageContext, data, location }) => {
                 description={`Explore Articles on ${tag} written by Linda Ikechukwu`}
                 pathname={location.pathname}
             />
-            <div className="container">
+            <div className="container tag-page">
                 <h1 className="u-bottom">{tagHeader}</h1>
                 <div className="flex-container">
                     <ul className="posts">

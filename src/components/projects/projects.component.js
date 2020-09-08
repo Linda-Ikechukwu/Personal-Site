@@ -22,7 +22,7 @@ class Projects extends React.Component {
     
     render(){
         return (
-            <section className="projects" id="projects">
+            <section className="section projects" data-anchor="Page 3">
                 <div className="projects__title" data-aos="zoom-in-right">
                     <p className="p-big">I sometimes mockup UIs and build stuff that help solidify what I'm currently learning </p>
                 </div>

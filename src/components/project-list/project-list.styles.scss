@@ -4,7 +4,16 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 66vw;
     margin-top: 3rem;
+
+    @media only screen and (max-width: 800px) {
+        width: 100vw;
+        justify-content: space-evenly;
+        margin-top: 1.5rem;
+    }
+
+    @media only screen and (min-width: 1420px) {
+        width: 100rem;
+    }
 }
 
