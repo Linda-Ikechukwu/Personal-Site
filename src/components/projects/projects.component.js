@@ -22,13 +22,12 @@ class Projects extends React.Component {
     
     render(){
         return (
-            <div className="projects" id="projects">
+            <section className="section projects" data-anchor="Page 3">
                 <div className="projects__title" data-aos="zoom-in-right">
-                    <h2 className="title">Sample Projects</h2>
-                    <p className="u-center">All Projects built from scratch with coffee and chips </p>
+                    <p className="p-big">I sometimes mockup UIs and build stuff that help solidify what I'm currently learning </p>
                 </div>
                 <ProjectList></ProjectList>
-            </div>
+            </section>
         )
     }
 }

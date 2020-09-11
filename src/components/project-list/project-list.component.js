@@ -10,25 +10,9 @@ import 'aos/dist/aos.css';
 class ProjectList extends React.Component{
 
     componentDidMount(){
-        const allProjectTiles = document.querySelectorAll('.project');
-        let index = 1;
-        document.querySelector('.next-button').addEventListener('click',function(){
-           allProjectTiles[index].classList.add('active');
-           
-           index === 0 ? allProjectTiles[allProjectTiles.length - 1].classList.remove('active') : allProjectTiles[index - 1].classList.remove('active')
-           
-
-           if(index === (allProjectTiles.length -1)){
-               index = 0
-           }else{
-               index++
-           }
-        })
 
         this.aos = AOS;
         this.aos.init();
-    
-        
     }
 
     componentDidUpdate() {
@@ -40,57 +24,67 @@ class ProjectList extends React.Component{
     
         return (
             <div className="projects-list" data-aos="zoom-in-right">
-                <ProjectItem active 
+                <ProjectItem
+                  num = {1}
                   title='Port Harcourt School of AI'
                   projectLink="https://phcschoolofai.org/"
-                  description="<p>The Port Harcourt School Of AI is an educational community focused on democratizing Data Science and Machine Learning education to underrepresented 
-                  groups.</p> <p>We needed a website to let the world in on what we do, so I designed the layout and developed it. </p>"
+                  description="Website for The Port Harcourt School Of AI."
                   image="/phcschoolofai.png"
-                  imageAlt="Screenshot of the project"
+                  imageAlt="Screenshot of Port Harcout School Of AI Website"
                   techsUsed={['HTML', 'SASS','PostCSS','JavaScript','Gulp' ]}
                   githubLink="https://github.com/Linda-Ikechukwu/Official-Website"
                 />
                 <ProjectItem
-                   title='Trivia Quiz App (PWA)'
-                   projectLink=" https://linda-ikechukwu.github.io/Simple-Quiz-App/src/index.html"
-                   description="<p>The trivia quiz app is a fully offline app that can be installed from the browser like a native app. It features four categories each with 20 random questions for each round and a timer of 20 seconds for each round.</p> 
-                   <p>The app makes use of localstorage to store user highscores, info and state.</p>"
-                   image="/trivaapp.png"
-                   imageAlt="Screenshot of the project"
-                   techsUsed={['HTML', 'CSS','JavaScript','Service Workers', 'Local Storage' ]}
-                   githubLink=" https://github.com/Linda-Ikechukwu/Simple-Quiz-App"
-                />
-                <ProjectItem
+                   num = {2}
                    title='Money Paddy (PWA)'
                    projectLink=" https://linda-ikechukwu.github.io/MoneyPaddy/dist/index.html"
-                   description="<p>Money Paddy is an income and expense logging app. The app incoporates indexed DB and Local Storage to persist data so the user can have a fully offline experience after installation. </p> 
-                   <p>It makes use of the Push and Notification Web APIs alongside firebase functions to implement Push Notifications and background syncing.</p>"
+                   description="Fully Offline Capable Income and Expense Logging PWA."
                    image="/moneypaddy.png"
                    imageAlt="Screenshot of the moneypaddy project"
-                   techsUsed={['HTML', 'CSS','JavaScript','Webpack','Babel','Service Workers', 'Local Storage', 'PostCSS', 'Firebase', 'Indexed DB', 'Push API', 'Notifications API' ]}
+                   techsUsed={['HTML', 'CSS','JavaScript','Webpack','Service Workers', 'PostCSS', 'Firebase','Push API', 'Notifications API' ]}
                    githubLink=" https://github.com/Linda-Ikechukwu/MoneyPaddy"
                 />
                  <ProjectItem
+                   num = {3}
                    title='Newsify'
                    projectLink=" https://linda-ikechukwu.github.io/MoneyPaddy/dist/index.html"
-                   description="<p>This project is a news website powered by the NEWS API. It is built on Express and uses EJS for templating. The app curates news from thousand of sources, which can then be filtered in terms of category or keyword.</p> "
+                   description="A news curator app. Filter, search and read news from different sites. "
                    image="/newsify.png"
                    imageAlt="Screenshot of the newsify project"
                    techsUsed={['HTML', 'CSS','Node JS','Express','EJS']}
                    githubLink=" https://github.com/Linda-Ikechukwu/Newsify"
                 />
                 <ProjectItem
+                   num = {4}
                    title='Labrinth Stores'
                    projectLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
-                   description="<p>Labrinth Stores is a hypothetical full blown ecommerce store for an african american women clothing label, with all the features you would expect: Authentication
-                   product directory, payment processing e.t.c</p> <p>The aim of this project was to challenge me to learn React to an Intermediate level</p>"
+                   description="Labrinth Stores is a hypothetical ecommerce store for an african american women clothing label."
                    image="/labrinthe.png"
                    imageAlt="Screenshot of the labrinth project"
-                   techsUsed={['Sass', 'JSX','React','Redux','React-Redux', 'Firebase Firestore', 'Firebase Authentication', 'Localstorage',]}
+                   techsUsed={['Sass','React','Redux', 'Firebase', 'Localstorage',]}
                    githubLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
                 />
-                
-                <button className="next-button">&#10095;</button>
+                <ProjectItem
+                   num = {5}
+                   title="MyPickup"
+                   projectLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
+                   description="Admin dashboard for a delivery as a service startup."
+                   image="/labrinthe.png"
+                   imageAlt="Screenshot of the labrinth project"
+                   techsUsed={['Sass','React','Material UI',]}
+                   githubLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
+                />
+                <ProjectItem
+                   num = {6}
+                   title='Severless Notist'
+                   projectLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
+                   description="A severless react app for taking notes."
+                   image="/labrinthe.png"
+                   imageAlt="Screenshot of the Notist project"
+                   techsUsed={['Sass','React','Severless Framework','AWS DynamoDB', 'AWS Cognito', 'AWS Lambda',]}
+                   githubLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
+                />
+                 
             </div>
         )
     }

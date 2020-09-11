@@ -1,4 +1,5 @@
-//Base styles for the whole site. Fnd general classes, Utility classes and vaiables here
+//Base styles for the whole site. 
+//Fnd general classes, Utility classes and vaiables here
 
 * {
   box-sizing: border-box;
@@ -6,13 +7,16 @@
 
 :root {
   --contrast-color: rgb(229, 49, 112);
-  --bg-dark-1: #232946;
-  --bg-dark-2: #2d2948;
+  --dark-primary:#212121;
+  --dark-secondary: #181717;
+  --white-primary: #ffffff;
+  --white-secondary: #d6d3d3;
+  --link-color: #f39ca9;
   --component-color: #b8c1ec;
   --text-color-light: #f1f1ef;
-  --secondary-font-family: "Ribeye Marrow", cursive;
-  --primary-font-family: "Rosario", sans-serif;
-  --link-color: rgb(243, 156, 169);
+  --secondary-font: "Rosario", sans-serif;
+  --primary-font: "Rosario", sans-serif;
+  
   --bg-white-1: #fdf9f9;
   --bg-white-2: #f8edeb;
 }
@@ -22,23 +26,29 @@ html {
   font-size: 62.5%; /*10px. Root font size is 16px i.e 100%*/
   scroll-behavior: smooth;
 
-  //changing root font size of screen sizes. NB: Base styling is laptop screensize centric.
-  @media only screen and (min-width: 1500px) {
-    font-size: 100%; //16px
+  @media only screen and (max-width: 400px) {
+    font-size: 50%; /*8px. Root font size is 16px i.e 100%*/
   }
 
-  /* @media only screen and (max-width: 500px) {
-    font-size: 56.25%; //1rem = 9px
-  } */
-
+  @media only screen and (min-width: 2000px) {
+    font-size: 100%; /*Root font size is 16px i.e 100%*/
+  }
 }
 
 body {
   margin: 0;
   padding: 0;
-  color: var(--text-color-light);
-  font-family: var(--primary-font-family);
+  color: var(--white-secondary);
+  font-family: var(--primary-font);
   font-size: 1.8rem;
+  background-color: var(--dark-primary);
+}
+
+h1,h2,h3,h4,h5,h6{
+  color: var(--white-primary);
+  margin-top:1rem;
+  margin-bottom: 1rem;
+  font-family: var(--secondary-font);
 }
 
 a {
@@ -46,48 +56,18 @@ a {
   color: var(--text-color-light);
 }
 
-h2 {
-  margin-top: 3rem;
-}
-
 label {
   display: none;
-}
-
-input,
-textarea {
-  background-color: transparent;
-  border: 2px solid var(--component-color);
-  border-radius: 5px;
-  color: var(--text-color-light);
-  font-family: monospace;
-}
-
-input:focus, textarea:focus{
-  border: 2px solid var(--link-color);
-  box-shadow: 0px 1px 3px rgba(17, 16, 16, 0.8);
-  outline: none;
-}
-
-input{
-  height: 5rem;
-  margin-bottom: 1.5rem;
-}
-
-textarea{
-  outline: none  !important;
-  resize: none;
-}
-
-code:not(.grvsc-code){
-  background-color: grey;
-  padding: 0 5px;
 }
 
 
 /*Utility Classes*/
 .u-margin-top-s {
   margin-top: 2rem;
+}
+
+.u-bottom {
+  margin-bottom: 4rem;
 }
 
 .u-center {
@@ -107,7 +87,6 @@ code:not(.grvsc-code){
 /*general Classes*/
 
 .nav,
-.header,
 .footer {
   padding: 2rem 10rem;
 
@@ -120,7 +99,8 @@ code:not(.grvsc-code){
   }
 }
 
-.info,
+.header,
+.speaking,
 .contact,
 .projects {
   -webkit-animation-duration: 1s;
@@ -128,11 +108,7 @@ code:not(.grvsc-code){
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 
-  padding: 5rem 10rem 8rem;
-
-  & > div {
-    width: 38vw;
-  }
+  padding: 5rem 15rem;
 
   @media only screen and (max-width: 1000px) {
     padding: 5rem 5rem;
@@ -151,26 +127,30 @@ code:not(.grvsc-code){
   }
 }
 
-
-
 .container {
-  background-color: var(--bg-dark-2);
+  background-color: var(--dark-primary);
   margin: 0 0;
   padding: 5rem 10rem;
-  border-bottom: 0.5px solid var(--component-color);
-  border-top: 0.5px solid var(--component-color);
   min-height: 80vh;
+
+  @media only screen and (min-width: 2500px) {
+    padding: 5rem 20rem;
+  }
 
   @media only screen and (max-width: 1300px) {
     padding: 5rem 8rem;
   }
 
-  @media only screen and (max-width: 1000px) {
-    padding: 5rem 5rem;
-  }
-
   @media only screen and (max-width: 500px) {
     padding: 5rem 2rem;
+  }
+}
+
+.tag-page{
+  @media only screen and (max-width: 800px) {
+    .sidebar{
+      display: none;
+    }
   }
 }
 
@@ -185,9 +165,7 @@ code:not(.grvsc-code){
 }
 
 .reverse-flex {
-  @media only screen and (max-width: 900px) {
     flex-direction: column-reverse;
-  }
 }
 
 .not-found {
@@ -195,7 +173,7 @@ code:not(.grvsc-code){
 
   h1 {
     font-size: 7rem;
-    font-family: var(--secondary-font-family);
+    font-family: var(--secondary-font);
     margin: 2rem 0;
   }
 
@@ -209,12 +187,84 @@ code:not(.grvsc-code){
   }
 }
 
-.title {
-  font-family: "Ribeye Marrow", cursive;
-  font-size: 3.4rem;
-  line-height: 67px;
-  text-transform: uppercase;
-  text-align: center;
+.sidebar {
+  width: 22vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  @media only screen and (min-width: 905px) {
+
+    &-fixed{
+      position: fixed;
+      top: 25%;
+      text-align:left;
+  
+      &-left{
+        right: 70%;
+        left: 10rem;
+  
+        @media only screen and (max-width: 1300px) {
+          left: 8rem;
+        }
+      
+        @media only screen and (max-width: 1000px) {
+          left: 5rem;
+        }
+      }
+  
+      &-right{
+        left: 75%;
+        right: 10rem;
+
+        @media only screen and (min-width: 2500px) {
+          right: 20rem;
+        }
+  
+        @media only screen and (max-width: 1300px) {
+          right: 5rem;
+
+          .blog-tagline{
+            padding: 1rem;
+
+            h2{
+              font-size: 2.5rem;
+            }
+          }
+        }
+      
+      }
+  
+      
+    }
+  }
+
+  
+}
+
+.pagination{
+  display: flex;
+  justify-content: space-between;
+
+  &-link:hover{
+    color: var(--link-color);
+  }
+}
+
+.p-big{
+  font-size: 3.0rem;
+  font-weight: normal;
+  font-style: italic;
+
+  @media only screen and (max-width: 800px) {
+    font-size: 2.5rem;
+  }
+
 }
 
 /*General classes for blog pages*/
@@ -239,6 +289,24 @@ code:not(.grvsc-code){
   }
   
 }
+
+.aside-outlined{
+  border: 1px solid var(--white-secondary);
+  padding: 1.5rem;
+  border-radius: 2px;
+}
+
+//For inline codes in blog posts
+code:not(.grvsc-code){
+  background-color: grey;
+  padding: 0 5px;
+}
+
+.abyss {
+  background-color: black !important;
+  padding: 2rem !important;
+}
+
 table {
   border-collapse: collapse;
   width: 90%;
@@ -254,77 +322,37 @@ table {
 }
 
 pre{
-  
   margin: 3.5rem 0;
   line-height: 1.3;
   overflow-x:auto;
 
 }
 
-/**/
-
-.sidebar {
-  position: relative;
-  width: 22vw;
-  display: flex;
-  flex-direction: column;
-
-  @media only screen and (max-width: 900px) {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-
-.tags {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.tag {
-  background-color: var(--component-color);
-  box-shadow: 0 1.5px 4px rgba(17, 16, 16, 0.6);
-  padding: 0.8rem;
-  margin: 1rem 5px;
-  border-radius: 6px;
-  cursor: pointer;
-
-  & a {
-    color: var(--bg-dark-1);
-  }
-}
 
 /*Alternate styles for light mode*/
 
 .light-mode {
-  color: var(--bg-dark-1);
+
+  color: var(--dark-primary);
+  background-color: var(--white-primary);
+
+  h1,h2,h3,h4,h5,h6{
+    color: var(--dark-secondary);
+  }
+
+  a {
+    color:inherit;
+  }
 
   .button a {
     color: var(--text-color-light);
   }
 
-  code:not(.grvsc-code){
-    background-color:#d0d0d5;
-    padding: 0 5px;
-  }
-
-  .inline-link {
-    color: var(--contrast-color);
-
-    &:hover, &:focus{
-      border-bottom: 1px solid var(--contrast-color);
-   }
-  }
-  .post__title {
-    a {
-      color: var(--bg-dark-1);
-    }
-  }
-
   .nav__item a,
   .info__list h4 a,
-  .not-found p a {
-    color: var(--bg-dark-1);
+  .not-found p a,
+  .pagination-link {
+    color: var(--dark-secondary);
 
     &:hover {
       color: var(--link-color);
@@ -338,40 +366,47 @@ pre{
       color: black;
     }
   }
-
-
-  button:hover, button:focus{
-      color: var(--bg-dark-1);
+  
+  code:not(.grvsc-code){
+    background-color:#d0d0d5;
+    padding: 0 5px;
   }
 
-  .nav,
-  .shape,
-  .projects {
-    background-color: var(--bg-white-1);
+  .inline-link {
+    color: var(--contrast-color);
+
+    &:hover, &:focus{
+      border-bottom: 1px solid var(--contrast-color);
+   }
   }
 
-  .nav.nav-dark,
-  .footer,
-  .info,
-  .contact {
-    background-color: var(--bg-white-2);
+  .post-main{
+    background-color: #f9f4f487;
   }
 
-  .header__image {
-    background: radial-gradient(var(--contrast-color) 1px, var(--bg-white-1) 1px);
-    background-size: 15px 15px;
+  .post__title {
+    a {
+      color: var(--dark-secondary);
+    }
+  }
+
+  .posts .post{
+    background-color: #f9f4f487 ;
+    color: var(--dark-primary);
+    box-shadow: none;
+  }
+
+  button{
+    border: 1px solid var( --dark-secondary);
+    color: var(--dark-secondary);
   }
 
   .container {
-    color: var(--bg-dark-1);
-    background-color: var(--bg-white-1);
+    color: var(--dark-secondary);
+    background-color: var(--white-primary);
   }
 
-  .container + .footer {
-    background-color: var(--bg-white-1);
-    color: var(--bg-dark-1);
-  }
-
+  
   .adComponent {
     & button {
       &:hover {
@@ -388,8 +423,8 @@ pre{
 
   .form input,
   .form textarea {
-    border: 2px solid var(--bg-dark-1);
-    color: var(--bg-dark-1);
+    border: 1px solid var(--dark-secondary);
+    color: var(--dark-secondary);
   }
 
   input:focus,
@@ -397,19 +432,17 @@ pre{
     border: 2px solid var(--contrast-color);
   }
 
-  .blog-tagline {
-    background-color: var(--bg-white-1);
-    color: var(--bg-dark-1);
-    padding: 5px;
-    border-top: 0.5px solid var(--component-color);
-    /* & p{
-        
-    } */
-  }
-
   .sub{
     background-color: #ebeef2;
-    border: 5px solid var(--bg-dark-1);
+    border: 5px solid var(--dark-secondary);
+  }
+
+  .hero-dark{
+    display: none;
+  }
+
+  .hero-light{
+    display: block;
   }
 }
 

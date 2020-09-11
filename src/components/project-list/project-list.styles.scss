@@ -1,31 +1,19 @@
+
 .projects-list{
-    height: 100%;
-    position: relative;
-    
-}
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 3rem;
 
-
-.next-button{
-    font-size: 4rem;
-    font-weight: bold;
-    color:var(--text-color-light);
-    position: absolute;
-    right: -4rem;
-    top: 41%;
-    width: 7rem;
-    height: 7rem;
-    border-radius: 50%;
-    outline: none;
-    border: none;
-    background: rgba(229, 49, 112,0.6);
-    cursor: pointer;
-    transition: .2s ease-in-out;
-
-    &:hover{
-        transform: scale(1.1);
+    @media only screen and (max-width: 800px) {
+        width: 100vw;
+        justify-content: space-evenly;
+        margin-top: 1.5rem;
     }
 
-    @media only screen and (max-width: 500px) {
-        right:-3rem;
+    @media only screen and (min-width: 1420px) {
+        width: 100rem;
     }
 }
+

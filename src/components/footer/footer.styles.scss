@@ -1,17 +1,17 @@
 .footer{
     height: 13vh;
-    background-color: var(--bg-dark-2);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-size:1.5rem;
 
     & p:nth-child(2){
        margin-top: 0;
     }
     & p:nth-child(1){
-        margin-bottom: 2px;
+        margin-bottom: 1rem;
      }
 
 }

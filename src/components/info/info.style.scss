@@ -1,15 +1,18 @@
-.info{
-    background-color: var(--bg-dark-2);
+.speaking{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    height: 100%;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     
     &__list{
-        padding-left: 2.5rem;
+        padding-left: 0;
 
         &__item{
+            margin-bottom: 2rem;
+
+
             &::marker{
                 font-size: 2.8rem;
                 transform: translateY(-5px);
@@ -28,12 +31,12 @@
             }
 
             & span{
-                border-top: .5px solid;
-                width: 33rem;
+                border-top: .5px solid var(--white-secondary);
+                width: 38rem;
                 display: block; 
 
-                @media only screen and (max-width: 900px) {
-                    width: 100%;
+                @media only screen and (max-width: 550px) {
+                    width: 95%;
                 }
             }
         }
@@ -51,3 +54,31 @@
     }
 }
 
+.talks{
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+
+    @media only screen and (max-width: 850px) {
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.8rem;
+        justify-content: center;
+
+        & .speaking__list{
+            width: 100%;
+        }
+
+        & ul:nth-of-type(1){
+            margin-bottom: 0;
+        }
+
+        & div:nth-of-type(2) {
+          & ul{
+            margin-top: 0;
+          }
+        }
+    }
+
+    
+}

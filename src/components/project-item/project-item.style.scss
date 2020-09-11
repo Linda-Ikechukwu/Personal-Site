@@ -1,100 +1,102 @@
 .project{
+    position: relative;
     background-color: var(--component-color);
     border-radius: 5px;
-    height: 100%;
-    width: 100%;
+    height: 24rem;
+    width: 28rem;
     padding: 2rem;
     padding-bottom: 4rem;
-    display: none;
-    position: relative;
-    right: -200px;
-    -webkit-animation: slide 0.5s forwards;
-    -webkit-animation-delay: .1s;
-    animation: slide 0.2s forwards;
-    animation-delay: .1s;
-    color: var(--bg-dark-1);
-
+    margin-bottom: 3rem;
     
 
-    &__title, h5{
-        font-size: 2.4rem;
-        margin: 0;
-        
-        a{
-            color: var(--bg-dark-1);
-        }
-        
-    }
-
-    p{
-        font-size: 1.8rem;
-        text-align: center;
-        margin: 5px 0;
-        font-weight: bold;
-    }
-
-    &__description > p{
-        font-size: 1.6rem;
-        margin: 5px 0;
-        text-align: left;
-        font-weight: normal;
+    &:hover .project__overlay{
+        opacity:1;
+        width: 100%;
     }
 
     img{
         width: 100%;
-        height: 45%;
+        height: 18rem;
     }
-    
-    & .github{
+
+    &--1{
+        background:linear-gradient(180deg, #b7daed, #d7dad7);
+    }
+    &--2{
+        background:linear-gradient(180deg, #f1d1d1, #d7dad7) 
+    }
+    &--3{
+        background:linear-gradient(180deg, #faedb8, #d7dad7);
+    }
+    &--4{
+        background:linear-gradient(180deg, #b8c1ec, #d7dad7) ;
+    }
+    &--5{
+        background:linear-gradient(180deg, #575180, #d7dad7) 
+    }
+    &--6{
+        background:linear-gradient(180deg, #a7e2be, #d7dad7) 
+    }
+
+    &__overlay{
+        transition: all .3s ease-in;
+        position: absolute;
+        width: 0;
+        height:100%;
+        top:0;
+        left:0;
+        background-color:#171414eb;
+        border-radius: 5px;
+        opacity: 0;
+        
+    }
+
+    &__details{
+        position: relative;
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+
+        h4{
+            text-align: center;
+        }
+
+        p{
+            text-align: center;  
+            font-size: 1.6rem;
+        }
+
+        div:not(:last-child){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            p:not(:last-child){
+                margin-right: 1rem;
+            }
+
+            p{
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
     }
 
-    & .tags, .github{
-       justify-content: center;
-        .tag{
-        background-color: var(--bg-dark-1);
-        color: var(--text-color-light);
-        font-size: 1.4rem;
-        margin: .5rem;
-       }
+    &__links{
+        display: flex;
+        justify-content: space-between;
+        width:25rem;
     }
 
-    @media only screen and (max-width: 770px) {
-        margin-top: 2rem;
 
+    @media only screen and (max-width: 800px) {
         
     }
 
-    @media only screen and (max-width: 500px) {
-        margin-top: 2rem;
-        height: 100%;
-        
-        &__title, h5{
-            font-size: 2.8rem;
-
-           
-        }
-
-        p {
-            font-size: 2.2rem
-        }
-
-        &__description > p{
-            font-size: 1.8rem;
-        }
-
-        & .tags .tag, button{
-           font-size: 1.8rem;
-        }
-
-    }
+    
 
 }
 
-.active{
-    display: block;
-}
 
-@keyframes slide {
-    100% { right: 0; }
-}

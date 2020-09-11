@@ -1,8 +1,8 @@
 ---
-title: "Build a Simple Responsive Grid System with CSS Floats"
+title: "Building Web Layouts With CSS Floats"
 date: "2020-06-25"
 featured: "./layout.png"
-description: "Understand how CSS floats work by building a simple grid syatem like bootstrap using floats."
+description: "In this article, you'll use the CSS float property which the most supported browser layout method to build a simple grid-like column layout system, just like bootstrap, that can be used for styling any web layout."
 tags: ["CSS", "HTML"]
 keywords: "CSS Floats, CSS Float layout templates, CSS Layout Float"
 ---

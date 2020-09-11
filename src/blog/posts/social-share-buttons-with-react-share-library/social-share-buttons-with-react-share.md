@@ -1,8 +1,8 @@
 ---
-title: "How to Add  Social Share Buttons to Gatsby Blog Pages With React Share In 3 Steps"
+title: "Add Social Share Buttons to Your Gatsby Blog Pages In 3 Steps"
 date: "2020-05-24"
 featured: "./socialshare.png"
-description: "Learn how to add social mediashare buttons to a blog built with gatsby in 3 simple steps."
+description: "You've created the perfect blog with gatsby, now you're wondering how to let people share them accross several social media platforms with just one click. In this article you'll learn  how to add social media buttons in 3 simple steps using the react share library."
 tags: ["React","Gatsby"]
 keywords: "Social Share Buttons, Gatsby Blog, React Share, Build a developer blog "
 ---

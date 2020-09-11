@@ -27,12 +27,12 @@ const TagsList = () => {
     )
     return (
         <div className="taglist">
-            <h2>Topics : </h2>
+            <h4>Explore Topics : </h4>
             <ul className="tags">
                 {data.allMarkdownRemark.group.map(tag => (
                     <li key={tag.fieldValue} className="tag">
                         <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                            {tag.fieldValue} ({tag.totalCount})
+                            #{tag.fieldValue} ({tag.totalCount})
                         </Link>
                     </li>
                 ))}

@@ -1,10 +1,12 @@
 .nav{
+    position: relative;
+    z-index: 100;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     height: 12vh;
-    background-color: var(--bg-dark-1);
+    box-shadow: 0 5px 20px -12px rgba(0,0,0,.55);
 
     &__item{
         font-size: 2rem;
@@ -47,7 +49,7 @@
                 height: 2rem;
                 width: 2rem;
                 left: -1px;
-                bottom: -0.3rem;
+                bottom: -0.4rem;
                 background-color:var(--link-color);
                 -webkit-transition: 0.4s;
                 transition: 0.4s;
@@ -59,7 +61,7 @@
             }
 
             input:checked + .slider:before {
-                background-color:var(--bg-dark-1);
+                background-color:var(--contrast-color);
             }
     
             input:focus + .slider {

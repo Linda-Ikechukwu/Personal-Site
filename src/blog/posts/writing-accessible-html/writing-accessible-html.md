@@ -2,7 +2,7 @@
 title: "HTML is Accessible Enough! Use It."
 date: "2020-08-10"
 featured: "./accessible-html.png"
-description: "The accessibility stats of most websites can be greatly improved by making few changes to the HTML. Find out how!"
+description: "When used properly, HTML by default is accessible. In this article, you'll learn 7 common HTML mistakes you may be making that is contributing to your website inaccessible to screen reader and keyboard users."
 tags: ["HTML"]
 keywords: "HTML Accessible Elements, Web Accessibility, Empty Image Alt, Semantic Elements "
 ---
@@ -17,17 +17,41 @@ In this article, I’ll share 7 minor changes you can make to your HTML to make 
 
 Let’s get started.
 
-## Stop Using Divs Everywhere.
+## 1. Stop Using Divs Everywhere.
 
 Really, stop it. Think about it, how would you feel if you walked into a grocery store and all sodas were put in the same type of bottle and labelled just ‘soda’. How would you be able to distinguish your favourite brand from another?
 
 That’s exactly what you do to the browser when you use divs everywhere.
 
-HTML 5 came with semantic elements which you should use. Writing semantic HTML not only improves your site’s accessibility, but it also improves your SEO.
+HTML 5 came with semantic elements, which you should use. Writing semantic HTML not only improves your site’s accessibility, but it also improves your SEO.
 
-Don't use `a` tags for buttons. Dont use div for navigations. There's `nav` for that. Don't use `div` for the footer. There's a `footer` tag for that too. You can find a <a target='blank' href="https://www.freecodecamp.org/news/semantic-html5-elements/" class="inline-link">list of all semantic elements here </a>.
+Divs should only be used within document landmarks or sections, to group related content. Use semantic HTML landmarks to help screen readers easily navigate your paeges. You can also go a step further by adding <a target='blank' href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles" class="inline-link">WAI-ARIA roles </a>. to landmarks for more fullproof and maybe really old browsers.
 
-## Placeholders are Great. Labels are Better!
+```html
+<body>
+    <header>
+        <nav role='navigation'>
+            ---
+        </nav>
+    </header>
+    <main role='main'>
+        <aside>
+            ---
+        </aside>
+        <section role='region'>
+            <h1 role="heading"></h1>
+            ----
+        <section>
+    </main>
+</body>
+
+```
+
+Also, don't style a `p` or `span` as a header. There are `h1` to `h6` tags for that. Don't use `a` tags for buttons. Dont use div for navigations. There's `nav` for that. Don't use `div` for the footer. There's a `footer` tag for that too. 
+
+You can find a <a target='blank' href="https://www.freecodecamp.org/news/semantic-html5-elements/" class="inline-link">list of all semantic elements here </a>.
+
+## 2. Placeholders are Great. Labels are Better!
 
 As web designers/web developers, we have grown creative wings. Part of that creativity has some of us choosing not to add labels to inputs and styling the input’s placeholder to look like a label. 
 
@@ -49,11 +73,17 @@ But, if you do not want to include labels due to design-specs, add an aria-label
 
 ```
 
-## Never Forget the Alt.
+## 3. Never Forget the Alt.
 
-Having images without an alt attribute is a no-no for web accessibility. Always include descriptive alt texts for your images or leave the alt tag empty if the image is just for decoration and adds no meaning to the content of the page (like a list marker).
+Having images without an alt attribute is a no-no for web accessibility. Always include descriptive alt texts for your images or leave the alt tag empty if the image is just for decoration, and adds no meaning to the content of the page (like a list marker).
 
-## Have a Skip Button
+Why? If no alt attribute is present on an image tag, screen readers will read the file name for the image instead, which can be a major distraction to those using screen reading technology.
+
+Also tip for providing alt text is to resist the urge to include start alt descriptions with 'image of' or 'picture of'. This is because screen readers automatically announce an image as an image. So an image of `<img src='apple.jpg alt='image of Linda'>` would be read aloud by a screen reader as “image, image of an Linda”.
+
+You can see that is repititive. A better alt text may be - `alt='Linda at a beach, laughing.'`.
+
+## 4. Have a Skip Button
 
 For every web page, the first thing you should provide is a skip link or button. This skip button is very useful for keyboard users and screen readers to be able to switch to the main content of the page without having to read through your header or navigation.
 
@@ -82,7 +112,35 @@ The skip button is usually visually hidden but not hidden to screenreaders. A CS
 
 ```
 
-## Table Headers, not Table Data
+## 5. Do not visually arrange elements with HTML
+
+Your Html elements should always be arranged in the proper logical manner, no matter how you want them to appear visually. Take the web layout below as an example.
+
+<img class="inline-image" src='web-layout.png' alt="Web layout sketch with navigation below the header">
+
+According to the design, the navigation should be below the header. It would be wrong to write the HTML this way:
+
+```html
+
+<body>
+   <header>...header image and text<header>
+   <nav>.....</nav>
+</body>
+
+```
+
+In accessibility standards, in addition to the skip link, the primary navigation should come above other elements in the page for easier navigation. A better approach is to properly write the HTML in the correct logical order, then re-arrange it visually using the `order` property for flex and grid containers or CSS positioning.
+
+```html
+
+<body>
+    <nav>.....</nav>
+   <header>...header image and text<header>
+</body>
+
+```
+
+## 6. Table Headers, not Table Data
 
 Yeah, this still happens. I’ve come across sites where the table headers were put in <td> tags instead of <th> tags and then styled to be bold. This greatly affects screen readers that will not be able to interpret that it is a header not a data like everything else.
 
@@ -107,21 +165,7 @@ Another thing is to remember to add captions. With table captions, screen reader
 
 ```
 
-## :Focus is really Important
-
-This has been written countless times but I guess it hasn’t sunk in. If you do not like the browser’s annoying blue outline on focused elements, restyle it to match the website’s brand colors. Never just settle on outline: none otherwise you’ll be giving keyboard users a difficult time.
-
-```css
-
-Button:focus{
- outline: 1px dotted pink;
-}
-
-```
-
-You can also opt to use shadows for the focus state.
-
-## Use Aria-Label for links with no inner text
+## 7. Use Aria-Label for links with no inner text
 
 There are times when link tags are used to wrap another HTML element, so there can’t be text between the tags. For example, using an image as a link or using a social icon as a link. In these cases, add an aria-label to the link tag describing its purpose.
 
@@ -135,6 +179,10 @@ There are times when link tags are used to wrap another HTML element, so there c
 
 ## Conclusion
 
-In this article, I've covered some common mistakes made when writing HTML that contributes to making sites inaccessible. I hope we all take note of them, make necessary changes and strive to build more accessible products. Accessibility should never be an afterthought. Go now and build something great!
+In this article, I've covered some common mistakes made when writing HTML that contributes to making sites inaccessible. This is by no means and exhaustive guide, but it is a starting point. I hope we all take note of them, make necessary changes and strive to build more accessible products. Accessibility should never be an afterthought. 
+
+If you liked this article, or have any questions or feedback, you can leave a comment below or say hi to me on <a target='blank' class='inline-link' href='https://twitter.com/_MsLinda'> twitter.</a>
+
+Now, go and build something great!
 
 
