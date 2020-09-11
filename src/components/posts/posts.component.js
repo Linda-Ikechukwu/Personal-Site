@@ -2,10 +2,12 @@ import React from "react";
 import { Link } from "gatsby";
 import Img from "gatsby-image"
 
-import "./posts.style.scss";
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+import "./posts.style.scss";
+
+
 
 class Posts extends React.Component {
   componentDidMount() {
@@ -22,7 +24,7 @@ class Posts extends React.Component {
     return (
       <div className="blogs-container">
         <ul className="posts">
-        
+
           {this.props.data.allMarkdownRemark.edges.map(edge => {
             if (!(edge.node.frontmatter.tags).join("").includes('Popular')) {
               return (

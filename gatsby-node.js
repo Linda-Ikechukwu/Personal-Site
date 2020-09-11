@@ -31,7 +31,9 @@ exports.createPages = async ({ graphql, actions }) => {
             domain: siteUrl
           }
         }
-        allMarkdownRemark (sort:{ order: ASC, fields: [frontmatter___date]}){
+        allMarkdownRemark (sort:{ order: ASC, fields: [frontmatter___date]}
+          limit: 1000
+        ){
           edges {
             node {
               fields {
@@ -43,7 +45,7 @@ exports.createPages = async ({ graphql, actions }) => {
               }
             }
           }
-          
+
         }
 
         tagsGroup: allMarkdownRemark(limit: 2000) {
@@ -57,12 +59,15 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create blog-list pages
   const articles = response.data.allMarkdownRemark.edges;
 
-  const postsPerPage = 5
-  const numPages = Math.ceil(articles.length / postsPerPage)
+  const postsPerPage = 5;
+
+  const numPages = Math.ceil(articles.length / postsPerPage);
+
+
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/blog/` : `/blog/${i + 1}`,
-      component: path.resolve("./src/pages/blog.js"),
+      component: path.resolve("./src/templates/blog-list.js"),
       context: {
         limit: postsPerPage,
         skip: i * postsPerPage,

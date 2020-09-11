@@ -1,11 +1,12 @@
 import React from "react";
 
-import ProjectItem from "../project-item/project-item.component"
-
-import "./project-list.styles.scss"
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+import ProjectItem from "../project-item/project-item.component"
+import "./project-list.styles.scss"
+
+
 
 class ProjectList extends React.Component{
 
@@ -20,8 +21,8 @@ class ProjectList extends React.Component{
     }
 
     render(){
-        
-    
+
+
         return (
             <div className="projects-list" data-aos="zoom-in-right">
                 <ProjectItem
@@ -84,12 +85,12 @@ class ProjectList extends React.Component{
                    techsUsed={['Sass','React','Severless Framework','AWS DynamoDB', 'AWS Cognito', 'AWS Lambda',]}
                    githubLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
                 />
-                 
+
             </div>
         )
     }
 
-    
+
 }
 
 export default ProjectList;

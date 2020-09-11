@@ -1,8 +1,7 @@
 import React, {useEffect} from "react";
-import Helmet from "react-helmet"
 
-import Layout from "../components/layout"
 import Header from "../components/header/header.component";
+import Layout from "../components/layout"
 import MetaData from "../components/metadata"
 import Info from "../components/info/info.component"
 import Projects from "../components/projects/projects.component"

@@ -1,11 +1,10 @@
 import React from "react";
 
-import ProjectList from "../project-list/project-list.component"
-
-import "./projects.style.scss"
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+import ProjectList from "../project-list/project-list.component"
+import "./projects.style.scss"
 
 //AOS.init();
 
@@ -19,7 +18,7 @@ class Projects extends React.Component {
     componentDidUpdate() {
         this.aos.refresh();
     }
-    
+
     render(){
         return (
             <section className="section projects" data-anchor="Page 3">

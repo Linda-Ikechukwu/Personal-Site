@@ -3,15 +3,17 @@ import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import Button from "../components/button/button.component";
+
 import Layout from "../components/layout"
 import MetaData from "../components/metadata"
 import TagList from "../components/taglist/taglist.component"
 
-import "../components/posts/posts.style.scss"
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+import "../components/posts/posts.style.scss"
+
+
 
 export const pageQuery = graphql`
   query($tag: String) {
@@ -63,7 +65,7 @@ const Tags = ({ pageContext, data, location }) => {
         totalCount === 1 ? "" : "s"
         } on "${tag}"`
 
-    
+
     useEffect(() => {
         const aos = AOS;
         aos.init();
@@ -115,7 +117,7 @@ const Tags = ({ pageContext, data, location }) => {
                                 </li>
                             )
 
-                            
+
                         })}
                     </ul>
                     <div className="sidebar">

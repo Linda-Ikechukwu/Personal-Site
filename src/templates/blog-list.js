@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql, Link } from 'gatsby'
 
-import Layout from "../components/layout"
 import Posts from "../components/posts/posts.component"
 import PopularPosts from "../components/posts/popular-posts.component"
+import Layout from "../components/layout"
 import MetaData from "../components/metadata"
 import BlogTagline from "../components/blog-tagline/blog-tagline.component"
 import TagList from "../components/taglist/taglist.component"
@@ -17,7 +17,7 @@ export const query = graphql`
             limit: $limit
             skip: $skip
             ){
-            
+
             edges {
               node {
                 frontmatter {
@@ -77,7 +77,7 @@ const Blog = (props) => {
             </div>
           </aside>
           <div>
-            
+
             {
               currentPage === 1 &&  <PopularPosts/>
             }
@@ -95,7 +95,7 @@ const Blog = (props) => {
               )}
 
               <span>{`Page ${currentPage} of ${numPages}`}</span>
-              
+
               {!isLast && (
                 <Link to={`blog/${nextPage}`} rel="next" className="pagination-link">
                   Next Page →

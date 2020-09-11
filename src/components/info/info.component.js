@@ -1,9 +1,9 @@
 import React from "react";
 
-import "./info.style.scss"
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+import "./info.style.scss"
 
 //AOS.init();
 
@@ -22,7 +22,7 @@ class speaking extends React.Component {
         return (
             <section className="speaking section" data-anchor="Page 2">
 
-                
+
 
                 <div data-aos="zoom-in-left" >
                    <p className="p-big">I give talks about frontend development or anything I find interesting. <br />
