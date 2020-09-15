@@ -65,11 +65,11 @@ class Car {
 
 const 2 .toyota = new Car('Toyota', 'Camry', '2018');
 
-/* Returns true as toyota is an instance of the Car object constructor. 
+/* Returns true as toyota is an instance of the Car object constructor.
 The toyota object therefore inherits all properties of the Car constructor. */
 'start' in toyota;
 
-/* Returns true. toString is a method property of the Object type, 
+/* Returns true. toString is a method property of the Object type,
 of which the Car constructor is an instance of. */
 'toString' in toyota;
 
@@ -106,7 +106,7 @@ const number = [2, 3, 4, 5];
 
 5 in number // Returns false because 5 is not an existing index on the array but a value;
 
-/* Returns true because filter is a method property on the Array type of which the number array is an instance of. 
+/* Returns true because filter is a method property on the Array type of which the number array is an instance of.
 The number array inherits the filter property.*/
 'filter' in number
 
@@ -159,6 +159,6 @@ This will return true, showing that the div element is an instance of the `Objec
 
 You’ve learned about the not so popular JavaScript in operator, which is used to verify the presence of properties on an object or `Object` type instances. This should come in handy when writing verification logic.
 
-If you liked this article, you’ll definitely like other articles on this blog, You can hit me up through the comment section or <a target="blank" class="inline-link" href=""> titter. </a>
+If you liked this article, you’ll definitely like other articles on this blog, You can hit me up through the comment section or <a target="blank" class="inline-link" href=""> twitter. </a>
 
-Now, go build something grat!
+Now, go build something great!
