@@ -16,6 +16,16 @@
 
     &__left{
         margin-left: -150px;
+        position: relative;
+
+    }
+
+    &__title{
+        p{
+            transform: translateY(250px);
+            animation: SlideInUp 1s ease forwards 3s;
+        }
+
     }
 
     &__subtitle h1{
@@ -23,12 +33,19 @@
         font-weight: 700;
         line-height: 60px;
         text-transform: uppercase;
-        font-family: 'Josedin Sans', sans-serif;
+        font-family: var(--primary-font);
+        transform: translateY(250px);
+        animation: SlideInUp 1.5s ease forwards 3s;
 
     }
 
     &__description{
         margin-top: 1.5rem;
+        p{
+          transform: translateY(250px);
+          animation: SlideInUp 2s ease forwards 3s;
+        }
+
     }
 
     & h1, & h2, & h3{
@@ -41,10 +58,12 @@
             width: 60rem;
             height: 70vh;
             margin-left: -25px;
+            transform: translateY(250px);
+            animation: SlideInUp 0.5s cubic-bezier(.17,.67,.38,.84) forwards 3s;
         }
     }
 
-    
+
     @media only screen and (max-width: 800px) {
         flex-direction: column;
         padding-top: 8rem;
@@ -64,37 +83,32 @@
             margin-top: -3rem;
         }
 
-    
+
         &__subtitle h1{
             font-size: 4rem;
             line-height: 50px;
             text-align: center;
         }
-        
+
         &__image {
             & img{
-                width: 60vw;
+                width: 70vw;
                 height: 40rem;
                 margin-left: -2rem;
             }
         }
 
-        
-        &__description{
-            margin-top: 0;
-        }
 
-        
-    
+
     }
 
     @media only screen and (max-width: 600px) {
-    
+
         &__subtitle h1{
             font-size: 2.5rem;
             line-height: 30px;
         }
-    
+
     }
 
     @media only screen and (max-width: 500px) {
@@ -105,7 +119,7 @@
             }
         }
     }
-    
+
     @media only screen and (max-width: 400px) {
         &__image {
             & img{
@@ -148,7 +162,7 @@ $shape-count: 30;
     $shape-key: random( length($shapes) );
     $shape-type: nth( $shapes, $shape-key );
     $text: random(10);
-    
+
     @keyframes shape-#{$i} {
         0% {
             transform: translate3d(0,0,0) rotate(#{$rotation + 0}deg);
@@ -157,8 +171,8 @@ $shape-count: 30;
             transform: translate3d(0,0,0) rotate(#{$rotation + 360}deg);
         }
     }
-  
-    .shape-container--#{$i} { 
+
+    .shape-container--#{$i} {
         animation: shape-#{$i} #{$speed}s linear infinite;
 
         .random-shape:after {
@@ -170,4 +184,11 @@ $shape-count: 30;
     }
 }
 
-
+@keyframes SlideInUp {
+    from{
+        transform: translateY(250px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}

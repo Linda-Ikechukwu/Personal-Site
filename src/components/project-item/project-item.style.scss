@@ -7,11 +7,10 @@
     padding: 2rem;
     padding-bottom: 4rem;
     margin-bottom: 3rem;
-    
+
 
     &:hover .project__overlay{
         opacity:1;
-        width: 100%;
     }
 
     img{
@@ -23,7 +22,7 @@
         background:linear-gradient(180deg, #b7daed, #d7dad7);
     }
     &--2{
-        background:linear-gradient(180deg, #f1d1d1, #d7dad7) 
+        background:linear-gradient(180deg, #f1d1d1, #d7dad7)
     }
     &--3{
         background:linear-gradient(180deg, #faedb8, #d7dad7);
@@ -32,23 +31,24 @@
         background:linear-gradient(180deg, #b8c1ec, #d7dad7) ;
     }
     &--5{
-        background:linear-gradient(180deg, #575180, #d7dad7) 
+        background:linear-gradient(180deg, #575180, #d7dad7)
     }
     &--6{
-        background:linear-gradient(180deg, #a7e2be, #d7dad7) 
+        background:linear-gradient(180deg, #a7e2be, #d7dad7)
     }
 
     &__overlay{
         transition: all .3s ease-in;
         position: absolute;
-        width: 0;
+        width: 100%;
         height:100%;
         top:0;
         left:0;
         background-color:#171414eb;
+        border: 1px solid var(--link-color);
         border-radius: 5px;
         opacity: 0;
-        
+
     }
 
     &__details{
@@ -64,8 +64,8 @@
         }
 
         p{
-            text-align: center;  
-            font-size: 1.6rem;
+            text-align: center;
+            font-size: 1.5rem;
         }
 
         div:not(:last-child){
@@ -90,10 +90,6 @@
         width:25rem;
     }
 
-
-    @media only screen and (max-width: 800px) {
-        
-    }
 
     
 

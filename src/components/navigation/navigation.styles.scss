@@ -10,7 +10,7 @@
 
     &__item{
         font-size: 2rem;
-        font-family: 'Rosario', sans-serif;
+        font-family: var(--primary-font);
 
         &:not(:last-of-type){
             margin-right: 2rem;
@@ -21,14 +21,14 @@
             display: inline-block;
             width: 4rem;
             height: 1.5rem;
-            
-    
+
+
             input {
                 opacity: 0;
                 width: 0;
                 height: 0;
             }
-    
+
             .slider {
                 position: absolute;
                 cursor: pointer;
@@ -42,7 +42,7 @@
                 border-radius: 34px;
                 border: 1px solid var(--text-color-light);
             }
-    
+
             .slider:before {
                 position: absolute;
                 content: "";
@@ -55,7 +55,7 @@
                 transition: 0.4s;
                 border-radius: 50%;
             }
-    
+
             input:checked + .slider {
                 background-color: #ccc;
             }
@@ -63,11 +63,11 @@
             input:checked + .slider:before {
                 background-color:var(--contrast-color);
             }
-    
+
             input:focus + .slider {
                 box-shadow: 0 0 1px #ccc;
             }
-    
+
             input:checked + .slider:before {
                 -webkit-transform: translateX(20px);
                 -ms-transform: translateX(20px);
@@ -80,15 +80,15 @@
             }
         }
 
-        
+
     }
 
     & a{
         &:hover{
             color: var(--link-color);
-            
+
         }
 
-        
+
     }
 }

@@ -7,6 +7,8 @@ import Layout from "../components/layout"
 import MetaData from "../components/metadata"
 import BlogTagline from "../components/blog-tagline/blog-tagline.component"
 import TagList from "../components/taglist/taglist.component"
+import AnimatedSvgLoader from "../components/svg-loader/svg-loader.component"
+
 
 
 
@@ -59,53 +61,56 @@ const Blog = (props) => {
 
 
   return (
-    <Layout dark>
-      <MetaData
-        title="CodeWithLinda"
-        description="CodeWithLinda is Linda Ikechukwu's Blog where she writes Beginner Friendly Articles on Frontend Developement, Cloud, Dev Life and more."
-        //image={props.data.markdownRemark.frontmatter.featured.childImageSharp.resize}
-        pathname={props.location.pathname}
-        keywords="CodeWithLinda, Linda Ikechukwu, Frontend Blog, Javascript Articles, Technical Writer in Nigeria, Devops Articles Nigeria, CSS Tricks, Linda Ikechukwu, codeswithlinda"
-      />
-      <main className="container ">
+    <>
+      <AnimatedSvgLoader />
+      <Layout dark>
+        <MetaData
+          title="CodeWithLinda"
+          description="CodeWithLinda is Linda Ikechukwu's Blog where she writes Beginner Friendly Articles on Frontend Developement, Cloud, Dev Life and more."
+          //image={props.data.markdownRemark.frontmatter.featured.childImageSharp.resize}
+          pathname={props.location.pathname}
+          keywords="CodeWithLinda, Linda Ikechukwu, Frontend Blog, Javascript Articles, Technical Writer in Nigeria, Devops Articles Nigeria, CSS Tricks, Linda Ikechukwu, codeswithlinda"
+        />
+        <main className="container ">
 
-        <div className="flex-container">
-          <aside className="sidebar">
-            <div className="sidebar-fixed sidebar-fixed-left">
-              <BlogTagline />
-              <TagList />
-            </div>
-          </aside>
-          <div>
+          <div className="flex-container">
+            <aside className="sidebar">
+              <div className="sidebar-fixed sidebar-fixed-left">
+                <BlogTagline />
+                <TagList />
+              </div>
+            </aside>
+            <div className="articles" >
 
-            {
-              currentPage === 1 &&  <PopularPosts/>
-            }
-            {
-              currentPage === 1 && <h1 className="u-bottom">Others:</h1>
-            }
-            <Posts data={props.data} />
+              {
+                currentPage === 1 && <PopularPosts />
+              }
+              {
+                currentPage === 1 && <h1 className="u-bottom">Others:</h1>
+              }
+              <Posts data={props.data} />
 
-            <div className="pagination">
+              <div className="pagination">
 
-              {!isFirst && (
-                <Link to={`blog/${prevPage}`} rel="prev" className="pagination-link">
-                  ← Previous Page
-                </Link>
-              )}
+                {!isFirst && (
+                  <Link to={`blog/${prevPage}`} rel="prev" className="pagination-link">
+                    ← Previous Page
+                  </Link>
+                )}
 
-              <span>{`Page ${currentPage} of ${numPages}`}</span>
+                <span>{`Page ${currentPage} of ${numPages}`}</span>
 
-              {!isLast && (
-                <Link to={`blog/${nextPage}`} rel="next" className="pagination-link">
-                  Next Page →
-                </Link>
-              )}
+                {!isLast && (
+                  <Link to={`blog/${nextPage}`} rel="next" className="pagination-link">
+                    Next Page →
+                  </Link>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-      </main>
-    </Layout>
+        </main>
+      </Layout>
+    </>
   )
 }
 

@@ -1,4 +1,4 @@
-//Base styles for the whole site. 
+//Base styles for the whole site.
 //Fnd general classes, Utility classes and vaiables here
 
 * {
@@ -7,18 +7,15 @@
 
 :root {
   --contrast-color: rgb(229, 49, 112);
-  --dark-primary:#212121;
+  --dark-primary: #212121;
   --dark-secondary: #181717;
-  --white-primary: #ffffff;
-  --white-secondary: #d6d3d3;
+  --white-primary: #d6d3d3;
+  --white-secondary: #a5a1a1;
   --link-color: #f39ca9;
   --component-color: #b8c1ec;
   --text-color-light: #f1f1ef;
-  --secondary-font: "Rosario", sans-serif;
-  --primary-font: "Rosario", sans-serif;
-  
-  --bg-white-1: #fdf9f9;
-  --bg-white-2: #f8edeb;
+  --secondary-font: "Lato", sans-serif;
+  --primary-font: "Lato", sans-serif;
 }
 
 html {
@@ -38,28 +35,36 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: var(--white-secondary);
+  color: var(--white-primary);
   font-family: var(--primary-font);
   font-size: 1.8rem;
   background-color: var(--dark-primary);
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--white-primary);
-  margin-top:1rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-family: var(--secondary-font);
 }
 
 a {
   text-decoration: none;
-  color: var(--text-color-light);
+  color: var(--white-primary);
 }
 
 label {
   display: none;
 }
 
+p {
+  line-height: 1.4;
+}
 
 /*Utility Classes*/
 .u-margin-top-s {
@@ -84,7 +89,7 @@ label {
   width: 1px;
 }
 
-/*general Classes*/
+/*General Classes*/
 
 .nav,
 .footer {
@@ -146,9 +151,9 @@ label {
   }
 }
 
-.tag-page{
+.tag-page {
   @media only screen and (max-width: 800px) {
-    .sidebar{
+    .sidebar {
       display: none;
     }
   }
@@ -159,13 +164,19 @@ label {
   flex-direction: row;
   justify-content: space-between;
 
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 1000px) {
     flex-direction: column;
+
+    .articles {
+      h1 {
+        margin-top: 5rem;
+      }
+    }
   }
 }
 
 .reverse-flex {
-    flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }
 
 .not-found {
@@ -188,83 +199,87 @@ label {
 }
 
 .sidebar {
-  width: 22vw;
+  width: 20vw;
   position: relative;
   display: flex;
   flex-direction: column;
 
-  @media only screen and (max-width: 900px) {
-    width: 100%;
-    margin-top: 0;
+  &-fixed-left {
+    animation: SlideBlogUp 0.8s ease forwards 3s;
   }
 
-  @media only screen and (min-width: 905px) {
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+    margin-top: 5rem;
+  }
 
-    &-fixed{
+  @media only screen and (min-width: 1000px) {
+    &-fixed {
       position: fixed;
-      top: 25%;
-      text-align:left;
-  
-      &-left{
+      text-align: left;
+
+      &-left {
         right: 70%;
         left: 10rem;
-  
+
+        @media only screen and (min-width: 2500px) {
+          left: 20rem;
+        }
+
         @media only screen and (max-width: 1300px) {
           left: 8rem;
         }
-      
+
         @media only screen and (max-width: 1000px) {
           left: 5rem;
         }
       }
-  
-      &-right{
+
+      &-right {
         left: 75%;
         right: 10rem;
 
         @media only screen and (min-width: 2500px) {
           right: 20rem;
         }
-  
+
         @media only screen and (max-width: 1300px) {
           right: 5rem;
 
-          .blog-tagline{
+          .blog-tagline {
             padding: 1rem;
 
-            h2{
+            h2 {
               font-size: 2.5rem;
             }
           }
         }
-      
       }
-  
-      
     }
   }
-
-  
 }
 
-.pagination{
+.articles {
+  animation: SlideBlogUp 0.8s ease forwards 3s;
+}
+
+.pagination {
   display: flex;
   justify-content: space-between;
 
-  &-link:hover{
+  &-link:hover {
     color: var(--link-color);
   }
 }
 
-.p-big{
-  font-size: 3.0rem;
+.p-big {
+  font-size: 3rem;
   font-weight: normal;
   font-style: italic;
 
   @media only screen and (max-width: 800px) {
     font-size: 2.5rem;
   }
-
 }
 
 /*General classes for blog pages*/
@@ -272,32 +287,34 @@ label {
   color: var(--link-color);
   font-style: italic;
 
-  &:hover, &:focus{
-     border-bottom: 1px solid var(--link-color);
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid var(--link-color);
   }
 }
 
-.inline-image{
+.inline-image {
   max-width: 50rem;
   max-height: 40rem;
   margin: 3rem auto;
 
-  & img{
+  & img {
     width: 100%;
     height: 100%;
-    box-shadow: 0 2px 5px rgba(14,13,13,0.4);
+    box-shadow: 0 2px 5px rgba(14, 13, 13, 0.4);
   }
-  
 }
 
-.aside-outlined{
+.aside-outlined {
   border: 1px solid var(--white-secondary);
   padding: 1.5rem;
   border-radius: 2px;
 }
 
 //For inline codes in blog posts
-code:not(.grvsc-code){
+//------------------------------
+
+code:not(.grvsc-code) {
   background-color: grey;
   padding: 0 5px;
 }
@@ -312,36 +329,39 @@ table {
   width: 90%;
   margin: 3rem auto;
 
-  td, th {
+  td,
+  th {
     border: 1px solid #dddddd;
     text-align: center;
     padding: 8px;
     min-width: 10rem;
   }
-
 }
 
-pre{
+pre {
   margin: 3.5rem 0;
   line-height: 1.3;
-  overflow-x:auto;
-
+  overflow-x: auto;
 }
 
-
 /*Alternate styles for light mode*/
+//------------------
 
 .light-mode {
-
   color: var(--dark-primary);
-  background-color: var(--white-primary);
+  background-color: #ffffff;
 
-  h1,h2,h3,h4,h5,h6{
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: var(--dark-secondary);
   }
 
   a {
-    color:inherit;
+    color: inherit;
   }
 
   .button a {
@@ -366,22 +386,23 @@ pre{
       color: black;
     }
   }
-  
-  code:not(.grvsc-code){
-    background-color:#d0d0d5;
+
+  code:not(.grvsc-code) {
+    background-color: #d0d0d5;
     padding: 0 5px;
   }
 
   .inline-link {
     color: var(--contrast-color);
 
-    &:hover, &:focus{
+    &:hover,
+    &:focus {
       border-bottom: 1px solid var(--contrast-color);
-   }
+    }
   }
 
-  .post-main{
-    background-color: #f9f4f487;
+  .post-main {
+    background-color: #ebeef2;
   }
 
   .post__title {
@@ -390,23 +411,23 @@ pre{
     }
   }
 
-  .posts .post{
-    background-color: #f9f4f487 ;
+  .posts .post {
+    background-color: #ffffff;
     color: var(--dark-primary);
     box-shadow: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
 
-  button{
-    border: 1px solid var( --dark-secondary);
+  button {
+    border: 1px solid var(--dark-secondary);
     color: var(--dark-secondary);
   }
 
   .container {
     color: var(--dark-secondary);
-    background-color: var(--white-primary);
+    background-color: #ffffff;
   }
 
-  
   .adComponent {
     & button {
       &:hover {
@@ -432,17 +453,50 @@ pre{
     border: 2px solid var(--contrast-color);
   }
 
-  .sub{
+  .sub {
     background-color: #ebeef2;
     border: 5px solid var(--dark-secondary);
   }
 
-  .hero-dark{
+  .hero-dark {
     display: none;
   }
 
-  .hero-light{
+  .hero-light {
     display: block;
+  }
+
+  .project__overlay {
+    color: var(--white-primary);
+
+    h4 {
+      color: inherit;
+    }
+  }
+
+  .svg-loader {
+    background-color: #ffffff;
   }
 }
 
+/*General Page animations*/
+//------------------
+
+/*slide in animation*/
+@keyframes SlideInUp {
+  from {
+    transform: translateY(250px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes SlideBlogUp {
+  from {
+    margin-top: 200px;
+  }
+  to {
+    margin-top: 0px;
+  }
+}

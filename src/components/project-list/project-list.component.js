@@ -42,7 +42,7 @@ class ProjectList extends React.Component{
                    description="Fully Offline Capable Income and Expense Logging PWA."
                    image="/moneypaddy.png"
                    imageAlt="Screenshot of the moneypaddy project"
-                   techsUsed={['HTML', 'CSS','JavaScript','Webpack','Service Workers', 'PostCSS', 'Firebase','Push API', 'Notifications API' ]}
+                   techsUsed={['HTML', 'CSS','JavaScript','Service Workers', 'PostCSS', 'Firebase','Push API']}
                    githubLink=" https://github.com/Linda-Ikechukwu/MoneyPaddy"
                 />
                  <ProjectItem
@@ -59,7 +59,7 @@ class ProjectList extends React.Component{
                    num = {4}
                    title='Labrinth Stores'
                    projectLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
-                   description="Labrinth Stores is a hypothetical ecommerce store for an african american women clothing label."
+                   description="A hypothetical ecommerce store for an african american women clothing."
                    image="/labrinthe.png"
                    imageAlt="Screenshot of the labrinth project"
                    techsUsed={['Sass','React','Redux', 'Firebase', 'Localstorage',]}
@@ -68,22 +68,22 @@ class ProjectList extends React.Component{
                 <ProjectItem
                    num = {5}
                    title="MyPickup"
-                   projectLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
+                   projectLink=" https://github.com/Linda-Ikechukwu/React-Dashboard/tree/development"
                    description="Admin dashboard for a delivery as a service startup."
                    image="/labrinthe.png"
                    imageAlt="Screenshot of the labrinth project"
                    techsUsed={['Sass','React','Material UI',]}
-                   githubLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
+                   githubLink=" https://github.com/Linda-Ikechukwu/React-Dashboard/tree/development"
                 />
                 <ProjectItem
                    num = {6}
                    title='Severless Notist'
-                   projectLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
+                   projectLink=" https://github.com/Linda-Ikechukwu/notist-severless"
                    description="A severless react app for taking notes."
-                   image="/labrinthe.png"
+                   image="/notist2.png"
                    imageAlt="Screenshot of the Notist project"
-                   techsUsed={['Sass','React','Severless Framework','AWS DynamoDB', 'AWS Cognito', 'AWS Lambda',]}
-                   githubLink=" https://github.com/Linda-Ikechukwu/Labrinth-Stores"
+                   techsUsed={['React','Severless Framework','DynamoDB', 'AWS Cognito', 'Lambda', 'Chakra UI']}
+                   githubLink=" https://github.com/Linda-Ikechukwu/notist-severless"
                 />
 
             </div>

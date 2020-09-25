@@ -14,7 +14,7 @@ module.exports = {
     siteUrl: `https://www.codewithlinda.com/`,
     paymentPointer: `$ilp.uphold.com/UgFp7pe6LHFk`
   },
-  
+
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
@@ -53,9 +53,15 @@ module.exports = {
           {
             resolve: `gatsby-remark-vscode`,
             options: {
-              theme: 'Abyss' 
+              theme: 'Abyss'
             }
-          }
+          },
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
+            },
+          },
         ],
       },
     },
@@ -89,8 +95,7 @@ module.exports = {
     resolve: `gatsby-plugin-netlify`,
     options: {
       allPageHeaders: [
-        "Link: <static/fonts/rosario-v17-latin-regular.woff2>; rel=preload; as=font",
-        "Link: <static/fonts//fonts/ribeye-marrow-v9-latin-regular.woff2>; rel=preload; as=font",
+        "Link: <static/fonts/lato-v17-latin-regular.woff2>; rel=preload; as=font",
         "Link: <static/fonts.css>; rel=preload; as=font",
       ],
     }

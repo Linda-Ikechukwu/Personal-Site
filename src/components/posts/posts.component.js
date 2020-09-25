@@ -22,7 +22,7 @@ class Posts extends React.Component {
   render() {
 
     return (
-      <div className="blogs-container">
+      <div>
         <ul className="posts">
 
           {this.props.data.allMarkdownRemark.edges.map(edge => {
@@ -52,9 +52,9 @@ class Posts extends React.Component {
                     </h2>
                     <div className="post__info">
                       <span>
-                        Published on {edge.node.frontmatter.date} <span>  </span>{" "}
+                        {edge.node.frontmatter.date} <span>  </span>{" "}
                                 ({edge.node.timeToRead} min read)
-                            </span>
+                      </span>
                     </div>
                     <p className="post__excerpt">{edge.node.frontmatter.description}</p>
                   </Link>

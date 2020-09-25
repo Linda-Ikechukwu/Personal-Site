@@ -5,7 +5,6 @@ import { Disqus } from 'gatsby-plugin-disqus'
 
 import Layout from "../components/layout"
 import MetaData from "../components/metadata"
-import AdComponent from "../components/ad/ad.component"
 import ShareButtons from "../components/share-buttons/share.component"
 import BlogTagline from "../components/blog-tagline/blog-tagline.component"
 import SubscriptionForm from "../components/subscription-form/subscription-form.component"
@@ -90,7 +89,7 @@ const BlogPost = props => {
                         <main className="post-main">
                             <div className="post-body__info">
                                 <h1 className="post-body__title">{props.data.markdownRemark.frontmatter.title}</h1>
-                                <span>Published on {props.data.markdownRemark.frontmatter.date}{" "}<span>
+                                <span>{props.data.markdownRemark.frontmatter.date}{" "}<span>
                                 </span> ({props.data.markdownRemark.timeToRead} min read)</span>
                             </div>
                             <div className="post-body__hero-image">
@@ -140,14 +139,13 @@ const BlogPost = props => {
                         </div>
                     </div>
                     <aside className="sidebar">
-                       <div className="sidebar-fixed sidebar-fixed-right">
                        <BlogTagline outlined/>
-                       </div>
-                        
+
+
                         {/* <AdComponent
                             image="/ztm.png"
                             alt="Zero to Mastery Academy Logo"
-                            description="Avoid Uncertainties and the Tutorial loophole. Learn to Code the right way, using the same resources I used and land a high 
+                            description="Avoid Uncertainties and the Tutorial loophole. Learn to Code the right way, using the same resources I used and land a high
                                paying job in less than a year for less than $300. Use my coupon code <span>FRIENDS10</span> for 10% off membership fee."
                             link="https://academy.zerotomastery.io/p/academy?affcode=441520_tjxt0mkj"
                             cto="Join the ZTM Academy Now!"

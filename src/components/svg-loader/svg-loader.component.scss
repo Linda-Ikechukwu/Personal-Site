@@ -1,0 +1,44 @@
+.svg-loader {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--dark-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    animation: fadeOut 1s ease forwards 3s;
+
+    svg {
+        width: 60rem;
+        height: 26rem;
+
+        path {
+            animation: fillSvg 1s ease forwards 2s;
+        }
+    }
+}
+
+@keyframes fillSvg {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: var(--link-color);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        display: flex;
+        opacity: 1;
+        z-index:1000;
+    }
+    to {
+        display: none;
+        opacity: 0;
+        z-index: -1000;
+
+    }
+}

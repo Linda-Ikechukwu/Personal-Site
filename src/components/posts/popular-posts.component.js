@@ -11,9 +11,9 @@ const PopularPosts = () => {
     query{
         allMarkdownRemark(
           sort: { fields: frontmatter___date, order: DESC }
-        
+
           ){
-          
+
           edges {
             node {
               frontmatter {
@@ -47,7 +47,7 @@ const PopularPosts = () => {
 
     return (
         <div>
-            <h1 className="u-bottom"> Popular Articles:</h1>
+            <h1 className="u-bottom popular"> Popular Articles:</h1>
             <ul className="posts">
                 {data.allMarkdownRemark.edges.map(edge => {
                     if ((edge.node.frontmatter.tags).join("").includes('Popular')) {
@@ -76,9 +76,9 @@ const PopularPosts = () => {
                                     </h2>
                                     <div className="post__info">
                                         <span>
-                                            Published on {edge.node.frontmatter.date} <span>  </span>{" "}
-                                ({edge.node.timeToRead} min read)
-                            </span>
+                                            {edge.node.frontmatter.date} <span>  </span>{" "}
+                                            ({edge.node.timeToRead} min read)
+                                        </span>
                                     </div>
                                     <p className="post__excerpt">{edge.node.frontmatter.description}</p>
                                 </Link>

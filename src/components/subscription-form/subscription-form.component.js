@@ -34,9 +34,9 @@ const SubscriptionForm = () => {
            if (json.status === 'success') {
                 setStatus('SUCCESS');
                 return;
-            } 
+            }
 
-           
+
         } catch (err) {
             setStatus('ERROR');
             console.log(err);
@@ -52,11 +52,13 @@ const SubscriptionForm = () => {
 
         <div className="sub">
             <h2>Join My Newsletter</h2>
-            <p>If you've found any of my articles useful, subscribe to receive more quality articles straight to your inbox.</p>
-            
+            <p>
+                If you've found any of my articles useful, subscribe to be notified of more quality articles as soon as they're published
+            </p>
+
             {status === 'SUCCESS' && <p>Please go confirm your subscription!</p>}
             {status === 'ERROR' && <p>Oops, Something went wrong! try again.</p>}
-            
+
             <form className="sub__form"
                 action={FORM_URL}
                 method="post"

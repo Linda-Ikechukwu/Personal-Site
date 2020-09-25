@@ -2,43 +2,46 @@
     list-style-type: none;
     padding-left: 0;
     margin: 0;
-    
+
     @media only screen and (max-width: 500px) {
        padding-top: 5rem;
     }
-    
+
     .post{
         background-color: var(--dark-secondary);
         border: 1px solid var( --component-color);
-        border-radius: 1rem; 
+        border-radius: 1rem;
         width: 55vw;
         margin-bottom: 5rem;
-        padding: 1rem;
+        padding: 2rem;
         box-shadow: 0 2px 4px  rgba(17, 16, 16, 0.6);
 
         &:hover{
             transform: scale(1.05) !important;
         }
-     
+
         &__info{
           font-style: italic;
+          text-transform: uppercase;
+          color: var(--white-secondary);
+          font-size: 1.6rem;
         }
 
-        
-    
-       @media only screen and (max-width: 900px) {
+
+
+       @media only screen and (max-width: 1000px) {
          width: 100%;
        }
-        
+
     }
-    
+
 
 
 }
 
 .post-body{
-    font-size: 1.8rem;
-    width: 65vw;
+    font-size: 1.9rem;
+    width: 63vw;
 
     &__links, &__comment{
         border-bottom: 0.2px solid var(--component-color);
@@ -49,12 +52,16 @@
          text-align: center;
          margin-bottom: 3rem;
 
+
         h1{
-            margin-bottom: 1rem; 
+            margin-bottom: 1rem;
         }
 
         span{
             font-style: italic;
+            text-transform: uppercase;
+            color: var(--white-secondary)
+
         }
     }
 
@@ -64,7 +71,7 @@
         .deckgo-highlight-code-container{
             line-height: 0 !important;
         }
-          
+
         img{
             width: 80%;
             height: 40rem;
@@ -90,7 +97,7 @@
                     color: var(--text-color-light);
                 }
             }
-            
+
         }
 
         span{
@@ -103,7 +110,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        
+
         & span{
            margin-right: 2rem;
         }
@@ -114,7 +121,7 @@
         margin-top: 5rem;
     }
 
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 1000px) {
         width: 100%;
     }
 }
@@ -142,3 +149,4 @@
     }
 
 }
+

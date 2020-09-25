@@ -1,8 +1,13 @@
-import React from "react";
-
+import React, {useEffect} from "react";
+import AOS from 'aos';
 import "./header.styles.scss"
 
 const Header = () => {
+
+  useEffect(() =>{
+    AOS.init()
+  })
+
   //creating an  array containing the floating shapes
   const shapes = [...Array(30)];
 
@@ -19,7 +24,7 @@ const Header = () => {
       }
       <section className="header section" data-anchor="Page 1">
 
-        <div className="header__right">
+        <div className="header__right" >
           <div className="header__image">
             <img className="hero-dark" src="/hero4.png"
               alt="headshot of Linda Ikechukwu">

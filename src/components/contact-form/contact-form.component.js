@@ -9,7 +9,7 @@ import "./contact-form.style.scss"
 
 
 
-//AOS.init();
+//AOS.init();//
 
 class ContactForm extends React.Component{
 

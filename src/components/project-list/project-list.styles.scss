@@ -3,12 +3,12 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 3rem;
 
     @media only screen and (max-width: 800px) {
         width: 100vw;
-        justify-content: space-evenly;
+        justify-content: space-around;
         margin-top: 1.5rem;
     }
 
