@@ -53,7 +53,7 @@ const SubscriptionForm = () => {
         <div className="sub">
             <h2>Join My Newsletter</h2>
             <p>
-                If you've found any of my articles useful, subscribe to be notified of more quality articles as soon as they're published
+                If you've found any of my articles useful, subscribe to be notified of more quality articles as soon as they're published.
             </p>
 
             {status === 'SUCCESS' && <p>Please go confirm your subscription!</p>}

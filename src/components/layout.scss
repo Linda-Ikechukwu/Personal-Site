@@ -23,10 +23,6 @@ html {
   font-size: 62.5%; /*10px. Root font size is 16px i.e 100%*/
   scroll-behavior: smooth;
 
-  @media only screen and (max-width: 400px) {
-    font-size: 50%; /*8px. Root font size is 16px i.e 100%*/
-  }
-
   @media only screen and (min-width: 2000px) {
     font-size: 100%; /*Root font size is 16px i.e 100%*/
   }
@@ -46,8 +42,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  color: var(--white-primary);
+h6, h2 a {
+  color: #ffffff;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-family: var(--secondary-font);
@@ -63,7 +59,7 @@ label {
 }
 
 p {
-  line-height: 1.4;
+  line-height: 1.8;
 }
 
 /*Utility Classes*/

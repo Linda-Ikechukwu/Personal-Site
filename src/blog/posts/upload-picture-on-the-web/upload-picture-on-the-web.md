@@ -17,7 +17,7 @@ I’ll explain the process in steps so that even a beginner will have no problem
 Here’s a gif demo of what we’ll be building:
 
 
-<img class="inline-image" src='javascript-file-api.gif' alt="Upload files using the JavaScript File API">
+<img class="inline-image" src='javascript-file-api.gif' style="padding:3rem" alt="Upload files using the JavaScript File API">
 
 
 Now, Let’s get started.

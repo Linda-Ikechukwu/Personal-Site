@@ -14,7 +14,7 @@ const Navigation = ({dark}) => {
             <a href='#main' className="visually-hidden ">Skip to main content</a>
             <div className="nav__right">
                 <span className="nav__item"><Link to="/">Home</Link></span>
-                <span className="nav__item"><Link to="/blog">Blog</Link></span>
+                <span className="nav__item"><Link to="/blog/">Blog</Link></span>
             </div>
             <div className="nav__left">
                 <span className="nav__item">

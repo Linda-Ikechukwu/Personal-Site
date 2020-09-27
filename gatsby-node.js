@@ -66,7 +66,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
-      path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+      path: i === 0 ? `/blog/` : `/blog/${i + 1}/`,
       component: path.resolve("./src/templates/blog-list.js"),
       context: {
         limit: postsPerPage,
@@ -81,7 +81,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   articles.forEach(({ node }, index) => {
     createPage({
-      path: `/blog/${node.fields.slug}`,
+      path: `/blog/${node.fields.slug}/`,
       component: path.resolve("./src/templates/blog-post.js"),
       context: {
         slug: node.fields.slug,
@@ -94,7 +94,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Extract tag data from query and create page
   response.data.tagsGroup.group.forEach(tag => {
     createPage({
-      path: `/tags/${_.kebabCase(tag.fieldValue)}`,
+      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
       component: path.resolve("./src/templates/tags.js"),
       context: {
         tag: tag.fieldValue,

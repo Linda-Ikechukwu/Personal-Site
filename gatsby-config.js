@@ -24,7 +24,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         custom: {
-          families: ["Rosario,  Ribeye Marrow"],
+          families: ["Lato, sans-serif"],
           urls: ["/fonts/fonts.css"],
         },
       },
@@ -96,7 +96,7 @@ module.exports = {
     options: {
       allPageHeaders: [
         "Link: <static/fonts/lato-v17-latin-regular.woff2>; rel=preload; as=font",
-        "Link: <static/fonts.css>; rel=preload; as=font",
+        "Link: <static/fonts/fonts.css>; rel=preload; as=font",
       ],
     }
    },
