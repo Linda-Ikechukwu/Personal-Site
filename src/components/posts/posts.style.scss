@@ -127,6 +127,10 @@
         margin-top: 5rem;
     }
 
+    &__comment{
+        content-visibility: auto;
+    }
+
     & .gatsby-resp-image-wrapper{
         margin-top: 6rem !important;
         margin-bottom: 6rem !important;

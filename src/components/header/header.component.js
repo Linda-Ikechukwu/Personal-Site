@@ -13,15 +13,7 @@ const Header = () => {
 
   return (
     <div className="shape">
-      {
-        shapes.map((_, shape) => {
-          return (
-            <div key={shape} className={`shape-container--${shape+1} shape-animation`}>
-              <div aria-hidden="true" className="random-shape"></div>
-            </div>
-          )
-        })
-      }
+      
       <section className="header section" data-anchor="Page 1">
 
         <div className="header__right" >

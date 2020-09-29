@@ -1,4 +1,4 @@
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
 
 .header{
     min-height: 88vh;
@@ -112,10 +112,17 @@
     }
 
     @media only screen and (max-width: 500px) {
+        padding-top: 4rem;
+
+        &__description{
+            margin-top: 0;
+        }
+
         &__image {
             & img{
-                width: 70vw;
-                margin-left: 1rem;
+                width: 85vw;
+                height: 32rem;
+                margin-right: -1rem;
             }
         }
     }
@@ -123,7 +130,7 @@
     @media only screen and (max-width: 400px) {
         &__image {
             & img{
-                margin-left: .5rem;
+                margin-left: -2rem;
             }
         }
     }
@@ -134,55 +141,17 @@
 }
 
 .shape {
+    content-visibility: auto;
     position: relative;
     height: 88vh;
     overflow: hidden;
 
     @media only screen and (max-width: 800px) {
-        height: 80rem;
+        height: 60rem;
     }
 }
 
-.random-shape:after {
-    font-family: FontAwesome;
-    content: "\f005";
-}
 
-$circle-size: 100px;
-$colors: #FFD700, #FFF8DC, #DB7093, #C2B7FE, #95A9FF;
-$shapes: '\f005', '\f0c8', '\f1db', '\f096', '\f1d8', '\f1cb';
-$shape-count: 30;
-
-@for $i from 1 through $shape-count {
-    $shape-size: random(10);
-    $rotation: random(360);
-    $speed: 40 + random(10);
-    $color-key: random( length($colors) );
-    $shape-color: nth( $colors, $color-key );
-    $shape-key: random( length($shapes) );
-    $shape-type: nth( $shapes, $shape-key );
-    $text: random(10);
-
-    @keyframes shape-#{$i} {
-        0% {
-            transform: translate3d(0,0,0) rotate(#{$rotation + 0}deg);
-        }
-        100% {
-            transform: translate3d(0,0,0) rotate(#{$rotation + 360}deg);
-        }
-    }
-
-    .shape-container--#{$i} {
-        animation: shape-#{$i} #{$speed}s linear infinite;
-
-        .random-shape:after {
-            margin: #{$shape-size}rem;
-            color: $shape-color;
-            font-size: #{$shape-size * 0.3}rem;
-            content: $shape-type;
-        }
-    }
-}
 
 @keyframes SlideInUp {
     from{

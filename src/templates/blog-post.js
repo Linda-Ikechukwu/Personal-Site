@@ -112,7 +112,7 @@ const BlogPost = props => {
                             >
                             </div>
                             <div className="post-body__share-buttons">
-                                <span>If you found this article helpful,please share it:</span>
+                                <span>If you found this article helpful, please share it:</span>
                                 <ShareButtons title={title} url={url} twitterHandle={twitterHandle} tags={tags} />
                             </div>
                         </main>

@@ -39,10 +39,10 @@ class ProjectList extends React.Component{
                    num = {2}
                    title='Money Paddy (PWA)'
                    projectLink=" https://linda-ikechukwu.github.io/MoneyPaddy/dist/index.html"
-                   description="Fully Offline Capable Income and Expense Logging PWA."
+                   description="Income and Expense Logging PWA."
                    image="/moneypaddy.png"
                    imageAlt="Screenshot of the moneypaddy project"
-                   techsUsed={['HTML', 'CSS','JavaScript','Service Workers', 'PostCSS', 'Firebase','Push API']}
+                   techsUsed={['JavaScript','Indexed DB', 'PostCSS', 'Firebase','Push API']}
                    githubLink=" https://github.com/Linda-Ikechukwu/MoneyPaddy"
                 />
                  <ProjectItem
