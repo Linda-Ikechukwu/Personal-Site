@@ -54,7 +54,7 @@ To understand the problems that serverless tries to solve, let’s go back in ti
 
 Development workflows have massively evolved. In the past, if a developer or a company wanted to deploy and host an application - say an online store, they had to purchase physical servers and storage hardware. These pieces of hardware had to be configured and supplied power 24/7 before applications could be on them. After deployment, the hardware modules must be maintained and updated regularly too.
 
-Now, times will come when visits to the online store may spike - for example during Black Friday's and holiday seasons. To cope with the increased requests and prevent the site from crashing, the developer or company would normally have existing pre-configured standby idle servers for such times; just like having to rent a car, you’ll barely use.
+Now, times will come when visits to the online store may spike - for example during Black Fridays and holiday seasons. To cope with the increased requests and prevent the site from crashing, the developer or company would normally have existing pre-configured standby idle servers for such times; just like having to rent a car, you’ll barely use.
 
 If requests exceeded the capacity of the hardware available, then new hardware had to be purchased, configured and whatnot - which takes time-  during which users will be lost.
 
