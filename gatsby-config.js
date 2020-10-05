@@ -92,12 +92,6 @@ module.exports = {
         trackingId: "UA-167406817-1",
       },
     },
-   {
-    resolve: `gatsby-plugin-purgecss`,
-    options: {
-      printRejected: true, // Print removed selectors and processed file names
-    }
-  },
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
