@@ -2,20 +2,20 @@
 title: "How To Set up Email Newsletter Subscription For Gatsby Blog Using ConvertKit"
 date: "2020-05-31"
 featured: "./emailsub.png"
-description: "Email newsletters can be used to keep readers continually engaged and drive constant traffic. In this article you'll learn how to set up an email newsletter subscription flow for your gatsby blog using Convertkit in 6 steps."
+description: "Learn how to set up an email newsletter subscription flow for your gatsby blog using Convertkit in 6 steps."
 tags: ["React","Gatsby"]
 keywords: "Build a Gatsby Blog, Email Newsletter Subcription, Using ConvertKit, Build a developer blog, Email Subscription Gatsby"
 ---
 <a target="blank" class="inline-link" href=""></a>
 Having an email newsletter subscription flow setup for your blog is great because it helps you retain/engage your readers and drive repeated traffic to your site amongst other reasons.
 
-Granted, there are a couple of tools available for doing this such as Mailchimp, Aweber, Hubspot, e.t.c. Gatsby even has a plugin for using mailchimp. However, for my blog, I decided to go with <a target="blank" class="inline-link" href="https://app.convertkit.com/referrals/l/794f325a-7d4e-472d-8fbb-bdf7aa155315"> ConvertKit</a> because: 
+Granted, there are a couple of tools available for doing this such as Mailchimp, Aweber, Hubspot, e.t.c. Gatsby even has a plugin for using mailchimp. However, for my blog, I decided to go with <a target="blank" class="inline-link" href="https://app.convertkit.com/referrals/l/794f325a-7d4e-472d-8fbb-bdf7aa155315"> ConvertKit</a> because:
   - There are a lot of good reviews about it.
   - The UI is really simple to use and navigate.
   - It has a free tier, so you can experiment before commiting.
   - The one and only <a target="blank" class="inline-link" href="https://monicalent.com/">Monica Lent </a>  recommended it.
 
-This article assumes that you have some experience using <a target="blank" class="inline-link" href="https://www.gatsbyjs.org/">Gatsby</a>  or <a target="blank" class="inline-link" href="https://reactjs.org/">React.</a> 
+This article assumes that you have some experience using <a target="blank" class="inline-link" href="https://www.gatsbyjs.org/">Gatsby</a>  or <a target="blank" class="inline-link" href="https://reactjs.org/">React.</a>
 
 
 ## To get started with ConvertKit,
@@ -71,7 +71,7 @@ const SubscriptionForm = () => {
             if (json.status === 'success') {
                 setStatus('SUCCESS');
                 return;
-            } 
+            }
         } catch (err) {
             setStatus('ERROR');
             console.log(err);
@@ -89,10 +89,10 @@ const SubscriptionForm = () => {
             <p>
                If you've found any of my articles useful, subscribe to receive more quality articles straight to your inbox.
             </p>
-            
+
             {status === 'SUCCESS' && <p>Please go confirm your subscription!</p>}
             {status === 'ERROR' && <p>Oops, Something went wrong! try again.</p>}
-            
+
             <form className="sub__form"
                 action={FORM_URL}
                 method="post"
@@ -126,15 +126,15 @@ export default SubscriptionForm
 ```
 
 
-You can style the subscription form component however you want, then import and use it in your blog pages template file or wherever else you wish. 
+You can style the subscription form component however you want, then import and use it in your blog pages template file or wherever else you wish.
 
 <strong>To Test:</strong> Enter an email address into your form and click on the subscribe button. If you receive a success message and confirmation email to that email address then you’re good to go.
 
 *P.S: This should be done on a live site not on localhost.*
 
-You can also make changes to the contents of the confirmation email, tweak other settings for your form, and create an email template for your broadcasts. 
+You can also make changes to the contents of the confirmation email, tweak other settings for your form, and create an email template for your broadcasts.
 
-I’m hoping you’ll figure your way around. If you have any further questions, ask away in the comment section or hit me up on <a target="blank" class="inline-link" href="https://twitter.com/_MsLinda?">twitter</a> 
+I’m hoping you’ll figure your way around. If you have any further questions, ask away in the comment section or hit me up on <a target="blank" class="inline-link" href="https://twitter.com/_MsLinda?">twitter</a>
 
 Now go on and build something great!
 

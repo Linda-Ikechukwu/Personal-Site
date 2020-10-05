@@ -2,12 +2,12 @@
 title: "Building Web Layouts With CSS Floats"
 date: "2020-06-25"
 featured: "./layout.png"
-description: "In this article, you'll use the CSS float property which the most supported browser layout method to build a simple grid-like column layout system, just like bootstrap, that can be used for styling any web layout."
+description: "Learn how to use the CSS float property -which the most supported web layout property - to build a simple grid-like column layout system -just like bootstrap."
 tags: ["CSS", "HTML"]
 keywords: "CSS Floats, CSS Float layout templates, CSS Layout Float"
 ---
 
-Building complex and adaptive web layouts has been super fun and easy since the release of CSS Grids and Flexbox. 
+Building complex and adaptive web layouts has been super fun and easy since the release of CSS Grids and Flexbox.
 
 Before those, float was the main property used for building layouts and is supported across all browsers; even older versions of Internet Explorer (IE) like 8 and 9 unlike the Flex and Grid properties. If you want to build a simple layout for an audience of mainly IE users, float should be your go to tool.
 
@@ -15,7 +15,7 @@ Before those, float was the main property used for building layouts and is suppo
 
 This article assumes that you understand how the CSS Float property works. If you don’t, you may find <a target="blank" class="inline-link" href="https://css-tricks.com/all-about-floats/">this article </a> useful.
 
-We’ll be going through a fun exercise great for CSS beginners. You’ll use floats to build a grid column layout just like in bootstrap, that can be used across different projects. You'll also make use of some CSS concepts you may not have used before like: 
+We’ll be going through a fun exercise great for CSS beginners. You’ll use floats to build a grid column layout just like in bootstrap, that can be used across different projects. You'll also make use of some CSS concepts you may not have used before like:
    - CSS variables.
    - CSS [attribute^=”value”] selector.
    - CSS :not(:last-child) selector.
@@ -42,7 +42,7 @@ The html will be:
 ```
 
 First, let’s define the spacings using Css variables aka custom properties.
- 
+
 Css variables, as the name implies, are custom properties defined by CSS developers that contain values that will be reused throughout a project. These custom property names are preceded with double dashes and are usually defined within the `:root` pseudo class.
 
 Let's call the spacing between columns: horizontal-grid-margin and the spacing between rows: vertical-grid-margin.
@@ -66,7 +66,7 @@ We’ll give rows a width of 100% to ensure that they always take up the entire 
 
 Next, we’ll float all divs with a preceeding  ` col- `  class name left.
 
-We’ll be having other ` col ` clases like ` col-1-of-3 ` for a 3 column layout and ` col-1-of-4 ` for a four column layout, so we want a way to target all divs with a classname that starts with col-. 
+We’ll be having other ` col ` clases like ` col-1-of-3 ` for a 3 column layout and ` col-1-of-4 ` for a four column layout, so we want a way to target all divs with a classname that starts with col-.
 
 Introducing the ` [class^=”value”] ` selector. This is a type of CSS selector like classes, ids and tags called an attribute selector that will target every element whose classname starts with the value assigned.
 
@@ -88,9 +88,9 @@ Also, we'll add some height and background color to our column divs to make them
 }
 ```
 
-Next, we know that we need to define some right margin value for the columns to make them spaced as what we have above. Defining a right margin value under the ` [class^=”value”] ` selector will give both columns a right margin. 
+Next, we know that we need to define some right margin value for the columns to make them spaced as what we have above. Defining a right margin value under the ` [class^=”value”] ` selector will give both columns a right margin.
 
-This is not what we want. We want to add spacing only between columns, not before or after. To do that, we have to give a right margin to all ` col- ` classes in a row excluding the last ones. 
+This is not what we want. We want to add spacing only between columns, not before or after. To do that, we have to give a right margin to all ` col- ` classes in a row excluding the last ones.
 
 Introducing the ` :not(:last-child) ` selector. This selector  basically targets all child elements of the parent element it is attached to, except the last one.
 
@@ -108,7 +108,7 @@ Next we need to define widths for the columns.
 
 From the demo gif above, we can see that both columns are of equal width.
 
-Let’s do some logical thinking here. We can see that the combined width of both columns is the width of the row minus the margin i.e ` 100% - horizontal-grid-margin ` .This means that the individual width of each column is the total width of both columns divided by 2 i.e `(100% - horizontal-grid-margin) / 2` .But, how do we write that in CSS? 
+Let’s do some logical thinking here. We can see that the combined width of both columns is the width of the row minus the margin i.e ` 100% - horizontal-grid-margin ` .This means that the individual width of each column is the total width of both columns divided by 2 i.e `(100% - horizontal-grid-margin) / 2` .But, how do we write that in CSS?
 
 Introducing the CSS `Calc()` function. The CSS calc function is used to perform simple calculations to determine CSS property values right in CSS.
 
@@ -121,7 +121,7 @@ Introducing the CSS `Calc()` function. The CSS calc function is used to perform 
 Tada!! As you can see, we’ve successfully implemented a responsive two column layout with CSS floats.
 
 While we’re feeling confident, let’s try to implement a three column layout.
-The html will be: 
+The html will be:
 
 ``` html
 <div class="row">
@@ -155,7 +155,7 @@ The html will be
 </div>
 ```
 
-Notice that the width of the 2-of-3 column is two 1-of-3 columns plus the horizontal-grid-margin? We’ve already calculated the width of one 1-of-3 column. That will be: `2 * ((100% - 2 *  horizontal-grid-margin)/3) + horizontal-grid-margin` 
+Notice that the width of the 2-of-3 column is two 1-of-3 columns plus the horizontal-grid-margin? We’ve already calculated the width of one 1-of-3 column. That will be: `2 * ((100% - 2 *  horizontal-grid-margin)/3) + horizontal-grid-margin`
 
 ``` css
 .col-2-of-3 {

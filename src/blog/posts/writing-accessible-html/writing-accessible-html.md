@@ -2,7 +2,7 @@
 title: "HTML is Accessible Enough! Use It."
 date: "2020-08-10"
 featured: "./accessible-html.png"
-description: "When used properly, HTML by default is accessible. In this article, you'll learn 7 common HTML mistakes you may be making that is contributing to your website inaccessible to screen reader and keyboard users."
+description: "Learn about 7 common HTML mistakes you may be making that is contributing to making your website inaccessible to screen reader and keyboard users."
 tags: ["HTML"]
 keywords: "HTML Accessible Elements, Web Accessibility, Empty Image Alt, Semantic Elements "
 ---
@@ -47,15 +47,15 @@ Divs should only be used within document landmarks or sections, to group related
 
 ```
 
-Also, don't style a `p` or `span` as a header. There are `h1` to `h6` tags for that. Don't use `a` tags for buttons. Dont use div for navigations. There's `nav` for that. Don't use `div` for the footer. There's a `footer` tag for that too. 
+Also, don't style a `p` or `span` as a header. There are `h1` to `h6` tags for that. Don't use `a` tags for buttons. Dont use div for navigations. There's `nav` for that. Don't use `div` for the footer. There's a `footer` tag for that too.
 
 You can find a <a target='blank' href="https://www.freecodecamp.org/news/semantic-html5-elements/" class="inline-link">list of all semantic elements here </a>.
 
 ## 2. Placeholders are Great. Labels are Better!
 
-As web designers/web developers, we have grown creative wings. Part of that creativity has some of us choosing not to add labels to inputs and styling the input’s placeholder to look like a label. 
+As web designers/web developers, we have grown creative wings. Part of that creativity has some of us choosing not to add labels to inputs and styling the input’s placeholder to look like a label.
 
-There’s nothing wrong with that until someone who uses screen readers has to access your site. 
+There’s nothing wrong with that until someone who uses screen readers has to access your site.
 For every input, provide a label. Combine explicit and implicit labelling That is, wrap the input with the label tag and also associate them with the HTML `for` attribute.
 
 ```html
@@ -179,7 +179,7 @@ There are times when link tags are used to wrap another HTML element, so there c
 
 ## Conclusion
 
-In this article, I've covered some common mistakes made when writing HTML that contributes to making sites inaccessible. This is by no means and exhaustive guide, but it is a starting point. I hope we all take note of them, make necessary changes and strive to build more accessible products. Accessibility should never be an afterthought. 
+In this article, I've covered some common mistakes made when writing HTML that contributes to making sites inaccessible. This is by no means and exhaustive guide, but it is a starting point. I hope we all take note of them, make necessary changes and strive to build more accessible products. Accessibility should never be an afterthought.
 
 If you liked this article, or have any questions or feedback, you can leave a comment below or say hi to me on <a target='blank' class='inline-link' href='https://twitter.com/_MsLinda'> twitter.</a>
 

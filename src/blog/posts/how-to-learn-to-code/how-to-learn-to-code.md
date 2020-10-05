@@ -2,7 +2,7 @@
 title: "How To Teach Yourself To Code"
 date: "2020-09-06"
 featured: "./learn-to-code.png"
-description: "As a beginner developer, teaching yourself to code is an exciting journey - but it's not always easy. And it can be tough to know how and where to start. In this post, I share steps to get started, what you should know to be successful at it, and free resources to get started with.
+description: "Learn what you need to know to successfully teach yourself to code and grow from a newbie to beginner developer.
 "
 tags: ["DevLife","Popular"]
 keywords: "How To Learn To Code, Self Taught Developer, Free Coding Resources"

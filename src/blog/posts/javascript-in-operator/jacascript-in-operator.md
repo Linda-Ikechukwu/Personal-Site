@@ -2,7 +2,7 @@
 title: "The JavaScript 'IN' Operator"
 date: "2020-09-02"
 featured: "./javascript-in.png"
-description: "One of the first topics to familarize yourself with when learning JavaScript (or any other programming language) are operators. Sadly, the Javascript IN isnt talked about so much. In this article, you'll learn what the IN operator is and isn't.
+description: "Learn about the not-so-popular JavaScript 'IN' operator is and isn't and also how it can be useful for verification logic.
 "
 tags: ["JavaScript",]
 keywords: "Javascript In operator, Javascript operator, operators in Javacript"

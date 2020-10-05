@@ -2,12 +2,12 @@
 title: "Add Social Share Buttons to Your Gatsby Blog Pages In 3 Steps"
 date: "2020-05-24"
 featured: "./socialshare.png"
-description: "You've created the perfect blog with gatsby, now you're wondering how to let people share them accross several social media platforms with just one click. In this article you'll learn  how to add social media buttons in 3 simple steps using the react share library."
+description: "Learn  how to add social media share buttons to your gatsby blog in 3 simple steps using the react share library."
 tags: ["React","Gatsby"]
 keywords: "Social Share Buttons, Gatsby Blog, React Share, Build a developer blog "
 ---
 
-We can all agree that writing a well thought out blog post isn’t the easiest thing to do. However, you'll still want to do it because you want to share your knowledge and hope that someone reads it aand finds it helpful. 
+We can all agree that writing a well thought out blog post isn’t the easiest thing to do. However, you'll still want to do it because you want to share your knowledge and hope that someone reads it aand finds it helpful.
 
 Adding social share buttons to your blog pages ensures that readers who find your article useful can share it with their audience with the click of a button. This improves the chances of more people reading your articles.
 
@@ -15,21 +15,21 @@ This article will guide you on how to add social share buttons to a blog built w
 
 Enough said, let's dive in.
 
-## Step 1: Install React Share 
+## Step 1: Install React Share
 
 React share is a library that provides social media share button components for react apps. To install, run `npm install react share --save`   or   `yarn add react-share`.
 
 ## Step 2: Create a ShareButtons component
 
-Go to your components folder in `src`, create a new folder named `ShareButtons` and inside it create a `sharebuttons.component.js` file i.e `src/components/share/share.component.js`. 
+Go to your components folder in `src`, create a new folder named `ShareButtons` and inside it create a `sharebuttons.component.js` file i.e `src/components/share/share.component.js`.
 
-This file will contain and export all your selected social buttons so you can use it wherever you want. 
+This file will contain and export all your selected social buttons so you can use it wherever you want.
 
-Add this code: 
+Add this code:
 
 ```javascript
 import React from 'react'
- 
+
 import {
   FacebookShareButton,
   FacebookIcon,
@@ -42,33 +42,33 @@ import {
   RedditShareButton,
   RedditIcon
 } from 'react-share'
- 
+
 const ShareButtons = ({title, url, twitterHandle, tags}) => {
-    
+
     return(
         <div>
           <FacebookShareButton url={url} >
                 <FacebookIcon  size={40} round={true}/>
          </FacebookShareButton>
-      
+
           <TwitterShareButton url={url} title={title} via={twitterHandle} hashtags={tags}>
                 <TwitterIcon  size={40} round={true} />
           </TwitterShareButton>
-      
+
           <LinkedinShareButton url={url} >
             <LinkedinIcon  size={40} round={true}/>
           </LinkedinShareButton>
-      
+
           <RedditShareButton url={url} title={title} >
             <RedditIcon  size={40} round={true} />
           </RedditShareButton>
-      
+
           <WhatsappShareButton url={url} title={title}>
                <WhatsappIcon  size={40} round={true}/>
            </WhatsappShareButton>
         </div>
       )
-      
+
 }
 export default ShareButtons
 
@@ -88,20 +88,20 @@ What the code above does is :
 
 ##  Step 3: Setup ShareButtons components in your single blog posts template file
 
-First, you need to query the title and tags of each blog post’s frontmatter in your blog post's template, since you’ll be needing to pass it as props to the sharebuttons component. 
+First, you need to query the title and tags of each blog post’s frontmatter in your blog post's template, since you’ll be needing to pass it as props to the sharebuttons component.
 
 ```javascript
    //In src/templates/blog-post.js
 
    export const query = graphql`
- 
+
    query {
       markdownRemark{
         frontmatter {
            title
            tags
         }
-        html 
+        html
    }}
 
 ```
@@ -120,7 +120,7 @@ Next, get the resulting data from query into the `BlogPost` component:
 
 ```
 
-*N.B: The `location.href` property of the prop points to the absolute url of the current page. You can `console.log(props)` and take a look at the properties.* 
+*N.B: The `location.href` property of the prop points to the absolute url of the current page. You can `console.log(props)` and take a look at the properties.*
 
 Then, import the `ShareButtons` component and pass the declared constants above as props to it.
 
@@ -136,17 +136,17 @@ Putting everything together, you should have this:
         frontmatter {
            title
            tags
-           html 
+           html
    }}
 
     const BlogPost = props => {
- 
+
     //For the social share buttons
     const title = `Read ${props.data.markdownRemark.frontmatter.title} `;
     const url = props.location.href;
     const twitterHandle = "_MsLinda";
     const tags = props.data.markdownRemark.frontmatter.tags;
- 
+
    return (
      <div>
        <div className="post-body__content"
@@ -157,7 +157,7 @@ Putting everything together, you should have this:
       </div>
      </div>
    )
- 
+
 }
 
 ```

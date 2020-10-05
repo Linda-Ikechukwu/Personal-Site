@@ -2,7 +2,7 @@
 title: "Serverless Explained By Booking An Uber Ride"
 date: "2020-09-26"
 featured: "./serverless-explained.png"
-description: "You're constantly hearing the term Serverless, but you have no idea what it means. If you've ever used an uber ride before, then you'll understand what serverless is. Learn how."
+description: "Learn what the buzz word 'Serverless' is all about. If you've ever used an uber ride before, then you'll understand what serverless is."
 tags: ["Cloud",]
 keywords: "What is Serverless, Serverless Computing,"
 ---
