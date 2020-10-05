@@ -13,15 +13,15 @@ const Header = () => {
 
   return (
     <div className="shape">
-      
+
       <section className="header section" data-anchor="Page 1">
 
         <div className="header__right" >
           <div className="header__image">
-            <img className="hero-dark" src="/hero4.png"
+            <img className="hero-dark" src="images/hero4.png"
               alt="headshot of Linda Ikechukwu">
             </img>
-            <img className="hero-light" src="/hero5.png"
+            <img className="hero-light" src="images/hero5.png"
               alt="headshot of Linda Ikechukwu">
             </img>
           </div>

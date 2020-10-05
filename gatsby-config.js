@@ -20,6 +20,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-dark-mode`,
+    `gatsby-plugin-preact`,
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
@@ -74,7 +75,7 @@ module.exports = {
         background_color: "#232946",
         theme_color: "#232946",
         display: "standalone",
-        icon: "static/icon.jpg" // This path is relative to the root of the site.
+        icon: "static/images/icon.jpg" // This path is relative to the root of the site.
       }
     },
     {
@@ -92,14 +93,11 @@ module.exports = {
       },
     },
    {
-    resolve: `gatsby-plugin-netlify`,
+    resolve: `gatsby-plugin-purgecss`,
     options: {
-      allPageHeaders: [
-        "Link: <static/fonts/lato-v17-latin-regular.woff2>; rel=preload; as=font",
-        "Link: <static/fonts/fonts.css>; rel=preload; as=font",
-      ],
+      printRejected: true, // Print removed selectors and processed file names
     }
-   },
+  },
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
@@ -113,7 +111,45 @@ module.exports = {
         sitemap: 'https://www.codewithlinda.com/sitemap.xml/',
         policy: [{ userAgent: '*', allow: '/' }]
       }
-    }
+    },
+
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          "/**/*.html": [
+            "cache-control: public",
+            "cache-control: max-age=0",
+            "cache-control: must-revalidate",
+          ],
+          "/page-data/*.json": [
+            "cache-control: public",
+            "cache-control: max-age=0",
+            "cache-control: must-revalidate",
+          ],
+          "/app-data.json": [
+            "cache-control: public",
+            "cache-control: max-age=0",
+            "cache-control: must-revalidate",
+          ],
+          "/static/*": [
+            "cache-control: public",
+            "cache-control: max-age=31536000",
+            "cache-control: immutable",
+          ],
+          '/fonts/*': [
+            'Cache-Control: public',
+            'Cache-Control: max-age=365000000',
+            'Cache-Control: immutable'
+          ],
+          // Cache images for a week
+          '/images/*': [
+            'Cache-Control: public',
+            'Cache-Control: max-age=604800'
+          ]
+        },
+      },
+    },
 
   ],
 }
