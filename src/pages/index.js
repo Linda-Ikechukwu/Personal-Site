@@ -16,10 +16,12 @@ const Index = () => {
       <AnimatedSvgLoader />
       <Layout>
         <MetaData title="Linda Ikechukwu" />
-        <Header />
-        <Info />
-        <Projects />
-        <Contact />
+        <div class="homepage">
+          <Header />
+          <Info />
+          <Projects />
+          <Contact />
+        </div>
 
       </Layout>
     </>

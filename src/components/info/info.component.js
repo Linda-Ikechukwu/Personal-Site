@@ -20,7 +20,7 @@ class speaking extends React.Component {
 
     render() {
         return (
-            <section className="speaking section" data-anchor="Page 2">
+            <section className="speaking section" >
 
 
 

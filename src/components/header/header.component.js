@@ -12,9 +12,9 @@ const Header = () => {
   const shapes = [...Array(30)];
 
   return (
-    <div className="shape">
+    <div className="shape section">
 
-      <section className="header section" data-anchor="Page 1">
+      <section className="header ">
 
         <div className="header__right" >
           <div className="header__image">

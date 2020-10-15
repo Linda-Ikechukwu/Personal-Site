@@ -69,14 +69,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "All About Linda",
+        name: "CodeWithLinda",
         short_name: "codewithlinda.com",
         start_url: "/",
-        background_color: "#232946",
-        theme_color: "#232946",
+        background_color: "#212121",
+        theme_color: " #f39ca9",
         display: "standalone",
         icon: "static/images/icon.jpg" // This path is relative to the root of the site.
       }
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`, `/blog/*`],
+      },
     },
     {
       resolve: `gatsby-plugin-canonical-urls`,
@@ -139,7 +145,8 @@ module.exports = {
           // Cache images for a week
           '/images/*': [
             'Cache-Control: public',
-            'Cache-Control: max-age=604800'
+            'Cache-Control: max-age=365000000',
+            'Cache-Control: immutable'
           ]
         },
       },

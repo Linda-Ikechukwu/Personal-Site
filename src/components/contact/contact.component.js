@@ -1,6 +1,6 @@
 import React from "react";
 
-import ContactForm from "../contact-form/contact-form.component"; 
+import ContactForm from "../contact-form/contact-form.component";
 
 import "./contact.style.scss"
 
@@ -10,7 +10,7 @@ import "./contact.style.scss"
 
 const Contact = () => {
     return (
-        <section className="contact section" id="contact"  data-anchor="Page 4" >
+        <section className="contact section" id="contact">
             <p className="p-big">I love to chat about gigs, technical writing, food, tequila and karaoke dates</p>
             <ContactForm/>
         </section>

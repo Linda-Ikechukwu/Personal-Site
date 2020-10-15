@@ -36,3 +36,4 @@ const AnimatedSvgLoader = () => {
 }
 
 export default AnimatedSvgLoader;
+

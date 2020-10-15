@@ -341,6 +341,27 @@ pre {
   overflow-x: auto;
 }
 
+//------------------
+/*Styles for fullscreen section scroll on the homepage*/
+//------------------
+
+
+  .homepage{
+    /* Necessary for scrolling */
+   overflow-y: scroll;
+   /* Specifies vertical scrolling */
+   scroll-snap-type: y mandatory;
+ }
+
+ .section{
+   /* Snaps each scroll to the start of the next slide */
+   scroll-snap-align: start;
+
+ }
+
+
+
+//------------------
 /*Alternate styles for light mode*/
 //------------------
 
@@ -497,3 +518,9 @@ pre {
     margin-top: 0px;
   }
 }
+
+
+
+
+
+
