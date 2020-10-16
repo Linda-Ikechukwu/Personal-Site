@@ -73,7 +73,7 @@ module.exports = {
         short_name: "codewithlinda.com",
         start_url: "/",
         background_color: "#212121",
-        theme_color: " #f39ca9",
+        theme_color: "#f39ca9",
         display: "standalone",
         icon: "static/images/icon.jpg" // This path is relative to the root of the site.
       }
@@ -81,7 +81,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-offline`,
       options: {
-        precachePages: [`/`, `/blog/*`],
+        precachePages: [ `/`,`/blog/*`],
       },
     },
     {
