@@ -83,8 +83,6 @@ A widely accepted technical definition of serverless is:
 
 Huh! What does all that even mean?
 
-Huh! What does all that even mean?
-
 In serverless, applications are architected following a modular microservice approach. Different services that make up the whole app are written and deployed as individual functions - hence, the term `Functions as a Service (FaaS)’.
 
 For example, consider a simple inventory application where users can add new entries which are uploaded to a database for keeps. Users can view all their entries or details of a single entry and can also delete a particular entry. In serverless, we can deploy the functionality of this inventory application as 4 functions : `addEntries`, `getEntries`, `getAllEntries`, and `deleteEntries`.

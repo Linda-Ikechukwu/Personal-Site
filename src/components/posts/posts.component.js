@@ -60,6 +60,8 @@ class Posts extends React.Component {
                   </Link>
                 </li>
               )
+            }else{
+              return null
             }
           })}
         </ul>

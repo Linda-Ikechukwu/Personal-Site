@@ -84,6 +84,8 @@ const PopularPosts = () => {
                                 </Link>
                             </li>
                         )
+                    }else{
+                        return null
                     }
                 })}
             </ul>
