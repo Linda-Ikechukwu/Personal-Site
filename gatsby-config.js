@@ -78,12 +78,11 @@ module.exports = {
         icon: "static/images/icon.jpg" // This path is relative to the root of the site.
       }
     },
+
     {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        precachePages: [`/blog/*/`],
-      },
+      resolve: `gatsby-plugin-remove-serviceworker`,
     },
+
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
