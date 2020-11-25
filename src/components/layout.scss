@@ -283,9 +283,12 @@ p {
   color: var(--link-color);
   font-style: italic;
 
-  &:hover,
-  &:focus {
+  &:hover{
     border-bottom: 1px solid var(--link-color);
+  }
+
+  &:focus {
+    border: 1.5px solid var(--link-color);
   }
 }
 
@@ -413,9 +416,11 @@ pre {
   .inline-link {
     color: var(--contrast-color);
 
-    &:hover,
-    &:focus {
+    &:hover {
       border-bottom: 1px solid var(--contrast-color);
+    }
+    &:focus {
+      border: 1.5px solid var(--contrast-color);
     }
   }
 

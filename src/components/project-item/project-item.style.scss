@@ -13,6 +13,10 @@
         opacity:1;
     }
 
+    &:focus-within{
+        border: 4px solid var(--contrast-color);
+    }
+
     img{
         width: 100%;
         height: 18rem;
@@ -91,7 +95,7 @@
     }
 
 
-    
+
 
 }
 
