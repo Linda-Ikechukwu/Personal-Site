@@ -20,7 +20,7 @@ function MetaData({ description, lang, meta, image: metaImage, title, pathname, 
       }
     `
   )
-
+  const title = title || data.site.siteMetadata.title
   const metaDescription = description || data.site.siteMetadata.description
   const image =
     metaImage && metaImage.src
@@ -64,6 +64,14 @@ function MetaData({ description, lang, meta, image: metaImage, title, pathname, 
         {
           property: `og:title`,
           content: title,
+        },
+        {
+          property: `og:url`,
+          content: canonical,
+        },
+        {
+          property: `og:image`,
+          content: image,
         },
         {
           property: `og:description`,

@@ -8,9 +8,9 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `Linda Ikechukwu`,
-    description: `Linda Ikechukwu is a Frontend Developer and Technical Writer from Lagos, Nigeria.`,
+    description: `Linda Ikechukwu is a Frontend Developer and Technical Writer from Lagos, Nigeria. She is also the Community Manager for the Portharcourt School of AI. `,
     author: `Linda Ikechukwu`,
-    keywords: `Linda Ikechukwu, CodeWithLinda, Nigerian Female Software Developer, PH School Of AI Community Manager, Frontend Developer, Javascript Developer in Nigeria `,
+    keywords: `Linda Ikechukwu, CodeWithLinda, Nigerian Female Software Developer, PH School Of AI Community Manager, Frontend Developer in Nigeria `,
     siteUrl: `https://www.codewithlinda.com/`,
     paymentPointer: `$ilp.uphold.com/UgFp7pe6LHFk`
   },

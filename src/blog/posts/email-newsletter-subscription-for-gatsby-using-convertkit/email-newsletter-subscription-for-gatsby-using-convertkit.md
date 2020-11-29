@@ -1,5 +1,5 @@
 ---
-title: "How To Set up Email Newsletter Subscription For Gatsby Blog Using ConvertKit"
+title: "How To Setup Email Newsletters For Gatsby Blogs With ConvertKit"
 date: "2020-05-31"
 featured: "./emailsub.png"
 description: "Learn how to set up an email newsletter subscription flow for your gatsby blog using Convertkit in 6 steps."
@@ -135,6 +135,8 @@ You can style the subscription form component however you want, then import and 
 You can also make changes to the contents of the confirmation email, tweak other settings for your form, and create an email template for your broadcasts.
 
 I’m hoping you’ll figure your way around. If you have any further questions, ask away in the comment section or hit me up on <a target="blank" class="inline-link" href="https://twitter.com/_MsLinda?">twitter</a>
+
+PS: If you're building a blog, you may also want to <a target="blank" class="inline-link" href="https://www.codewithlinda.com/blog/social-share-buttons-with-react-share/">add social media share buttons directly to your blog pages.</a>
 
 Now go on and build something great!
 

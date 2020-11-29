@@ -36,7 +36,7 @@ const Header = () => {
           </div>
           <div className="header__description">
             <p>
-              I build web interfaces and <a className="inline-link" href="/blog">write</a> about it.
+              I build web interfaces and <a className="inline-link" href="/blog/">write</a> about it.
             </p>
           </div>
 

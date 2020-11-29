@@ -65,8 +65,8 @@ const Blog = (props) => {
       <AnimatedSvgLoader />
       <Layout dark>
         <MetaData
-          title="CodeWithLinda"
-          description="CodeWithLinda is Linda Ikechukwu's Blog where she writes Beginner Friendly Articles on Frontend Developement, Cloud, Dev Life and more."
+          title="CodeWithLinda - Articles on Frontend Development and Dev Life"
+          description="CodeWithLinda is Linda Ikechukwu's Blog where she writes Beginner Friendly Articles on Frontend Developement, Dev Life and more."
           //image={props.data.markdownRemark.frontmatter.featured.childImageSharp.resize}
           pathname={props.location.pathname}
           keywords="CodeWithLinda, Linda Ikechukwu, Frontend Blog, Javascript Articles, Technical Writer in Nigeria, Devops Articles Nigeria, CSS Tricks, Linda Ikechukwu, codeswithlinda"

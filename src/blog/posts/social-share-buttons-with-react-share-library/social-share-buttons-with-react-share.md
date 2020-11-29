@@ -1,5 +1,5 @@
 ---
-title: "Add Social Share Buttons to Your Gatsby Blog Pages In 3 Steps"
+title: "Social Media Share Buttons For Gatsby Blogs With React Share"
 date: "2020-05-24"
 featured: "./socialshare.png"
 description: "Learn  how to add social media share buttons to your gatsby blog in 3 simple steps using the react share library."
@@ -186,6 +186,9 @@ Inspecting the buttons in dev tools, you’ll find that each is a button with a 
 
 
 *N.B: You should have the <a href="https://www.gatsbyjs.org/docs/sass/" class="inline-link">gatsby-sass plugin</a> installed and added to the plugins array of your gatsby.config.js file.*
+
+PS: If you're building a gatsby blog, you may also want to <a target="blank" class="inline-link" href="https://www.codewithlinda.com/blog/email-newsletter-subscription-for-gatsby-using-convertkit/">set up a newsletter with convertkit to engage more visitors.</a>
+
 
 Now go on and build something great!
 
