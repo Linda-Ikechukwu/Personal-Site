@@ -20,7 +20,7 @@ function MetaData({ description, lang, meta, image: metaImage, title, pathname, 
       }
     `
   )
-  const title = title || data.site.siteMetadata.title
+  const pageTitle = title || data.site.siteMetadata.title
   const metaDescription = description || data.site.siteMetadata.description
   const image =
     metaImage && metaImage.src
@@ -87,7 +87,7 @@ function MetaData({ description, lang, meta, image: metaImage, title, pathname, 
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: pageTitle,
         },
         {
           name: `twitter:description`,

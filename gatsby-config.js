@@ -18,9 +18,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-sitemap`,
     `gatsby-plugin-dark-mode`,
     `gatsby-plugin-preact`,
+    {
+      resolve: "gatsby-plugin-sitemap",
+      exclude: [`/tags/*`]
+    },
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {

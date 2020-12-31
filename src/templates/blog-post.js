@@ -96,7 +96,7 @@ const BlogPost = props => {
                                 {
                                     props.data.markdownRemark.frontmatter.featured && (
                                         <Img style={{
-                                            height: `30rem`,
+                                            height: `100%`,
                                             width: `100%`
                                         }}
                                             fluid={

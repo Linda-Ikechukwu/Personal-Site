@@ -109,7 +109,7 @@ const filterObjsInArr = (arr, selection) => {
 
 ```
 
-This second method is shorter in terms of lines of code. Cloning arrays in JavaScript is a bit complicated, because<a target="blank" class="inline-link" href="https://dev.to/samanthaming/how-to-deep-clone-an-array-in-javascript-3cig">arrays are stored as references</a>. So, we use the <a target="blank" class="inline-link" href="https://lodash.com/docs/4.17.15#cloneDeep">cloneDeep method from Lodash</a> to do that. We are cloning the original array so as not to mutate it, we need it to be intact and untouched for future filtering. We loop through each object of the cloned array, then through each property in that particular object, checking if that property exists in the `selection` array. If it doesn’t, we delete it.
+This second method is shorter in terms of lines of code. Cloning arrays in JavaScript is a bit complicated, because <a target="blank" class="inline-link" href="https://dev.to/samanthaming/how-to-deep-clone-an-array-in-javascript-3cig">arrays are stored as references</a>. So, we use the <a target="blank" class="inline-link" href="https://lodash.com/docs/4.17.15#cloneDeep"> cloneDeep method from Lodash</a> to do that. We are cloning the original array so as not to mutate it, we need it to be intact and untouched for future filtering. We loop through each object of the cloned array, then through each property in that particular object, checking if that property exists in the `selection` array. If it doesn’t, we delete it.
 
 That’s it. Go build something great or fun at least :). Say hi on <a target="blank" class="inline-link" href="https://twitter.com/_MsLinda">twitter</a> if you’ll love to connect or have questions. Until next time, ciao.
 
