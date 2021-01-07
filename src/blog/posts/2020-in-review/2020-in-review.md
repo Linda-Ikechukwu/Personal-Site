@@ -2,7 +2,7 @@
 title: "2020: Starting a career in a pandemic"
 date: "2020-12-31"
 featured: "./2020.jpg"
-description: "I officially started my tech career this year. In this article, I narrate all the ups and downs I encountered."
+description: "I officially started my tech career this year. In this article, I narrate all the ups and downs I encountered throughout the year."
 tags: ["Personal",]
 keywords: "2020 in Review"
 ---
@@ -37,7 +37,7 @@ Amongst all those articles, one of the most popular was The Self Taught Develope
 <img src="./search-console.png" alt="Search console statistics">
 <img src="./google-analytics.png" alt="Google analytics statistics">
 
-The images above are analytics stats for my blog -not so bad, considering that I didn't really take SEO seriously.  Thank God I met Monica this year and after everything I've learnt from her, I hope to send those numbers skyrocketing next year.
+The images above are analytics stats for my blog -not so bad, considering that I didn't really take SEO seriously.  Thank God I met <a target="blank" class="inline-link" href="https://www.linkedin.com/in/monica-lent-542122145/">Monica</a> and the <a target="blank" class="inline-link" href="https://bloggingfordevs.com/">Blogging For Devs Community</a> this year. After everything I've learnt from her and the awesome community, I hope to send those numbers skyrocketing next year.
 
 ## Speaking
 
@@ -65,12 +65,12 @@ Some other notable events that happened this year:
 - I went on the lekki conservation center canopy walk (considering that I have a huge phobia for heights, this was huge)
 - I finally got my nose piercing :)
 - I rode a horse for the first time
-- I missed out on an opportunity to join one of my favourite Nigerian companies because I didn't know redux well enough (this hurt). Have I learnt redux now? LOL, no!
+- I missed out on an opportunity to join one of my favourite Nigerian companies because I didn't know Redux well enough (this hurt). Have I learnt redux now? LOL, no!
 - I grew the <a target="blank" class="inline-link" href="https://twitter.com/PHCSchoolOfAI">Port Harcourt School of AI's</a> twitter account to 800 followers :) (hire me as your next social media manager). Along with the other volunteers, I'll say we had a good year as a community.
 
 ## Final Words
 
-In summary, I had a good year. I started earning small money and discovered a few more ways to make extra bucks. My biggest realization this year is that access to electricity, internet and a quiet environment could literally change one's life. Also, my mum got her dream job this year - this has to be my biggest win.
+In summary, I had a good year. I started earning small money, discovered a few more ways to make extra bucks and helped my mom pay some bills. My biggest realization this year is that access to electricity, internet and a quiet environment could literally change one's life. Also, my mum got her dream job this year - this has to be my biggest win.
 
 In 2021, I hope to:
 
@@ -85,4 +85,4 @@ In 2021, I hope to:
 
 and anything else that comes up …
 
-Lastly, in no particular order, to Sokari, Titus, Mr Kenneth, Chris, Kate, Monica, Gift, Geoff, Dan, Gift, Abraham, Gabriel and Esha, thank you all for either being friends, inspiring me or taking a chance on me this year. Let's do more in 2021.
+Lastly, in no particular order, to Sokari, Titus, Mr Kenneth, Chris, Kate, Monica, Gift, Geoff, Dan, Abraham, Gabriel and Esha, thank you all for either being friends, inspiring me or taking a chance on me this year. Let's do more in 2021.
