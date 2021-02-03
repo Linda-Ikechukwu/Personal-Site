@@ -17,7 +17,7 @@ Enough said, let's dive in.
 
 ## Step 1: Install React Share
 
-React share is a library that provides social media share button components for react apps. To install, run `npm install react share --save`   or   `yarn add react-share`.
+React share is a library that provides social media share button components for react apps. To install, run `npm install react-share --save`   or   `yarn add react-share`.
 
 ## Step 2: Create a ShareButtons component
 
