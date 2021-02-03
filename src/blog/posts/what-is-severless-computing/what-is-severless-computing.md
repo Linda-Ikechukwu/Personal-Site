@@ -1,5 +1,5 @@
 ---
-title: "Serverless Explained By Booking An Uber Ride"
+title: "Serverless Computing Explained By Booking An Uber Ride"
 date: "2020-09-26"
 featured: "./serverless-explained.png"
 description: "Learn what the buzz word 'Serverless' is all about. If you've ever used an uber ride before, then you'll understand what serverless is."
