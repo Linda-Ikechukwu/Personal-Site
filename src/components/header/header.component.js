@@ -8,9 +8,6 @@ const Header = () => {
     AOS.init()
   })
 
-  //creating an  array containing the floating shapes
-  const shapes = [...Array(30)];
-
   return (
     <div className="shape section">
 
