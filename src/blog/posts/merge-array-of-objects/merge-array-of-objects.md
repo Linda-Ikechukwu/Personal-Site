@@ -2,7 +2,7 @@
 title: "Merge Objects in Array by Key"
 date: 2021-02-17
 featured: "./merge-array-of-objects.png"
-description: "Find out how to merge objects in an array based on a key and create a new array that contains the merged objects"
+description: "Find out how to merge objects in an array based on a key and create a new array that contains the merged objects."
 tags: ["DevLife",]
 keywords: "Merge Array, Merge Object Javascript"
 ---

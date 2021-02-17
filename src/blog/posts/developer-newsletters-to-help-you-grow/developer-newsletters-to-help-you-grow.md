@@ -3,7 +3,7 @@ title: "5 Personal Developer Newsletters that Have Helped Me Grow as a Frontend 
 date: 2021-02-14
 featured: "./developer-newsletters.png"
 description: "Developer newsletters have helped me maintain a consistent learning habit. In this article, I share five personal developer blogs and their newsletters that have helpd me become a better frontend developer and will for you too."
-tags: ["DevLife",]
+tags: ["DevLife","Popular"]
 keywords: "Frontend Developer Newsletters"
 ---
 
