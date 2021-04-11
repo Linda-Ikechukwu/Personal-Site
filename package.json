@@ -49,13 +49,16 @@
     "gatsby-transformer-sharp": "^2.5.0",
     "imagemin-pngquant": "^5.0.1",
     "node-sass": "^4.14.1",
+    "of": "^1.0.0",
     "pageable": "^0.6.8",
     "pngquant-bin": "^3.1.1",
     "preact": "^10.5.3",
+    "preact-render-to-string": "^5.1.19",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
     "react-share": "^4.1.0",
+    "typescript": "^4.2.4",
     "vivus": "^0.4.5"
   },
   "devDependencies": {
