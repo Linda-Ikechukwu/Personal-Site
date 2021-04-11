@@ -7,7 +7,7 @@ tags: ["CSS", "HTML",]
 keywords: "The CSS Cascade, CSS !important, what is the cascade, cascade order for css, what is CSS specificity, what is C in CSS, CSS Inherintance."
 ---
 
-Have you ever been in a situation where the CSS styles you wrote and thought should be applied to a particular element wasn’t what you saw in the browser? That’s the ‘Cascading’ in Cascading Style Sheets (CSS) at work.
+Have you ever been in a situation where the CSS styles you wrote and thought should be applied to a particular element wasn’t what you saw in the browser? Well, that’s the ‘Cascading’ effect in Cascading Style Sheets (CSS) at work.
 
 The CSS Cascade is the algorithm used by browsers to resolve the conflict of which style rule to apply to an element, when there are  2 or more style rules of the same property, but different values targeting the element. The style rules could be from the same style declaration and source or not.
 
