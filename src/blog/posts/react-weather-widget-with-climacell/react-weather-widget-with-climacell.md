@@ -4,9 +4,9 @@ date: "2021-02-03"
 featured: "./build-weather-widget-tutorial.png"
 description: "Learn how to build a React weather widget with the Climacell weather api using the native Geolocation API and Google's Geocoding API. Great project for beginner React devs to practice with."
 tags: ["React",]
-keywords: "Climacell Weather Api, React Weather Widget"
+keywords: "Climacell Weather Api, React Weather Widget, Tommorow.io"
 ---
-<a target='blank' class="inline-link" href=""></a>
+
 If you’ve just learned the fundamentals of React, the best way to solidify your learning is to build a pet project with all that knowledge. A typical pet project featured by most tutorials is the reverend to-do list. This time, let’s step away from that and try to build something more fun: a weather widget.
 
 To build this weather widget, we’re going to be using the following tools/libraries:
@@ -338,7 +338,7 @@ export default WeatherToday
 
 In both components, we’re using the lightweight dayjs library to format the date data returned in ISO format into a more readable format.
 
-Unfortunately, Climacell does not have an API for retrieving <a target='blank' class="inline-link" href="https://github.com/climacell-api/weather-code-icons">corresponding weather icons</a> but, they have a collection of weather icons with corresponding <a target='blank' class="inline-link" href="https://docs.climacell.co/reference/data-layers-core">weather codes</a> which is accessible via the `weatherCode` params.
+Unfortunately, Climacell does not have an API for retrieving <a target='blank' class="inline-link" href="https://github.com/climacell-api/weather-code-icons">corresponding weather icons</a> but, they have a collection of weather icons with corresponding <a target='blank' class="inline-link" href="https://docs.tomorrow.io/reference/data-layers-core">weather codes</a> which is accessible via the `weatherCode` params.
 
 I downloaded a couple that I need in svg formats and put all of them in `src/WeatherIcons`. Also in the `WeatherIcons` folder, create an `icons.js` file and write this:
 
@@ -423,7 +423,7 @@ That’s it. Go now and build something great!
 
 
                                        -----
-<em>This article was sponsored by the guys at climacell :)</em>
+<em>This article was sponsored by the guys at climacell :). P.S: Climacell has now rebranded to tommorow.io</em>
 
 
 

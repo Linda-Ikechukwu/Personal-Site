@@ -15,7 +15,10 @@ const Index = () => {
     <>
       <AnimatedSvgLoader />
       <Layout>
-        <MetaData title="Linda Ikechukwu" />
+        <MetaData 
+          lang="en"
+          title="Linda Ikechukwu: Frontend Developer and Technical Writer from Lagos, Nigeria" 
+        />
         <div class="homepage">
           <Header />
           <Info />

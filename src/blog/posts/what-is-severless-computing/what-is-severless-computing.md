@@ -9,7 +9,7 @@ keywords: "What is Serverless, Serverless Computing,"
 
 ## Introduction
 
-The word ‘serverless’ is everywhere. In fact, according to google trends, it is googled an average of 100 times daily in 2020. Is serverless just a buzzword? A facade? Or a world where we won’t need servers anymore?
+What exactly is Severless? All of a sudden, the word ‘serverless’ is everywhere. In fact, according to google trends, it is googled an average of 100 times daily in 2020. Is serverless just a buzzword? A facade? Or a world where we won’t need servers anymore?
 
 Before completing my Cloud Developer Nanodegree program from Udacity, I too didn’t fully understand what serverless really meant. It sounded abstract and most of the articles I read were filled with a lot of technical jargon that made little sense. I ended up concluding that serverless was just something the 10X developers came up with to remind us mere mortals of our status.
 

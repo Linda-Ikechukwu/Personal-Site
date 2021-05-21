@@ -295,12 +295,19 @@ p {
 .inline-image {
   max-width: 50rem;
   max-height: 40rem;
-  margin: 3rem auto;
+  margin: 3rem auto 0;
 
   & img {
     width: 100%;
     height: 100%;
     box-shadow: 0 2px 5px rgba(14, 13, 13, 0.4);
+  }
+
+  &-subtitle{
+    margin: 0.5rem auto 6rem;
+    font-size: 1.4rem;
+    font-style: italic;
+    text-align: center;
   }
 }
 
