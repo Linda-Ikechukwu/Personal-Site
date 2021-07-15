@@ -93,7 +93,7 @@ const Blog = (props) => {
               <div className="pagination">
 
                 {!isFirst && (
-                  <Link to={`/${prevPage}/`} rel="prev" className="pagination-link">
+                  <Link to={`blog/${prevPage}/`} rel="prev" className="pagination-link">
                     ← Previous Page
                   </Link>
                 )}
@@ -101,7 +101,7 @@ const Blog = (props) => {
                 <span>{`Page ${currentPage} of ${numPages}`}</span>
 
                 {!isLast && (
-                  <Link to={`/${nextPage}/`} rel="next" className="pagination-link">
+                  <Link to={`blog/${nextPage}/`} rel="next" className="pagination-link">
                     Next Page →
                   </Link>
                 )}
