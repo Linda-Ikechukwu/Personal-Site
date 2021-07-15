@@ -102,7 +102,7 @@ Introducing the ` :not(:last-child) ` selector. This selector  basically targets
 
 Now, with the code above, we are targeting all col- classes except the last ones in a row and giving them a right margin. Cool huh?
 
-Before we continue, we need to clear the float on the rows. When a parent element contains only floated elements like our row does, its height is collapsed to nothing instead of 100% of its children’s height. To prevent this strange behaviour, we use this <a href="https://css-tricks.com/all-about-floats/#techniques-for-clearing-floats">clearfix solution</a> from CSS Tricks: 
+Before we continue, we need to clear the float on the rows. When a parent element contains only floated elements like our row does, its height is collapsed to nothing instead of 100% of its children’s height. To prevent this strange behaviour, we use this <a target='blank' class="inline-link" href="https://css-tricks.com/all-about-floats/#techniques-for-clearing-floats">clearfix solution</a> from CSS Tricks: 
 
 ```css
 .row:after { 
