@@ -45,7 +45,7 @@
     "gatsby-remark-images": "^3.3.0",
     "gatsby-remark-vscode": "^2.1.2",
     "gatsby-source-filesystem": "^2.3.0",
-    "gatsby-transformer-remark": "^2.8.13",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.5.0",
     "imagemin-pngquant": "^5.0.1",
     "node-sass": "^4.14.1",
